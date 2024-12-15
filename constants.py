@@ -1,0 +1,13 @@
+# constants.py
+# 画面設定
+SCREEN_WIDTH = 900
+SCREEN_HEIGHT = 600
+
+# 牌の設定
+TILE_WIDTH = 40
+TILE_HEIGHT = 80
+TILE_MARGIN = 10
+TILE_MARGIN_AI = 5
+
+# 遅延設定
+AI_ACTION_DELAY = 1000  # AIが捨てるまでの待機時間 (ミリ秒)
