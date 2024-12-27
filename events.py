@@ -33,3 +33,12 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
         game.current_turn = 1
 
     return tsumo_tile, selected_tile
+
+def handle_pon_click(event, button_rect, game):
+    """ポンボタンがクリックされた場合の処理"""
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        pos = event.pos
+        if button_rect and button_rect.collidepoint(pos):  # ボタンをクリックした場合
+            game.process_pon(0)  # ポン処理
+            return True
+    return False

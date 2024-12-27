@@ -1,4 +1,5 @@
 # drawing.py
+import os
 import pygame
 from constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN, TILE_MARGIN_AI
 
@@ -36,3 +37,25 @@ def draw_discards(screen, discards):
         y = 150 + (i // 10) * (TILE_HEIGHT + TILE_MARGIN)
         rotated_image = pygame.transform.rotate(tile.image, 180)
         screen.blit(rotated_image, (x, y))
+
+def draw_pon_button(screen, visible):
+    """ポンボタンを描画し、その矩形を返す"""
+    if visible:
+        button_rect = pygame.Rect(TILE_WIDTH + 13 * (TILE_WIDTH + TILE_MARGIN), 500, 100, 50)  # ボタンの位置とサイズ
+        pygame.draw.rect(screen, (255, 0, 0), button_rect)  # ボタンの赤い背景を描画
+
+        # 日本語対応フォントを読み込む
+        font_path = "meiryo.ttc"  # プロジェクトフォルダ内のフォントファイル
+
+        font = pygame.font.Font(font_path, 36)
+
+        text = font.render("ポン", True, (255, 255, 255))
+        screen.blit(text, (button_rect.x + 20, button_rect.y + 10))  # テキストを描画
+        return button_rect
+    return None
+
+def get_font_path(default="meiryo.ttc"):
+    if os.path.exists(default):
+        return default
+    print("フォントが見つかりません。デフォルトフォントを使用します。")
+    return None  # デフォルトフォントを使用

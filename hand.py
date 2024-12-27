@@ -3,6 +3,7 @@
 class Hand:
     def __init__(self):
         self.tiles = []  # 手牌のリスト
+        self.pons = []   # ポンした牌のリスト
 
     def add_tile(self, tile):
         """牌を手牌に追加"""

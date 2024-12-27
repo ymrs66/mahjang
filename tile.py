@@ -15,4 +15,4 @@ class Tile:
 
     def __repr__(self):
         # 例: '1m', '5p', '中'
-        return f"{self.value}{self.suit}"
+        return f"{self.value}{self.suit} (id={id(self)})"
