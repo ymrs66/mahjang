@@ -1,4 +1,5 @@
-from constants import AI_ACTION_DELAY
+##game_logic.py
+from core.constants import AI_ACTION_DELAY
 
 def handle_draw_phase(state, current_time):
     """

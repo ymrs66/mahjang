@@ -1,10 +1,15 @@
+##main.py
 import pygame
-from game import Game
-from game_state import GameState
-from event_handler import handle_events  # イベント処理を外部モジュールに分離
-from game_logic import handle_ai_turn, handle_draw_phase  # ゲームロジックを外部モジュールに分離
-from drawing import draw_tiles, draw_ai_tiles, draw_discards, draw_pon_button  # 描画関連
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from core.game import Game
+from core.game_state import GameState
+from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
+from core.game_logic import handle_ai_turn, handle_draw_phase  # ゲームロジックを外部モジュールに分離
+# 描画関連
+from drawing.player_drawing import draw_tiles, draw_pons
+from drawing.ai_drawing import draw_ai_tiles
+from drawing.discard_drawing import draw_discards
+from drawing.ui_drawing import draw_pon_button
+from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 # Pygame初期設定
 pygame.init()
@@ -58,6 +63,7 @@ def render_game(state):
     """
     screen.fill((0, 128, 0))  # 背景色
     draw_tiles(screen, state.game.players[0], state.tsumo_tile, state.selected_tile)
+    draw_pons(screen, state.game.players[0])  # ポンした牌を描画
     draw_ai_tiles(screen)
     draw_discards(screen, state.game.discards)
     if state.game.can_pon:

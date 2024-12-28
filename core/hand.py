@@ -1,4 +1,4 @@
-# 手牌を管理するクラス
+## 手牌を管理するクラス
 # hand.py
 class Hand:
     def __init__(self):

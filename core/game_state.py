@@ -1,5 +1,4 @@
 ##game_state.py
-
 class GameState:
     """
     ゲーム全体の状態を管理するクラス
