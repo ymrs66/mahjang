@@ -13,6 +13,13 @@ class Game:
         self.can_pon = False  # ポン可能フラグ
         self.target_tile = None  # ポン対象の牌
 
+    def is_game_over(self):
+        """
+        ゲーム終了条件を判定する。
+        山牌がなくなった場合にTrueを返す。
+        """
+        return len(self.wall) == 0
+
     def generate_wall(self):
         """麻雀の山を生成する"""
         suits = ['m', 'p', 's']
@@ -93,7 +100,7 @@ class Game:
         ポン処理を実行する。
         """
         if not self.can_pon or self.target_tile is None:
-            print("ポン処理が無効です")
+            # 不要なメッセージを削除し、条件不成立時は単に終了
             return
 
         player_hand = self.players[player_id].tiles
