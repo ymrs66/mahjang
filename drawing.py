@@ -4,7 +4,12 @@ import pygame
 from constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN, TILE_MARGIN_AI
 
 def draw_tiles(screen, hand, tsumo_tile, selected_tile):
+    """
+    手牌を描画する。ポンした牌も右側に描画。
+    """
     screen.fill((255, 255, 255))  # 背景を白で塗りつぶす
+
+    # 手牌の描画
     for i, tile in enumerate(hand.tiles):
         x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
         y = 500
@@ -12,6 +17,7 @@ def draw_tiles(screen, hand, tsumo_tile, selected_tile):
         if tile == selected_tile:
             pygame.draw.rect(screen, (255, 0, 0), (x, y, TILE_WIDTH, TILE_HEIGHT), 3)
 
+    # ツモ牌の描画
     if tsumo_tile:
         x = TILE_WIDTH + len(hand.tiles) * (TILE_WIDTH + TILE_MARGIN) + 20
         y = 500
@@ -19,6 +25,13 @@ def draw_tiles(screen, hand, tsumo_tile, selected_tile):
         if tsumo_tile == selected_tile:
             pygame.draw.rect(screen, (255, 0, 0), (x, y, TILE_WIDTH, TILE_HEIGHT), 3)
 
+    # ポンした牌の描画
+    for i, pon_set in enumerate(hand.pons):
+        for j, tile in enumerate(pon_set):
+            x = TILE_WIDTH + (len(hand.tiles) + 1) * (TILE_WIDTH + TILE_MARGIN) + j * (TILE_WIDTH + TILE_MARGIN)
+            y = 450 + i * (TILE_HEIGHT + 10)
+            screen.blit(tile.image, (x, y))
+            
 def draw_ai_tiles(screen):
     for i in range(13):
         x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN_AI)
