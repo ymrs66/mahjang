@@ -18,3 +18,24 @@ def draw_pon_button(screen, visible):
             screen.blit(text, (button_rect.x + 20, button_rect.y + 10))
         return button_rect
     return None
+
+def draw_chi_button(screen, visible):
+    """
+    チーボタンを描画し、その矩形を返す。
+    """
+    if visible:
+        button_x = 900  # 手牌と重ならない右側の位置
+        button_y = 450  # 画面下部の少し上
+        button_width = 100
+        button_height = 50
+
+        button_rect = pygame.Rect(button_x, button_y, button_width, button_height)
+        pygame.draw.rect(screen, (255, 255, 0), button_rect)  # 黄色のボタン
+
+        font_path = get_resource_path(DEFAULT_FONT_PATH)
+        if font_path:
+            font = pygame.font.Font(font_path, 36)
+            text = font.render("チー", True, (0, 0, 0))
+            screen.blit(text, (button_rect.x + 20, button_rect.y + 10))
+        return button_rect
+    return None

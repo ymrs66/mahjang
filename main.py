@@ -5,10 +5,10 @@ from core.game_state import GameState
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
 from core.game_logic import handle_ai_turn, handle_draw_phase  # ゲームロジックを外部モジュールに分離
 # 描画関連
-from drawing.player_drawing import draw_tiles, draw_pons
+from drawing.player_drawing import draw_tiles, draw_pons, draw_chis
 from drawing.ai_drawing import draw_ai_tiles
 from drawing.discard_drawing import draw_discards
-from drawing.ui_drawing import draw_pon_button
+from drawing.ui_drawing import draw_pon_button, draw_chi_button
 from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 # Pygame初期設定
@@ -28,7 +28,7 @@ def main_loop():
     game.deal_initial_hand()
 
     state = GameState()
-    state.initialize(game)
+    state.initialize(game)  # `chi_button_rect` も初期化される
 
     running = True
     while running:
@@ -64,11 +64,19 @@ def render_game(state):
     screen.fill((0, 128, 0))  # 背景色
     draw_tiles(screen, state.game.players[0], state.tsumo_tile, state.selected_tile)
     draw_pons(screen, state.game.players[0])  # ポンした牌を描画
+    draw_chis(screen, state.game.players[0])  # チーした牌を描画
     draw_ai_tiles(screen)
     draw_discards(screen, state.game.discards)
+    
+    # ポンボタンが必要なら描画
     if state.game.can_pon:
         draw_pon_button(screen, True)
+    
+    # チーボタンが必要なら描画
+    if state.game.can_chi:
+        state.chi_button_rect = draw_chi_button(screen, True)
+    
     pygame.display.flip()
-
+    
 if __name__ == "__main__":
     main_loop()

@@ -37,13 +37,13 @@ class AIPlayer:
         print(f"AIが捨てる牌を決定: {discard_tile}")
         return discard_tile
 
+    # AIPlayer の discard_tile メソッド
     def discard_tile(self):
         """
-        AIが捨てる牌を選び、手牌から削除。
-        :return: 捨てた牌（Tile オブジェクト）または None
+        AIが捨てる牌を選び、削除する。
         """
-        discard_tile = self.decide_discard()
+        discard_tile = self.decide_discard()  # 捨てる牌を選択
         if discard_tile:
-            self.hand.remove_tile(discard_tile)
-            print(f"AIが牌を捨てました: {discard_tile}")
+            self.hand.remove_tile(discard_tile)  # 手牌から削除
+            print(f"AIの捨て牌: {discard_tile}")  # デバッグ用
         return discard_tile

@@ -29,16 +29,10 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
             print("警告: 牌が選択されていません。捨て牌処理をスキップします。")
             return tsumo_tile, selected_tile
 
-        if selected_tile == tsumo_tile:
-            print(f"捨てたツモ牌: {tsumo_tile}")
-            game.discards[0].append(tsumo_tile)
-            tsumo_tile = None
-        elif selected_tile in game.players[0].tiles:
-            print(f"捨てた手牌: {selected_tile}")
-            game.discards[0].append(selected_tile)
-            game.players[0].remove_tile(selected_tile)
-        else:
-            print(f"エラー: {selected_tile} は手牌にもツモ牌にも存在しません！")
+        # 捨て牌処理を追加
+        if selected_tile:
+            print(f"プレイヤーが捨てた牌: {selected_tile}")
+            game.discard_tile(selected_tile, 0)  # プレイヤーIDは0
 
         if tsumo_tile:
             print(f"ツモ牌を手牌に追加: {tsumo_tile}")
@@ -46,7 +40,7 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
             game.players[0].sort_tiles()
             tsumo_tile = None
 
-        game.current_turn = 1
+        game.current_turn = 1  # AIのターンに移行
         selected_tile = None
 
     return tsumo_tile, selected_tile
