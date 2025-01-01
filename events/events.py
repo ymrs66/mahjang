@@ -32,12 +32,17 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
         # 捨て牌処理を追加
         if selected_tile:
             print(f"プレイヤーが捨てた牌: {selected_tile}")
+            print(f"捨てる前の手牌: {game.players[0].tiles}")
             game.discard_tile(selected_tile, 0)  # プレイヤーIDは0
+            print(f"捨てた後の手牌: {game.players[0].tiles}")
+            print(f"現在の捨て牌: {game.discards[0]}")
 
         if tsumo_tile:
             print(f"ツモ牌を手牌に追加: {tsumo_tile}")
+            print(f"追加前の手牌: {game.players[0].tiles}")
             game.players[0].add_tile(tsumo_tile)
             game.players[0].sort_tiles()
+            print(f"追加後の手牌: {game.players[0].tiles}")
             tsumo_tile = None
 
         game.current_turn = 1  # AIのターンに移行

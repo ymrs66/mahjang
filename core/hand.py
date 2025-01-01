@@ -17,15 +17,20 @@ class Hand:
         else:
             print(f"{tile} は手牌にありません")
 
-    def add_chi(self, sequence):
+    def add_chi(self, sequence, discard_tile):
         """
         チーした順子を追加
-        順子内の牌は手牌から削除される
+        順子内の牌は手牌から削除されるが、捨て牌は手牌に存在しないため除外
         """
-        if all(tile in self.tiles for tile in sequence[:-1]):  # 最後の牌は捨て牌
+        print(f"チー処理開始: sequence={sequence}, discard_tile={discard_tile}")
+        if all(tile in self.tiles for tile in sequence if tile != discard_tile):
             self.chis.append(sequence)  # 順子をチーリストに追加
-            for tile in sequence[:-1]:  # 捨て牌以外を削除
-                self.tiles.remove(tile)
+            for tile in sequence:
+                if tile != discard_tile:  # 捨て牌は手牌に存在しないため削除しない
+                    self.tiles.remove(tile)
+            print(f"チーを実行しました: {sequence}")
+            print(f"現在の手牌: {self.tiles}")
+            print(f"現在のチーリスト: {self.chis}")
         else:
             raise ValueError("順子の一部が手牌に存在しません")
 

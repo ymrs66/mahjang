@@ -10,6 +10,7 @@ class GameState:
         self.ai_action_time = 0
         self.draw_action_time = 0
         self.chi_button_rect = None  # チーボタンの位置とサイズ
+        self.pon_button_rect = None  # ポンボタンの位置とサイズ
 
     def initialize(self, game):
         self.game = game
@@ -18,3 +19,4 @@ class GameState:
         self.ai_action_time = 0
         self.draw_action_time = 0
         self.chi_button_rect = None
+        self.pon_button_rect = None

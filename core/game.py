@@ -15,6 +15,7 @@ class Game:
         self.can_pon = False  # ポン可能フラグ
         self.can_chi = False  # チー可能フラグ
         self.target_tile = None  # ポン/チー対象の牌
+        self.chi_candidates = []  # チー候補のリストを初期化
 
     def is_game_over(self):
         """
@@ -56,24 +57,18 @@ class Game:
         print(f"初期配布完了: プレイヤー: {len(self.players[0].tiles)}枚, AI: {len(self.players[1].hand.tiles)}枚")
 
     def discard_tile(self, tile, player_id):
-        """
-        指定されたプレイヤーが牌を捨てる。
-        """
         print(f"discard_tile 呼び出し: tile={tile}, player_id={player_id}")
-
         if player_id == 0:
-            # プレイヤーの手牌から牌を削除して捨て牌に追加
-            self.players[0].remove_tile(tile)
-            self.discards[0].append(tile)
+            if tile in self.players[0].tiles:
+                print(f"手牌から削除: {tile}")
+                self.players[0].remove_tile(tile)
+                self.discards[0].append(tile)
+            else:
+                print(f"エラー: {tile} は手牌に存在しません！")
         else:
-            # AIの捨て牌処理
-            discard_tile = self.players[1].discard_tile()
-            self.discards[1].append(discard_tile)
-
-            # チー可能性を判定
-            print(f"AIが捨てた牌: {discard_tile}")
-            chi_result = self.check_chi(0, discard_tile)
-            print(f"check_chi 結果: {chi_result}")  # デバッグ用
+            discarded_tile = self.players[1].discard_tile()
+            self.discards[1].append(discarded_tile)
+            print(f"AIが捨てた牌: {discarded_tile}")
 
     def check_pon(self, player_id, tile):
         """
@@ -118,79 +113,86 @@ class Game:
         self.target_tile = None
         self.current_turn = player_id  # ポンしたプレイヤーのターンに戻る
 
-    def check_chi(self, player_id, tile):
+    def check_chi(self, player_id, discard_tile):
         """
-        チーが可能か判定する。
+        チー可能な牌の組み合わせをチェック
         """
-        if self.current_turn != 1:
-            print(f"現在のターン: {self.current_turn}, チー可能性なし（ターン条件不一致）")
-            return False
+        player_hand = self.players[player_id].tiles
+        discard_suit = discard_tile.suit
 
-        if tile.suit not in ['m', 'p', 's']:
-            print(f"字牌 {tile} はチーできません")
-            return False
-
-        hand = self.players[player_id].tiles
-        suit = tile.suit
-        value = int(tile.value)
-
-        # チー可能な連続する組み合わせ
-        valid_sets = [
-            [value - 2, value - 1],  # 1〇3
-            [value - 1, value + 1],  # 12〇
-            [value + 1, value + 2],  # 〇23
-        ]
-
-        for sequence in valid_sets:
-            print(f"確認中の順子候補: {sequence}")
-            if all(Tile(suit, str(v), "") in hand for v in sequence if 1 <= v <= 9):
-                self.can_chi = True
-                self.target_tile = tile
-                print(f"現在のターン: {self.current_turn}, チー対象の牌: {tile}, チー可能: {self.can_chi}")
-                return True
-
-        self.can_chi = False
-        self.target_tile = None
-        print(f"現在のターン: {self.current_turn}, チー対象の牌: {tile}, チー可能: {self.can_chi}")
-        return False
+        print(f"チー判定開始: プレイヤー{player_id}, 捨て牌: {discard_tile}")
     
+        # 捨て牌が数牌でない場合はチー不可
+        if discard_suit not in ["m", "p", "s"]:
+            print("チー不可: 捨て牌が数牌ではありません")
+            return []
+
+        try:
+            discard_value = int(discard_tile.value)  # 数牌の場合、値を整数型に変換
+        except ValueError:
+            print("チー不可: 捨て牌の値が整数に変換できません")
+            return []
+
+        chi_candidates = []
+
+        # チー候補を探す
+        for offset in [-2, -1, 1]:  # -2/-1, -1/+1, +1/+2 の組み合わせを確認
+            needed_values = [
+                discard_value + offset,
+                discard_value + (2 * offset)
+            ]
+            print(f"必要な値: {needed_values} (オフセット: {offset})")
+
+            # 必要な牌が手牌にあるか確認
+            candidate = [
+                tile for tile in player_hand
+                if tile.suit == discard_suit and int(tile.value) in needed_values
+            ]
+
+            # 候補が2枚揃った場合
+            if len(candidate) == 2:
+                candidate.append(discard_tile)  # 捨て牌を含める
+                chi_candidates.append(candidate)
+                print(f"チー候補に追加: {candidate}")
+
+        if chi_candidates:
+            self.target_tile = discard_tile  # ターゲット牌を設定
+
+        print(f"最終的なチー候補: {chi_candidates}")
+        return chi_candidates
+
     def process_chi(self, player_id, chosen_sequence):
         """
         チー処理を実行する。
         """
-        if not self.can_chi or self.target_tile is None:
+        if self.target_tile is None:
+            print("エラー: target_tile が None です。")
             return
 
-        # チー対象の牌のスーツを取得
-        suit = self.target_tile.suit
+        print(f"チー処理開始: プレイヤー{player_id}, 選択された順子: {chosen_sequence}")
+        player_hand = self.players[player_id].tiles  # プレイヤーの手牌を取得
 
-        # 順子を生成
-        sequence = []
-        for v in chosen_sequence:
-            if 1 <= v <= 9:  # 牌の範囲チェック
-                tile = Tile(suit, str(v), TILE_IMAGE_PATH.format(value=v, suit=suit))
-                sequence.append(tile)
-            else:
-                print(f"無効な牌の値: {v}")
-                return  # 無効な値がある場合は処理を中止
+        # 捨て牌を除外した順子部分を取得
+        sequence_without_discard = [tile for tile in chosen_sequence if not (
+            tile.suit == self.target_tile.suit and tile.value == self.target_tile.value
+        )]
 
-        # チー対象のプレイヤーの手牌オブジェクトを取得
-        player_hand = self.players[player_id].hand
-
-        # チー対象の牌（捨て牌）を順子に追加
-        sequence.append(self.target_tile)
-
-        # 順子を手牌に追加（Hand.add_chi() を使用）
-        try:
-            player_hand.add_chi(sequence)
-        except ValueError as e:
-            print(f"チー処理中にエラーが発生: {e}")
+        # 手牌に必要な牌が揃っているか確認
+        if not all(tile in player_hand for tile in sequence_without_discard):
+            print(f"エラー: {sequence_without_discard} の一部が手牌に存在しません")
             return
 
-        # 捨て牌からチー対象牌を削除
-        self.discards[(player_id - 1) % len(self.players)].remove(self.target_tile)
+        # チー牌を手牌から削除
+        for tile in sequence_without_discard:
+            self.players[player_id].remove_tile(tile)
 
-        # 状態をリセット
-        self.can_chi = False
-        self.target_tile = None
-        self.current_turn = player_id  # チーしたプレイヤーのターンに切り替え
+        # 捨て牌を捨て牌リストから削除
+        if self.target_tile in self.discards[1]:  # AIが捨てた牌から削除
+            self.discards[1].remove(self.target_tile)
+
+        # チーした牌を記録
+        self.players[player_id].chis.append(chosen_sequence)  # 順子をチーリストに追加
+
+        print(f"チー成功: {chosen_sequence}")
+        self.can_chi = False  # チー状態をリセット
+        self.target_tile = None  # ターゲット牌をリセット
