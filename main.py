@@ -3,7 +3,7 @@ import pygame
 from core.game import Game
 from core.game_state import GameState
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
-from core.game_logic import handle_ai_turn, handle_draw_phase  # ゲームロジックを外部モジュールに分離
+from core.game_logic import handle_ai_turn,handle_draw_phase # ゲームロジックを外部モジュールに分離
 # 描画関連
 from drawing.player_drawing import draw_tiles, draw_player_state # プレイヤーの手牌・ポン・チーを描画
 from drawing.ai_drawing import draw_ai_tiles
@@ -62,7 +62,10 @@ def render_game(state):
     画面描画を管理する
     """
     screen.fill((0, 128, 0))  # 背景色
+    draw_tiles(screen, state.game.players[0], state.tsumo_tile, state.selected_tile)
     draw_player_state(screen, state.game.players[0], state.selected_tile)  # プレイヤーの手牌・ポン・チーを描画
+    draw_ai_tiles(screen)
+    draw_discards(screen, state.game.discards)
     draw_ai_tiles(screen)
     draw_discards(screen, state.game.discards)
     
