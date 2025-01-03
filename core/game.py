@@ -44,7 +44,13 @@ class Game:
     def draw_tile(self, player_id):
         """指定されたプレイヤーが山から1枚ツモる"""
         if self.wall:
-            return self.wall.pop()
+            tile = self.wall.pop()
+            if player_id == 0:  # プレイヤーの場合
+                self.tsumo_tile = tile  # ツモ牌を記録
+                print(f"プレイヤーがツモ: {tile}")
+            else:
+                print(f"AIがツモ: {tile}")
+            return tile
         else:
             print("山が空です！")
             return None
@@ -58,22 +64,32 @@ class Game:
 
     def discard_tile(self, tile, player_id):
         print(f"discard_tile 呼び出し: tile={tile}, player_id={player_id}")
+    
         if player_id == 0:  # プレイヤーの場合
-            # 選択した牌が手牌に存在するか確認
-            if tile in self.players[0].tiles:
-                print(f"手牌から削除: {tile}")
-                self.players[0].remove_tile(tile)  # 手牌から削除
+            # ツモ牌を捨てる場合
+            if tile == self.tsumo_tile:
+                print(f"ツモ牌を捨てます: {tile}")
                 self.discards[0].append(tile)  # 捨て牌リストに追加
+                self.tsumo_tile = None  # ツモ牌をリセット
             else:
-                print(f"エラー: {tile} は手牌に存在しません！")
-                print(f"現在の手牌: {self.players[0].tiles}")
-                return  # ターンを進めず終了
-
+                # ツモ牌が手牌に存在する場合（不正状態）に備える
+                if tile in self.players[0].tiles:
+                    print(f"手牌から削除: {tile}")
+                    self.players[0].remove_tile(tile)  # 手牌から削除
+                    self.discards[0].append(tile)  # 捨て牌リストに追加
+        
             # ポン・チー状態のリセット
             self.can_pon = False
             self.can_chi = False
             self.target_tile = None
+
+            # 手牌へのツモ牌の重複追加を防ぐ
+            if self.tsumo_tile is None and tile in self.players[0].tiles:
+                self.players[0].remove_tile(tile)
+
+            # ターンをAIに移行
             self.current_turn = 1  # AIのターン
+    
         else:  # AIの場合
             discarded_tile = self.players[1].discard_tile()
             if discarded_tile:
@@ -82,8 +98,9 @@ class Game:
             else:
                 print("エラー: AIが捨て牌を選択できませんでした！")
         
-            # 明示的にターンをプレイヤーのツモフェーズに移行
+            # ターンをプレイヤーのツモフェーズに移行
             self.current_turn = 2  # プレイヤーのツモフェーズ
+
 
     def check_pon(self, player_id, tile):
         """
