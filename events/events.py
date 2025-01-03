@@ -45,8 +45,8 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
                 print(f"ツモ牌を手牌に追加: {tsumo_tile}")
                 print(f"追加前の手牌: {game.players[0].tiles}")
                 game.players[0].add_tile(tsumo_tile)
-                game.players[0].sort_tiles()
-                print(f"追加後の手牌: {game.players[0].tiles}")
+            game.players[0].sort_tiles()
+            print(f"追加後の手牌: {game.players[0].tiles}")
             tsumo_tile = None
         game.current_turn = 1  # AIのターンに移行
         selected_tile = None
