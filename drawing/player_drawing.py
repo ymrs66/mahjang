@@ -1,6 +1,6 @@
 ##player_drawing.py
 import pygame
-from core.constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN, SCREEN_HEIGHT,SCREEN_WIDTH
+from core.constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN,SCREEN_WIDTH,SCREEN_HEIGHT
 
 def draw_tiles(screen, hand, tsumo_tile, selected_tile):
     """

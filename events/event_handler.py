@@ -52,18 +52,26 @@ def handle_pon_phase(event, state, screen):
     ポンが可能な状態での操作。
     """
     if state.game.can_pon:
+        # ポンボタンの描画
         pon_button_rect = draw_pon_button(screen, True)
+
+        # プレイヤーがポンボタンをクリックした場合
         if event.type == pygame.MOUSEBUTTONDOWN and pon_button_rect.collidepoint(event.pos):
             print(f"ポンを実行: {state.game.target_tile}")
             state.game.process_pon(0)  # ポンの処理を実行
             state.game.can_pon = False
-            state.game.current_turn = 2  # ツモフェーズに移行
-            state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
+
+            # ポン後にプレイヤーが捨てるフェーズへ移行
+            state.game.current_turn = 0  # プレイヤーのターン
+            state.pon_button_rect = None
+
+        # ポンをスキップする場合（スペースキー）
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             print("ポンをスキップしました")
             state.game.can_pon = False
             state.game.current_turn = 2  # ツモフェーズに移行
-            state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
+            state.pon_button_rect = None
+        state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
 def is_pon_button_clicked(mouse_pos, pon_button_rect):
     """
@@ -86,16 +94,18 @@ def handle_chi_phase(event, state, screen):
         if event.type == pygame.MOUSEBUTTONDOWN and state.chi_button_rect.collidepoint(event.pos):
             print("チーを実行")
             chosen_sequence = state.game.chi_candidates[0]  # 暫定的に最初の候補を選択
-            state.game.process_chi(0, chosen_sequence)
+            state.game.process_chi(0, chosen_sequence)  # チーの処理を実行
             state.game.can_chi = False
-            state.game.current_turn = 2  # ツモフェーズに移行
             state.chi_button_rect = None
+            state.game.current_turn = 0  # プレイヤーターンに移行
+            return  # チー待機フェーズ終了
 
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             print("チーをスキップしました")
             state.game.can_chi = False
-            state.game.current_turn = 2  # ツモフェーズに移行
             state.chi_button_rect = None
+            state.game.current_turn = 2  # ツモフェーズに移行
+        state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
 def is_chi_button_clicked(mouse_pos, chi_button_rect):
     """
