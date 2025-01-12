@@ -8,7 +8,7 @@ from core.game_logic import handle_ai_turn,handle_draw_phase # ゲームロジ�
 from drawing.player_drawing import draw_tiles, draw_player_state # プレイヤーの手牌・ポン・チーを描画
 from drawing.ai_drawing import draw_ai_tiles
 from drawing.discard_drawing import draw_discards
-from drawing.ui_drawing import draw_pon_button, draw_chi_button
+from drawing.ui_drawing import draw_pon_button, draw_chi_button,draw_kan_button
 from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 # Pygame初期設定
@@ -71,12 +71,17 @@ def render_game(state):
     
     # ポンボタンが必要なら描画
     if state.game.can_pon:
-        draw_pon_button(screen, True)
+        state.pon_button_rect = draw_pon_button(screen, True)
     
     # チーボタンが必要なら描画
     if state.game.can_chi:
         state.chi_button_rect = draw_chi_button(screen, True)
-    
+
+    # カンボタンが必要なら描画
+    if state.game.can_kan:
+        state.kan_button_rect = draw_kan_button(screen, True)
+
+
     pygame.display.flip()
     
 if __name__ == "__main__":

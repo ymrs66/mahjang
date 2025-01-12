@@ -9,6 +9,15 @@ class AIPlayer:
         """
         self.id = player_id
         self.hand = Hand()  # 手牌を管理する Hand オブジェクト
+        self.pons = []  # ポンした牌のリストを初期化
+        self.chis = []  # チーした牌のリストを初期化
+        self.kans = []  # カンした牌のリストを初期化
+
+    @property
+    def tiles(self):
+        """AIの手牌を取得するプロパティ"""
+        return self.hand.tiles
+
 
     def add_tile(self, tile):
         """

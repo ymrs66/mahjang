@@ -39,3 +39,20 @@ def draw_chi_button(screen, visible):
             screen.blit(text, (button_rect.x + 20, button_rect.y + 10))
         return button_rect
     return None
+
+def draw_kan_button(screen, visible, index=0, kan_candidate=None):
+    """
+    カンボタンを描画し、その矩形を返す。
+    index: ボタンの位置
+    kan_candidate: カン候補（表示用の牌情報）
+    """
+    if visible:
+        button_rect = pygame.Rect(800, 500 + index * 60, 100, 50)
+        pygame.draw.rect(screen, (0, 255, 0), button_rect)
+        font_path = get_resource_path(DEFAULT_FONT_PATH)
+        if font_path:
+            font = pygame.font.Font(font_path, 20)
+            text = font.render(f"カン: {kan_candidate}", True, (255, 255, 255))
+            screen.blit(text, (button_rect.x + 5, button_rect.y + 10))
+        return button_rect
+    return None

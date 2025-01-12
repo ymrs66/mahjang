@@ -5,6 +5,7 @@ class Hand:
         self.tiles = []  # 手牌のリスト
         self.pons = []   # ポンした牌のリスト
         self.chis = []   # チーした牌のリスト
+        self.kans = []  # カンされた牌を記録するリスト
 
     def add_tile(self, tile):
         """牌を手牌に追加"""

@@ -1,7 +1,7 @@
 import pygame
 from events.events import handle_player_input
 from core.constants import AI_ACTION_DELAY
-from drawing.ui_drawing import draw_pon_button, draw_chi_button
+from drawing.ui_drawing import draw_pon_button, draw_chi_button,draw_kan_button
 
 def handle_events(state, current_time, screen):
     """
@@ -19,6 +19,10 @@ def handle_events(state, current_time, screen):
         # プレイヤーのポン待機フェーズ中
         if state.game.current_turn == 4:  # 4をポン待機状態として使用
             handle_pon_phase(event, state, screen)
+            return True  # 他の処理をスキップして次のフレームへ
+
+        if state.game.current_turn == 5:  # カン待機フェーズ
+            handle_kan_phase(event, state, screen)
             return True  # 他の処理をスキップして次のフレームへ
 
         # プレイヤーの通常ターン
@@ -112,3 +116,31 @@ def is_chi_button_clicked(mouse_pos, chi_button_rect):
     チーボタンがクリックされたかどうかを判定する。
     """
     return chi_button_rect is not None and chi_button_rect.collidepoint(mouse_pos)
+
+def handle_kan_phase(event, state, screen):
+    """
+    カン待機フェーズの処理。
+    """
+    if state.game.can_kan:
+        kan_button_rect = draw_kan_button(screen, True)  # カンボタンの描画
+        pygame.display.update()
+
+        # カンボタンがクリックされた場合
+        if event.type == pygame.MOUSEBUTTONDOWN and kan_button_rect.collidepoint(event.pos):
+            print("カンを実行")
+            kan_candidates = state.game.check_kan(0)  # プレイヤーIDは0
+            if kan_candidates:
+                # 暗槓を例として実行（ユーザー選択を拡張可能）
+                state.game.process_kan(0, kan_candidates[0], '暗槓')
+            state.game.can_kan = False
+            state.kan_button_rect = None
+            state.game.current_turn = 0  # プレイヤーのターンに戻る
+            return
+
+        # スペースキーでカンをスキップする場合
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            print("カンをスキップしました")
+            state.game.can_kan = False
+            state.kan_button_rect = None
+            state.game.current_turn = 2  # ツモフェーズに移行
+            return

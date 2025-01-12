@@ -14,8 +14,10 @@ class Game:
         self.current_turn = 0  # 0: プレイヤー, 1: AI
         self.can_pon = False  # ポン可能フラグ
         self.can_chi = False  # チー可能フラグ
+        self.can_kan = False  # カン可能フラグ
         self.target_tile = None  # ポン/チー対象の牌
         self.chi_candidates = []  # チー候補のリストを初期化
+        self.kan_candidates = []  # カン候補のリストを初期化
 
     def is_game_over(self):
         """
@@ -45,6 +47,11 @@ class Game:
         """指定されたプレイヤーが山から1枚ツモる"""
         if self.wall:
             tile = self.wall.pop()
+            # 捨て牌リストにツモ牌が含まれていないか確認
+            if tile in self.discards[player_id]:
+                print(f"警告: ツモ牌 {tile} は既に捨て牌リストに存在します")
+                return None
+
             if player_id == 0:  # プレイヤーの場合
                 self.tsumo_tile = tile  # ツモ牌を記録
                 print(f"プレイヤーがツモ: {tile}")
@@ -60,36 +67,28 @@ class Game:
         for _ in range(13):
             self.players[0].add_tile(self.draw_tile(0))  # プレイヤー
             self.players[1].add_tile(self.draw_tile(1))  # AI
-        print(f"初期配布完了: プレイヤー: {len(self.players[0].tiles)}枚, AI: {len(self.players[1].hand.tiles)}枚")
+        print(f"初期配布完了: プレイヤー: {len(self.players[0].tiles)}枚,\
+            AI: {len(self.players[1].hand.tiles)}枚")
 
     def discard_tile(self, tile, player_id):
-        print(f"discard_tile 呼び出し: tile={tile}, player_id={player_id}")
-    
         if player_id == 0:  # プレイヤーの場合
-            # ツモ牌を捨てる場合
             if tile == self.tsumo_tile:
                 print(f"ツモ牌を捨てます: {tile}")
-                self.discards[0].append(tile)  # 捨て牌リストに追加
-                self.tsumo_tile = None  # ツモ牌をリセット
+                self.discards[0].append(tile)
+                self.tsumo_tile = None
             else:
-                # ツモ牌が手牌に存在する場合（不正状態）に備える
-                if tile in self.players[0].tiles:
-                    print(f"手牌から削除: {tile}")
-                    self.players[0].remove_tile(tile)  # 手牌から削除
-                    self.discards[0].append(tile)  # 捨て牌リストに追加
-        
-            # ポン・チー状態のリセット
-            self.can_pon = False
-            self.can_chi = False
-            self.target_tile = None
-
-            # 手牌へのツモ牌の重複追加を防ぐ
-            if self.tsumo_tile is None and tile in self.players[0].tiles:
+                print(f"手牌から捨てます: {tile}")
                 self.players[0].remove_tile(tile)
+                self.discards[0].append(tile)
+
+                # ポン・チー状態のリセット
+                self.can_pon = False
+                self.can_chi = False
+                self.target_tile = None
 
             # ターンをAIに移行
             self.current_turn = 1  # AIのターン
-    
+
         else:  # AIの場合
             discarded_tile = self.players[1].discard_tile()
             if discarded_tile:
@@ -97,7 +96,7 @@ class Game:
                 print(f"AIが捨てた牌: {discarded_tile}")
             else:
                 print("エラー: AIが捨て牌を選択できませんでした！")
-        
+
             # ターンをプレイヤーのツモフェーズに移行
             self.current_turn = 2  # プレイヤーのツモフェーズ
 
@@ -244,3 +243,76 @@ class Game:
 
         # プレイヤーの捨てるフェーズに移行	
         self.current_turn = 0 # プレイヤーターン（捨てるフェーズ）
+
+
+    def check_kan(self, player_id, tile=None):
+        """
+        カンが可能か判定する。
+        player_id: プレイヤーID
+        tile: 他のプレイヤーが捨てた牌（明槓用）。Noneの場合は手牌を調べる（暗槓/加槓）。
+        """
+        hand = self.players[player_id].tiles
+        pons = self.players[player_id].pons  # ポンした牌のリスト
+        kan_candidates = []
+
+        def count_tile_in_hand(target_tile):
+            """手牌内で指定された牌の数を数える"""
+            return sum(1 for t in hand if t.suit == target_tile.suit and t.value == target_tile.value)
+
+        # 暗槓のチェック
+        if tile is None:
+            for t in hand:
+                if count_tile_in_hand(t) == 4 and t not in kan_candidates:
+                    kan_candidates.append(t)
+
+        # 明槓のチェック
+        elif count_tile_in_hand(tile) == 3:
+            kan_candidates.append(tile)
+
+        # 加槓のチェック
+        for pon_set in pons:
+            # pon_set が有効か確認し、tile との一致をチェック
+            if pon_set and len(pon_set) == 3 and tile and pon_set[0].suit\
+                == tile.suit and pon_set[0].value == tile.value:
+                kan_candidates.append(tile)
+
+        print(f"カン候補: {kan_candidates}")
+        return kan_candidates
+    
+    def process_kan(self, player_id, tile, kan_type):
+        """
+        カンの処理を実行する。
+        player_id: プレイヤーID
+        tile: カン対象の牌
+        kan_type: '暗槓', '明槓', '加槓'のいずれか
+        """
+        if kan_type == '暗槓':
+            # 手牌から4枚を削除し、カンリストに追加
+            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not (t.suit == tile.suit and t.value == tile.value)]
+            self.players[player_id].kans.append([tile] * 4)
+            print(f"暗槓成功: {tile}")
+
+        elif kan_type == '明槓':
+            # 手牌から3枚を削除し、捨て牌を合わせてカンリストに追加
+            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not (t.suit == tile.suit and t.value == tile.value)]
+            self.players[player_id].kans.append([tile] * 4)
+            self.discards[1].remove(tile)
+            print(f"明槓成功: {tile}")
+
+        elif kan_type == '加槓':
+            # ポンした牌に1枚を追加し、カンリストに移動
+            for pon_set in self.players[player_id].pons:
+                if pon_set[0].suit == tile.suit and pon_set[0].value == tile.value:
+                    self.players[player_id].pons.remove(pon_set)
+                    self.players[player_id].kans.append(pon_set + [tile])
+                    self.players[player_id].tiles.remove(tile)
+                    break
+            print(f"加槓成功: {tile}")
+
+        # **嶺上牌のツモ処理を追加**
+        new_tile = self.wall.pop() if self.wall else None
+        if new_tile:
+            self.players[player_id].add_tile(new_tile)
+            print(f"嶺上牌をツモ: {new_tile}")
+        else:
+            print("山牌がありません！ゲーム終了です。")

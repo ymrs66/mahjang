@@ -2,11 +2,33 @@
 from core.constants import AI_ACTION_DELAY
 
 def handle_draw_phase(state, current_time):
-    """
-    プレイヤーが牌をツモるフェーズ
-    """
     if current_time >= state.draw_action_time:
+        # ツモ牌を取得するが、手牌にはまだ追加しない
         state.tsumo_tile = state.game.draw_tile(0)
+        print(f"ツモフェーズ: ツモ牌 = {state.tsumo_tile}")
+        
+        # ツモフェーズからプレイヤーの操作フェーズへ移行
+        state.game.current_turn = 0  # プレイヤーのターン
+
+        # 暗槓のチェック
+        kan_candidates = state.game.check_kan(0)  # プレイヤーID 0
+        if kan_candidates:
+            print(f"暗槓候補: {kan_candidates}")
+            state.game.can_kan = True
+            state.game.kan_candidates = kan_candidates
+            state.game.current_turn = 5  # カン選択待機フェーズに移行
+            return
+
+        # 加槓のチェック（すでにポンしている牌との組み合わせ）
+        for pon_set in state.game.players[0].pons:
+            if len(pon_set) == 3 and state.tsumo_tile.suit == pon_set[0].suit and state.tsumo_tile.value == pon_set[0].value:
+                print(f"加槓候補: {state.tsumo_tile}")
+                state.game.can_kan = True
+                state.game.kan_candidates = [state.tsumo_tile]
+                state.game.current_turn = 5  # カン選択待機フェーズに移行
+                return
+
+        # 通常のターンに移行
         state.game.current_turn = 0
 
 def handle_ai_turn(state, current_time):
@@ -16,12 +38,30 @@ def handle_ai_turn(state, current_time):
     :param current_time: 現在の時間
     """
     # プレイヤーのチーまたはポン待機中はAIの動作を停止
-    if state.game.current_turn in [3, 4]:  # 3: チー待機, 4: ポン待機
+    if state.game.current_turn in [3, 4, 5]:  # 3: チー待機, 4: ポン待機, 5: カン待機
         print("プレイヤーが待機中のためAIの動作をスキップ")
         return
 
     # 通常のAI処理
     if current_time >= state.ai_action_time:
+        # AIがカン可能か確認
+        kan_candidates = state.game.check_kan(1)  # AIはプレイヤーID 1
+        if kan_candidates:
+            print(f"AIが暗槓を実行: {kan_candidates[0]}")
+            state.game.process_kan(1, kan_candidates[0], '暗槓')
+            state.ai_action_time = current_time + AI_ACTION_DELAY  # 次のAIアクションを待つ
+            return  # カン後は即座にツモを行うため処理を終了
+
+        # 明槓の可能性を確認（プレイヤーの捨て牌を対象に）
+        if state.game.discards[0]:
+            last_discard = state.game.discards[0][-1]
+            if state.game.check_kan(1, last_discard):
+                print(f"AIが明槓を実行: {last_discard}")
+                state.game.process_kan(1, last_discard, '明槓')
+                state.ai_action_time = current_time + AI_ACTION_DELAY
+                return
+
+        # 通常の捨て牌処理
         discard_tile = state.game.players[1].discard_tile()
         if discard_tile:
             state.game.discards[1].append(discard_tile)

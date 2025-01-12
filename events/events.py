@@ -40,26 +40,16 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
         if tsumo_tile:
             # ツモ牌がすでに捨てられているかを確認
             if tsumo_tile in game.discards[0]:
-                print(f"ツモ牌 {tsumo_tile} はすでに捨てられています。手牌に追加しません。")
+                print(f"ツモ牌 {tsumo_tile} (id={id(tsumo_tile)}) は既に捨て牌リストに存在します: {game.discards[0]}")
             else:
                 print(f"ツモ牌を手牌に追加: {tsumo_tile}")
                 print(f"追加前の手牌: {game.players[0].tiles}")
                 game.players[0].add_tile(tsumo_tile)
-            game.players[0].sort_tiles()
-            print(f"追加後の手牌: {game.players[0].tiles}")
+                game.players[0].sort_tiles()
+                print(f"追加後の手牌: {game.players[0].tiles}")
             tsumo_tile = None
+        
         game.current_turn = 1  # AIのターンに移行
         selected_tile = None
 
     return tsumo_tile, selected_tile
-
-def handle_pon_click(event, button_rect, game):
-    """
-    ポンボタンがクリックされた場合の処理。
-    """
-    if event.type == pygame.MOUSEBUTTONDOWN:
-        pos = event.pos
-        if button_rect and button_rect.collidepoint(pos):
-            game.process_pon(0)  # ポン処理
-            return True
-    return False
