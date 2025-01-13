@@ -3,7 +3,7 @@
 import pygame
 from core.constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN,AI_TURN_PHASE
 
-def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
+def handle_player_input(event, game, tsumo_tile, selected_tile, current_time, state):
     """
     プレイヤーの入力処理
     """
@@ -49,7 +49,7 @@ def handle_player_input(event, game, tsumo_tile, selected_tile, current_time):
                 print(f"追加後の手牌: {game.players[0].tiles}")
             tsumo_tile = None
         
-        game.current_turn = AI_TURN_PHASE  # AIのターンに移行
+        state.transition_to(AI_TURN_PHASE)  # AIのターンに移行
         selected_tile = None
 
     return tsumo_tile, selected_tile

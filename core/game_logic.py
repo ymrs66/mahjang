@@ -1,6 +1,7 @@
 ##game_logic.py
 from core.constants import *
 
+
 def handle_draw_phase(state, current_time):
     if current_time >= state.draw_action_time:
         # ツモ牌を取得するが、手牌にはまだ追加しない
@@ -8,7 +9,7 @@ def handle_draw_phase(state, current_time):
         print(f"ツモフェーズ: ツモ牌 = {state.tsumo_tile}")
         
         # ツモフェーズからプレイヤーの操作フェーズへ移行
-        state.game.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーのターン
+        state.transition_to(PLAYER_DISCARD_PHASE)  # プレイヤーのターン
 
         # 暗槓のチェック
         kan_candidates = state.game.check_kan(0)  # プレイヤーID 0
@@ -16,7 +17,7 @@ def handle_draw_phase(state, current_time):
             print(f"暗槓候補: {kan_candidates}")
             state.game.can_kan = True
             state.game.kan_candidates = kan_candidates
-            state.game.current_turn = KAN_WAIT_PHASE  # カン選択待機フェーズに移行
+            state.transition_to(KAN_WAIT_PHASE)  # カン選択待機フェーズに移行
             return
 
         # 加槓のチェック（すでにポンしている牌との組み合わせ）
@@ -25,11 +26,11 @@ def handle_draw_phase(state, current_time):
                 print(f"加槓候補: {state.tsumo_tile}")
                 state.game.can_kan = True
                 state.game.kan_candidates = [state.tsumo_tile]
-                state.game.current_turn = KAN_WAIT_PHASE  # カン選択待機フェーズに移行
+                state.transition_to(KAN_WAIT_PHASE)  # カン選択待機フェーズに移行
                 return
 
         # 通常のターンに移行
-        state.game.current_turn = PLAYER_DISCARD_PHASE
+        state.transition_to(PLAYER_DISCARD_PHASE)
 
 def handle_ai_turn(state, current_time):
     """
@@ -38,7 +39,7 @@ def handle_ai_turn(state, current_time):
     :param current_time: 現在の時間
     """
     # プレイヤーのチーまたはポン待機中はAIの動作を停止
-    if state.game.current_turn in [CHI_WAIT_PHASE, PON_WAIT_PHASE, KAN_WAIT_PHASE]: # 3: チー待機, 4: ポン待機, 5: カン待機
+    if state.current_phase in [CHI_WAIT_PHASE, PON_WAIT_PHASE, KAN_WAIT_PHASE]: # 3: チー待機, 4: ポン待機, 5: カン待機
         print("プレイヤーが待機中のためAIの動作をスキップ")
         return
 
@@ -48,7 +49,7 @@ def handle_ai_turn(state, current_time):
         kan_candidates = state.game.check_kan(1)  # AIはプレイヤーID 1
         if kan_candidates:
             print(f"AIが暗槓を実行: {kan_candidates[0]}")
-            state.game.process_kan(1, kan_candidates[0], '暗槓')
+            state.game.process_kan(1, kan_candidates[0], state,'暗槓')
             state.ai_action_time = current_time + AI_ACTION_DELAY  # 次のAIアクションを待つ
             return  # カン後は即座にツモを行うため処理を終了
 
@@ -57,7 +58,7 @@ def handle_ai_turn(state, current_time):
             last_discard = state.game.discards[0][-1]
             if state.game.check_kan(1, last_discard):
                 print(f"AIが明槓を実行: {last_discard}")
-                state.game.process_kan(1, last_discard, '明槓')
+                state.game.process_kan(1, last_discard, state,'明槓')
                 state.ai_action_time = current_time + AI_ACTION_DELAY
                 return
 
@@ -69,20 +70,20 @@ def handle_ai_turn(state, current_time):
 
             # チーのチェックと処理
             if process_chi_logic(state, discard_tile):  # チー待機状態に移行
-                state.game.current_turn = CHI_WAIT_PHASE  # チー待機状態
+                state.transition_to(CHI_WAIT_PHASE)  # チー待機状態
                 return  # チー待機中はここで処理を終了
 
             # ポンのチェックと処理
             if process_pon_logic(state, discard_tile):  # ポン待機状態に移行
-                state.game.current_turn = PON_WAIT_PHASE  # ポン待機状態
+                state.transition_to(PON_WAIT_PHASE)  # ポン待機状態
                 return  # ポン待機中はここで処理を終了
 
             # チー・ポンが発生しない場合
-            state.game.current_turn = PLAYER_DRAW_PHASE  # プレイヤーのツモフェーズに移行
+            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズに移行
             state.draw_action_time = current_time + AI_ACTION_DELAY
         else:
             print("AIの捨て牌がありません！")
-            state.game.current_turn = PLAYER_DRAW_PHASE  # プレイヤーのツモフェーズに移行
+            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズに移行
             state.draw_action_time = current_time + AI_ACTION_DELAY
 
         # 次のAI行動タイミングを設定
@@ -98,7 +99,7 @@ def process_pon_logic(state, discard_tile):
         state.game.can_pon = True
         state.game.pon_candidates = pon_candidates  # ポン候補を設定
         state.game.target_tile = discard_tile
-        state.game.current_turn = PON_WAIT_PHASE  # ポン待機状態に移行
+        state.transition_to(PON_WAIT_PHASE)  # ポン待機状態に移行
         return True
     else:
         print("ポン候補がありません。")
@@ -111,7 +112,7 @@ def process_chi_logic(state, discard_tile):
     チーロジックを処理する。チー待機フェーズに移行する場合はTrueを返す。
     """
     print("=== チーロジック開始 ===")
-    print(f"プレイヤーの手番: {state.game.current_turn}, 捨て牌: {discard_tile}")
+    print(f"プレイヤーの手番: {state.current_phase}, 捨て牌: {discard_tile}")
 
     # プレイヤーのチー可能性を確認
     chi_candidates = state.game.check_chi(0, discard_tile)  # プレイヤーIDは0で固定

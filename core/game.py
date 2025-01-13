@@ -11,7 +11,6 @@ class Game:
         self.wall = self.generate_wall()  # 山牌
         self.players = [Hand(), AIPlayer(1)]  # プレイヤー(0)とAI(1)
         self.discards = [[], []]  # プレイヤーの捨て牌[0]とAIの捨て牌[1]
-        self.current_turn = 0  # 0: プレイヤー, 1: AI
         self.can_pon = False  # ポン可能フラグ
         self.can_chi = False  # チー可能フラグ
         self.can_kan = False  # カン可能フラグ
@@ -98,8 +97,7 @@ class Game:
                 print("エラー: AIが捨て牌を選択できませんでした！")
 
             # ターンをプレイヤーのツモフェーズに移行
-            self.current_turn = PLAYER_DRAW_PHASE = 2     # プレイヤーのツモフェーズ
-
+            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズ
 
     def check_pon(self, player_id, tile):
         """
@@ -118,7 +116,7 @@ class Game:
             self.target_tile = None
             return False
 
-    def process_pon(self, player_id):
+    def process_pon(self, player_id,state):
         """
         ポン処理を実行する。
         """
@@ -143,7 +141,7 @@ class Game:
         self.can_pon = False
         self.target_tile = None
         # プレイヤーの捨てるフェーズに移行
-        self.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーターン（捨てるフェーズ）
+        state.transition_to(PLAYER_DISCARD_PHASE)  # プレイヤーターン（捨てるフェーズ）
 
     def check_chi(self, player_id, discard_tile):
         """
@@ -205,7 +203,7 @@ class Game:
         print(f"最終的なチー候補: {chi_candidates}")
         return chi_candidates
 
-    def process_chi(self, player_id, chosen_sequence):
+    def process_chi(self, player_id, chosen_sequence,state):
         """
         チー処理を実行する。
         """
@@ -242,7 +240,7 @@ class Game:
         self.target_tile = None  # ターゲット牌をリセット
 
         # プレイヤーの捨てるフェーズに移行	
-        self.current_turn = PLAYER_DISCARD_PHASE # プレイヤーターン（捨てるフェーズ）
+        state.transition_to(PLAYER_DISCARD_PHASE) # プレイヤーターン（捨てるフェーズ）
 
 
     def check_kan(self, player_id, tile=None):
@@ -279,7 +277,7 @@ class Game:
         print(f"カン候補: {kan_candidates}")
         return kan_candidates
     
-    def process_kan(self, player_id, tile, kan_type):
+    def process_kan(self, player_id, tile, state, kan_type):
         """
         カンの処理を実行する。
         player_id: プレイヤーID

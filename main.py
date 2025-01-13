@@ -44,9 +44,9 @@ def main_loop():
             break
 
         # ターン進行処理
-        if state.game.current_turn == AI_TURN_PHASE:  # AIのターン
+        if state.current_phase == AI_TURN_PHASE:  # AIのターン
             handle_ai_turn(state, current_time)
-        elif state.game.current_turn == PLAYER_DRAW_PHASE:  # ツモフェーズ
+        elif state.current_phase == PLAYER_DRAW_PHASE:  # ツモフェーズ
             handle_draw_phase(state, current_time)
 
         # 描画
