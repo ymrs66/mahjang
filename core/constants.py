@@ -26,3 +26,12 @@ AI_ACTION_DELAY = 1000  # AI のアクション待機時間（ミリ秒）
 # ポン表示のオフセット
 PON_OFFSET_X = 100  # 右方向へのオフセット
 PON_OFFSET_Y = 450  # 基準となるY座標
+
+# フェーズ 
+PLAYER_DISCARD_PHASE = 0  # プレイヤーの捨てるフェーズ
+AI_TURN_PHASE = 1         # AIのターン
+PLAYER_DRAW_PHASE = 2     # プレイヤーのツモフェーズ
+CHI_WAIT_PHASE = 3        # チー待機フェーズ
+PON_WAIT_PHASE = 4        # ポン待機フェーズ
+KAN_WAIT_PHASE = 5        # カン待機フェーズ
+ACTION_SELECTION_PHASE = 6  # アクション選択フェーズ

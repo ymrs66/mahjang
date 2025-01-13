@@ -1,6 +1,6 @@
 import pygame
 from events.events import handle_player_input
-from core.constants import AI_ACTION_DELAY
+from core.constants import *  # 全ての定義をインポート
 from drawing.ui_drawing import draw_pon_button, draw_chi_button,draw_kan_button
 
 def handle_events(state, current_time, screen):
@@ -12,29 +12,29 @@ def handle_events(state, current_time, screen):
             return False
 
         # プレイヤーのチー待機フェーズ中
-        if state.game.current_turn == 3:  # 3をチー待機状態として使用
+        if state.game.current_turn == CHI_WAIT_PHASE:  # 3をチー待機状態として使用
             handle_chi_phase(event, state, screen)
             return True  # 他の処理をスキップして次のフレームへ
 
         # プレイヤーのポン待機フェーズ中
-        if state.game.current_turn == 4:  # 4をポン待機状態として使用
+        if state.game.current_turn == PON_WAIT_PHASE:  # 4をポン待機状態として使用
             handle_pon_phase(event, state, screen)
             return True  # 他の処理をスキップして次のフレームへ
 
-        if state.game.current_turn == 5:  # カン待機フェーズ
+        if state.game.current_turn == KAN_WAIT_PHASE:  # カン待機フェーズ
             handle_kan_phase(event, state, screen)
             return True  # 他の処理をスキップして次のフレームへ
 
         # プレイヤーの通常ターン
-        if state.game.current_turn == 0:
+        if state.game.current_turn == PLAYER_DISCARD_PHASE:
             state.tsumo_tile, state.selected_tile = handle_player_input(
                 event, state.game, state.tsumo_tile, state.selected_tile, current_time
             )
-            if state.game.current_turn == 1:  # AIのターンに移行
+            if state.game.current_turn == AI_TURN_PHASE:  # AIのターンに移行
                 state.ai_action_time = current_time + AI_ACTION_DELAY
 
         # チーの候補がある場合にボタンを表示
-        if state.game.current_turn == 1 and state.game.can_chi:
+        if state.game.current_turn == AI_TURN_PHASE and state.game.can_chi:
             if state.game.chi_candidates:
                 print(f"チーボタンを表示: {state.game.chi_candidates}")
                 state.chi_button_rect = draw_chi_button(screen, True)  # チーボタンの描画関数
@@ -42,7 +42,7 @@ def handle_events(state, current_time, screen):
                 print("チー候補がありません。ボタンを表示しません。")
 
         # ポンの候補がある場合にボタンを表示
-        if state.game.current_turn == 1 and state.game.can_pon:
+        if state.game.current_turn == AI_TURN_PHASE and state.game.can_pon:
             if state.game.pon_candidates:
                 print(f"ポンボタンを表示: {state.game.pon_candidates}")
                 state.pon_button_rect = draw_pon_button(screen, True)  # ポンボタンの描画関数
@@ -66,14 +66,14 @@ def handle_pon_phase(event, state, screen):
             state.game.can_pon = False
 
             # ポン後にプレイヤーが捨てるフェーズへ移行
-            state.game.current_turn = 0  # プレイヤーのターン
+            state.game.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーのターン
             state.pon_button_rect = None
 
         # ポンをスキップする場合（スペースキー）
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             print("ポンをスキップしました")
             state.game.can_pon = False
-            state.game.current_turn = 2  # ツモフェーズに移行
+            state.game.current_turn = PLAYER_DRAW_PHASE  # ツモフェーズに移行
             state.pon_button_rect = None
         state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
@@ -101,14 +101,14 @@ def handle_chi_phase(event, state, screen):
             state.game.process_chi(0, chosen_sequence)  # チーの処理を実行
             state.game.can_chi = False
             state.chi_button_rect = None
-            state.game.current_turn = 0  # プレイヤーターンに移行
+            state.game.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーターンに移行
             return  # チー待機フェーズ終了
 
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             print("チーをスキップしました")
             state.game.can_chi = False
             state.chi_button_rect = None
-            state.game.current_turn = 2  # ツモフェーズに移行
+            state.game.current_turn = PLAYER_DRAW_PHASE  # ツモフェーズに移行
         state.draw_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
 def is_chi_button_clicked(mouse_pos, chi_button_rect):
@@ -134,7 +134,7 @@ def handle_kan_phase(event, state, screen):
                 state.game.process_kan(0, kan_candidates[0], '暗槓')
             state.game.can_kan = False
             state.kan_button_rect = None
-            state.game.current_turn = 0  # プレイヤーのターンに戻る
+            state.game.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーのターンに戻る
             return
 
         # スペースキーでカンをスキップする場合
@@ -142,5 +142,5 @@ def handle_kan_phase(event, state, screen):
             print("カンをスキップしました")
             state.game.can_kan = False
             state.kan_button_rect = None
-            state.game.current_turn = 2  # ツモフェーズに移行
+            state.game.current_turn = PLAYER_DRAW_PHASE  # ツモフェーズに移行
             return

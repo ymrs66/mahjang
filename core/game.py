@@ -3,7 +3,7 @@ import random
 from core.tile import Tile
 from core.hand import Hand
 from ai.ai_player import AIPlayer
-from core.constants import SUITS, HONORS, TILE_IMAGE_PATH
+from core.constants import *
 
 class Game:
     def __init__(self):
@@ -87,7 +87,7 @@ class Game:
                 self.target_tile = None
 
             # ターンをAIに移行
-            self.current_turn = 1  # AIのターン
+            self.current_turn = AI_TURN_PHASE  # AIのターン
 
         else:  # AIの場合
             discarded_tile = self.players[1].discard_tile()
@@ -98,7 +98,7 @@ class Game:
                 print("エラー: AIが捨て牌を選択できませんでした！")
 
             # ターンをプレイヤーのツモフェーズに移行
-            self.current_turn = 2  # プレイヤーのツモフェーズ
+            self.current_turn = PLAYER_DRAW_PHASE = 2     # プレイヤーのツモフェーズ
 
 
     def check_pon(self, player_id, tile):
@@ -143,7 +143,7 @@ class Game:
         self.can_pon = False
         self.target_tile = None
         # プレイヤーの捨てるフェーズに移行
-        self.current_turn = 0  # プレイヤーターン（捨てるフェーズ）
+        self.current_turn = PLAYER_DISCARD_PHASE  # プレイヤーターン（捨てるフェーズ）
 
     def check_chi(self, player_id, discard_tile):
         """
@@ -242,7 +242,7 @@ class Game:
         self.target_tile = None  # ターゲット牌をリセット
 
         # プレイヤーの捨てるフェーズに移行	
-        self.current_turn = 0 # プレイヤーターン（捨てるフェーズ）
+        self.current_turn = PLAYER_DISCARD_PHASE # プレイヤーターン（捨てるフェーズ）
 
 
     def check_kan(self, player_id, tile=None):

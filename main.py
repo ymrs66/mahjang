@@ -2,6 +2,7 @@
 import pygame
 from core.game import Game
 from core.game_state import GameState
+from core.constants import AI_TURN_PHASE,PLAYER_DRAW_PHASE
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
 from core.game_logic import handle_ai_turn,handle_draw_phase # ゲームロジックを外部モジュールに分離
 # 描画関連
@@ -43,9 +44,9 @@ def main_loop():
             break
 
         # ターン進行処理
-        if state.game.current_turn == 1:  # AIのターン
+        if state.game.current_turn == AI_TURN_PHASE:  # AIのターン
             handle_ai_turn(state, current_time)
-        elif state.game.current_turn == 2:  # ツモフェーズ
+        elif state.game.current_turn == PLAYER_DRAW_PHASE:  # ツモフェーズ
             handle_draw_phase(state, current_time)
 
         # 描画
