@@ -106,7 +106,7 @@ class Game:
         if tile is None or player_id != 0:  # 現在はプレイヤーのみ実装
             return False
         hand = self.players[player_id].tiles
-        count = sum(1 for t in hand if t.suit == tile.suit and t.value == tile.value)
+        count = sum(1 for t in hand if t.is_same_tile(tile))  # is_same_tile を使用
         if count >= 2:
             self.can_pon = True
             self.target_tile = tile
@@ -116,32 +116,37 @@ class Game:
             self.target_tile = None
             return False
 
-    def process_pon(self, player_id,state):
+    def process_pon(self, player_id, state):
         """
         ポン処理を実行する。
         """
         if not self.can_pon or self.target_tile is None:
             return
 
-        # 手牌から2枚、捨て牌から1枚を取得
+        # 手牌からポン対象の2枚を取得
         player_hand = self.players[player_id].tiles
-        pon_tiles = [t for t in player_hand if t.suit == self.target_tile.suit and t.value == self.target_tile.value][:2]
+        pon_tiles = [t for t in player_hand if t.is_same_tile(self.target_tile)][:2]
+
         if len(pon_tiles) < 2:
             print("ポン対象の牌が手牌に不足しています")
             return
 
-        # 手牌と捨て牌を更新
+        # 手牌からポン対象の2枚を削除
         for tile in pon_tiles:
             self.players[player_id].tiles.remove(tile)
-        if self.target_tile in self.discards[1]:
-            self.discards[1].remove(self.target_tile)
+
+        # 捨て牌から対象牌を削除
+        self.discards[1] = [t for t in self.discards[1] if not t.is_same_tile(self.target_tile)]
+
+        # ポンした牌を記録
         self.players[player_id].pons.append(pon_tiles + [self.target_tile])
 
         print(f"ポン成功: {pon_tiles + [self.target_tile]}")
         self.can_pon = False
         self.target_tile = None
+
         # プレイヤーの捨てるフェーズに移行
-        state.transition_to(PLAYER_DISCARD_PHASE)  # プレイヤーターン（捨てるフェーズ）
+        state.transition_to(PLAYER_DISCARD_PHASE)
 
     def check_chi(self, player_id, discard_tile):
         """
@@ -255,7 +260,7 @@ class Game:
 
         def count_tile_in_hand(target_tile):
             """手牌内で指定された牌の数を数える"""
-            return sum(1 for t in hand if t.suit == target_tile.suit and t.value == target_tile.value)
+            return sum(1 for t in hand if t.is_same_tile(target_tile))  # is_same_tile を使用
 
         # 暗槓のチェック
         if tile is None:
@@ -270,8 +275,7 @@ class Game:
         # 加槓のチェック
         for pon_set in pons:
             # pon_set が有効か確認し、tile との一致をチェック
-            if pon_set and len(pon_set) == 3 and tile and pon_set[0].suit\
-                == tile.suit and pon_set[0].value == tile.value:
+            if pon_set and len(pon_set) == 3 and tile and pon_set[0].is_same_tile(tile):  # is_same_tile を使用
                 kan_candidates.append(tile)
 
         print(f"カン候補: {kan_candidates}")
@@ -286,24 +290,24 @@ class Game:
         """
         if kan_type == '暗槓':
             # 手牌から4枚を削除し、カンリストに追加
-            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not (t.suit == tile.suit and t.value == tile.value)]
+            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not t.is_same_tile(tile)]
             self.players[player_id].kans.append([tile] * 4)
             print(f"暗槓成功: {tile}")
 
         elif kan_type == '明槓':
             # 手牌から3枚を削除し、捨て牌を合わせてカンリストに追加
-            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not (t.suit == tile.suit and t.value == tile.value)]
+            self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not t.is_same_tile(tile)]
             self.players[player_id].kans.append([tile] * 4)
-            self.discards[1].remove(tile)
+            self.discards[1] = [d for d in self.discards[1] if not d.is_same_tile(tile)]
             print(f"明槓成功: {tile}")
 
         elif kan_type == '加槓':
             # ポンした牌に1枚を追加し、カンリストに移動
             for pon_set in self.players[player_id].pons:
-                if pon_set[0].suit == tile.suit and pon_set[0].value == tile.value:
+                if pon_set[0].is_same_tile(tile):
                     self.players[player_id].pons.remove(pon_set)
                     self.players[player_id].kans.append(pon_set + [tile])
-                    self.players[player_id].tiles.remove(tile)
+                    self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not t.is_same_tile(tile)]
                     break
             print(f"加槓成功: {tile}")
 

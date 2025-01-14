@@ -24,6 +24,15 @@ class Tile:
             return self.suit == other.suit and self.value == other.value and id(self) == id(other)
         return False
 
+    def is_same_tile(self, other):
+        """
+        suit と value が同じであれば True を返す比較メソッド。
+        カンの判定などに利用する。
+        """
+        if isinstance(other, Tile):
+            return self.suit == other.suit and self.value == other.value
+        return False
+
     def __repr__(self):
         """
         オブジェクトの文字列表現を返す (デバッグ用)。
