@@ -69,6 +69,19 @@ class Game:
         print(f"初期配布完了: プレイヤー: {len(self.players[0].tiles)}枚,\
             AI: {len(self.players[1].hand.tiles)}枚")
 
+    def get_available_actions(self, player_id, discard_tile):
+        """
+        プレイヤーが選択可能なアクションをリストで返す。
+        """
+        actions = []
+        if self.check_pon(player_id, discard_tile):
+            actions.append("ポン")
+        if self.check_chi(player_id, discard_tile):
+            actions.append("チー")
+        if self.check_kan(player_id, discard_tile):
+            actions.append("カン")
+        return actions
+
     def discard_tile(self, tile, player_id):
         if player_id == 0:  # プレイヤーの場合
             if tile == self.tsumo_tile:
@@ -302,14 +315,14 @@ class Game:
             print(f"明槓成功: {tile}")
 
         elif kan_type == '加槓':
-            # ポンした牌に1枚を追加し、カンリストに移動
+        # ポンから対象のセットを探してカンに移動
             for pon_set in self.players[player_id].pons:
-                if pon_set[0].is_same_tile(tile):
+                if self.is_same_tile(pon_set[0], tile):
                     self.players[player_id].pons.remove(pon_set)
                     self.players[player_id].kans.append(pon_set + [tile])
-                    self.players[player_id].tiles = [t for t in self.players[player_id].tiles if not t.is_same_tile(tile)]
+                    self.players[player_id].tiles.remove(tile)  # 手牌から1枚削除
+                    print(f"加槓成功: {pon_set + [tile]}")
                     break
-            print(f"加槓成功: {tile}")
 
         # **嶺上牌のツモ処理を追加**
         new_tile = self.wall.pop() if self.wall else None
@@ -318,3 +331,30 @@ class Game:
             print(f"嶺上牌をツモ: {new_tile}")
         else:
             print("山牌がありません！ゲーム終了です。")
+
+    def determine_kan_type(self, player_id, tile):
+        """
+        どの種類のカンが可能かを判定する。
+        :param player_id: プレイヤーID
+        :param tile: カン対象の牌
+        :return: "暗槓", "明槓", "加槓" のいずれか
+        """
+        player_hand = self.players[player_id].tiles
+        player_pons = self.players[player_id].pons
+
+        # 暗槓（手牌に4枚揃っている）
+        if player_hand.count(tile) == 4:
+            return "暗槓"
+
+        # 明槓（捨て牌を含めて4枚になる）
+        if self.target_tile and self.target_tile.is_same_tile(tile):
+            discard_count = sum(1 for d in self.discards[1] if d.is_same_tile(tile))  # AIの捨て牌からカウント
+            if discard_count == 1 and player_hand.count(tile) == 3:
+                return "明槓"
+
+        # 加槓（ポン済みの牌と同じ牌が1枚手牌にある）
+        for pon_set in player_pons:
+            if pon_set and len(pon_set) == 3 and pon_set[0].is_same_tile(tile) and player_hand.count(tile) == 1:
+                return "加槓"
+
+        return None  # カン不可

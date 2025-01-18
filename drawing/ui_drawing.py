@@ -56,3 +56,23 @@ def draw_kan_button(screen, visible, index=0, kan_candidate=None):
             screen.blit(text, (button_rect.x + 5, button_rect.y + 10))
         return button_rect
     return None
+
+def draw_action_buttons(screen, actions):
+    """
+    アクションボタンを複数描画し、その矩形をリストで返す。
+    actions: {"ポン": rect, "チー": rect, "カン": rect} の形式
+    """
+    button_rects = {}
+    x, y = 800, 500  # 初期位置
+
+    for action in actions:
+        button_rect = pygame.Rect(x, y, 100, 50)
+        pygame.draw.rect(screen, (200, 200, 200), button_rect)
+        font_path = get_resource_path(DEFAULT_FONT_PATH)
+        if font_path:
+            font = pygame.font.Font(font_path, 24)
+            text = font.render(action, True, (0, 0, 0))
+            screen.blit(text, (button_rect.x + 10, button_rect.y + 10))
+        button_rects[action] = button_rect
+        y += 60  # ボタンを縦に並べる
+    return button_rects

@@ -15,6 +15,8 @@ class GameState:
         self.kan_button_rect = None  # カンボタンの位置とサイズ
         self.phase_history = []  # 遷移履歴を保持（デバッグ用）
         self.current_phase = PLAYER_DRAW_PHASE  # 初期フェーズを直接設定
+        self.action_buttons = {}  # アクションボタンの矩形情報を保持
+        self.available_actions = []  # 利用可能なアクションのリスト
 
     def initialize(self, game):
         """
