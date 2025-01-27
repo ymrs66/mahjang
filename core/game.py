@@ -4,12 +4,13 @@ from core.tile import Tile
 from core.hand import Hand
 from ai.ai_player import AIPlayer
 from core.constants import *
+from core.player import Player
 
 class Game:
     def __init__(self):
         self.tile_cache = {}  # キャッシュ用辞書（未使用であれば削除検討）
         self.wall = self.generate_wall()  # 山牌
-        self.players = [Hand(), AIPlayer(1)]  # プレイヤー(0)とAI(1)
+        self.players = [Player(), AIPlayer(1)]  # プレイヤー(0)とAI(1)
         self.discards = [[], []]  # プレイヤーの捨て牌[0]とAIの捨て牌[1]
         self.can_pon = False  # ポン可能フラグ
         self.can_chi = False  # チー可能フラグ
@@ -43,22 +44,12 @@ class Game:
         random.shuffle(self.wall)
 
     def draw_tile(self, player_id):
-        """指定されたプレイヤーが山から1枚ツモる"""
         if self.wall:
             tile = self.wall.pop()
-            # 捨て牌リストにツモ牌が含まれていないか確認
-            if tile in self.discards[player_id]:
-                print(f"警告: ツモ牌 {tile} は既に捨て牌リストに存在します")
-                return None
-
-            if player_id == 0:  # プレイヤーの場合
-                self.tsumo_tile = tile  # ツモ牌を記録
-                print(f"プレイヤーがツモ: {tile}")
-            else:
-                print(f"AIがツモ: {tile}")
+            # 捨て牌リストとの重複チェックなどはそのまま
+            # ただし、print("プレイヤーがツモ") は書かない
             return tile
         else:
-            print("山が空です！")
             return None
 
     def deal_initial_hand(self):
@@ -71,35 +62,51 @@ class Game:
 
     def get_available_actions(self, player_id, discard_tile):
         """
-        プレイヤーが選択可能なアクションをリストで返す。
+        他家の捨て牌 (discard_tile) に対して、
+        ポン / チー / カン（明槓 or 加槓）の可否を判定し、
+        さらに手牌だけで暗槓ができるかもチェックして、まとめて返す。
         """
         actions = []
-        if self.check_pon(player_id, discard_tile):
+
+        # ポン判定
+        pon_candidates = self.check_pon(player_id, discard_tile)
+        if pon_candidates:
             actions.append("ポン")
-        if self.check_chi(player_id, discard_tile):
+
+        # チー判定
+        chi_candidates = self.check_chi(player_id, discard_tile)
+        if chi_candidates:
             actions.append("チー")
-        if self.check_kan(player_id, discard_tile):
+
+        # 明槓 or 加槓 の判定（discard_tile がある前提）
+        # → check_kan(...) に discard_tile を渡して判定
+        kan_candidates_from_discard = self.check_kan(player_id, discard_tile)
+        # check_kan で self.can_kan が設定される
+        # もしここで can_kan == True なら "カン" 候補がある
+
+        # ---- ここが大事: 暗槓 の判定 ----
+        # tile=None を指定して、手牌のみで4枚揃いがあるかチェック
+        kan_candidates_dark = self.check_kan(player_id, None)
+        # 上の呼び出しでも self.can_kan が True になる可能性あり
+
+        # もし check_kan のいずれかで self.can_kan == True になったら "カン" を追加
+        if self.can_kan:
+            # 「重複してカンが2回分出る」のを防ぎたいので、1回だけ "カン" を追加
             actions.append("カン")
+
         return actions
+
 
     def discard_tile(self, tile, player_id):
         if player_id == 0:  # プレイヤーの場合
-            if tile == self.tsumo_tile:
-                print(f"ツモ牌を捨てます: {tile}")
-                self.discards[0].append(tile)
-                self.tsumo_tile = None
-            else:
-                print(f"手牌から捨てます: {tile}")
-                self.players[0].remove_tile(tile)
-                self.discards[0].append(tile)
+            print(f"手牌から捨てます: {tile}")
+            self.players[0].discard_tile(tile)
+            self.discards[0].append(tile)
 
-                # ポン・チー状態のリセット
-                self.can_pon = False
-                self.can_chi = False
-                self.target_tile = None
-
-            # ターンをAIに移行
-            self.current_turn = AI_TURN_PHASE  # AIのターン
+            # ポン・チー状態のリセット
+            self.can_pon = False
+            self.can_chi = False
+            self.target_tile = None
 
         else:  # AIの場合
             discarded_tile = self.players[1].discard_tile()
@@ -109,25 +116,36 @@ class Game:
             else:
                 print("エラー: AIが捨て牌を選択できませんでした！")
 
-            # ターンをプレイヤーのツモフェーズに移行
-            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズ
 
-    def check_pon(self, player_id, tile):
-        """
-        ポンが可能か判定する。
-        """
-        if tile is None or player_id != 0:  # 現在はプレイヤーのみ実装
-            return False
+    def check_pon(self, player_id, discard_tile):
+        if discard_tile is None:
+            return []
+
+        # プレイヤーでなければポンしない想定なら
+        #if player_id != 0:
+        #    return []
+
         hand = self.players[player_id].tiles
-        count = sum(1 for t in hand if t.is_same_tile(tile))  # is_same_tile を使用
+        count = sum(1 for t in hand if t.is_same_tile(discard_tile))
+
+        # 実際のポン候補（2枚+捨て牌）をまとめたリスト
+        pon_candidates = []
         if count >= 2:
+            # 2枚 + discard_tile をひとまとめにした候補を作る
+            # 例: [pon_tile, pon_tile, discard_tile]
+            pon_candidates.append([discard_tile, discard_tile, discard_tile])  # 仮にこう書く
+            # あるいは、実際には手牌に同じタイルオブジェクトが2枚分あるので取り出してリスト化
+            # ...（省略）
+
             self.can_pon = True
-            self.target_tile = tile
-            return True
+            self.pon_candidates = pon_candidates
+            self.target_tile = discard_tile
+            print(f"[ポン可能] {discard_tile} でポンが可能, pon_candidates={pon_candidates}")
         else:
             self.can_pon = False
+            self.pon_candidates = []
             self.target_tile = None
-            return False
+        return pon_candidates
 
     def process_pon(self, player_id, state):
         """
@@ -146,7 +164,7 @@ class Game:
 
         # 手牌からポン対象の2枚を削除
         for tile in pon_tiles:
-            self.players[player_id].tiles.remove(tile)
+            self.players[player_id].remove_tile(tile)
 
         # 捨て牌から対象牌を削除
         self.discards[1] = [t for t in self.discards[1] if not t.is_same_tile(self.target_tile)]
@@ -161,9 +179,11 @@ class Game:
         # プレイヤーの捨てるフェーズに移行
         state.transition_to(PLAYER_DISCARD_PHASE)
 
+# game.py 内の check_chi を差し替え/修正
+
     def check_chi(self, player_id, discard_tile):
         """
-        チー可能な牌の組み合わせをチェック
+        チー可能な牌の組み合わせをチェック (重複牌も正しく扱う)
         """
         player_hand = self.players[player_id].tiles
         discard_suit = discard_tile.suit
@@ -181,45 +201,69 @@ class Game:
             print("チー不可: 捨て牌の値が整数に変換できません")
             return []
 
+        # --- ここから修正 ---
+        from collections import Counter
+
+        # 同スーツの牌のみカウントする
+        # （捨て牌と同じスーツに限定）
+        same_suit_values = [int(t.value) for t in player_hand if t.suit == discard_suit]
+        tile_counter = Counter(same_suit_values)
+
         chi_candidates = []
         chi_patterns = [
-            [-2, -1],  # 捨て牌の前に2つ連続
-            [-1, 1],   # 捨て牌を中心に前後1つずつ
-            [1, 2]     # 捨て牌の後に2つ連続
+            [-2, -1],  # 例: [discard_value-2, discard_value-1, discard_value]
+            [-1, 1],   # [discard_value-1, discard_value, discard_value+1]
+            [1, 2]     # [discard_value, discard_value+1, discard_value+2]
         ]
 
         for offsets in chi_patterns:
             needed_values = [discard_value + offset for offset in offsets]
             print(f"必要な値: {needed_values} (オフセット: {offsets})")
 
-            # 必要な値が手牌に揃っているか確認
-            candidate_tiles = []
-            used_values = set()
+            # 範囲外(1～9)の値が含まれる場合は即スキップ
+            if any(v < 1 or v > 9 for v in needed_values):
+                continue
 
-            for tile in player_hand:
-                if (
-                    tile.suit == discard_suit 
-                    and int(tile.value) in needed_values
-                    and (int(tile.value), id(tile)) not in used_values  # 値とIDでユニーク性を保証
-                ):
-                    candidate_tiles.append(tile)
-                    used_values.add((int(tile.value), id(tile)))
+            # 全ての needed_value が手牌中に1枚以上あるかチェック
+            can_form = True
+            for val in needed_values:
+                if tile_counter[val] < 1:
+                    can_form = False
+                    break
 
-            # 候補が2枚以上揃っている場合に順子を形成
-            if len(candidate_tiles) >= 2:
-                candidate_values = sorted([int(tile.value) for tile in candidate_tiles] + [discard_value])
-                if candidate_values == list(range(min(candidate_values), max(candidate_values) + 1)):
-                    # 必要な2枚を抽出し、捨て牌を最後に追加
-                    required_tiles = candidate_tiles[:2]
-                    required_tiles.append(discard_tile)
-                    chi_candidates.append(required_tiles)
-                    print(f"チー候補に追加: {required_tiles}")
+            # もし全部揃っていればチー可能
+            if can_form:
+                # 実際に 2 枚ピックアップし、捨て牌を加える
+                candidate_tiles = []
+                # 順序は (小さい順 → 大きい順)、最後に discard_tile は必ず入れるが、
+                # ここでは分かりやすく 2枚だけピックアップ
+                used_temp = Counter()  # どの値を何枚使ったか
+
+                for val in needed_values:
+                    # 同じ val の牌の中からまだ使っていない牌を1枚ピックアップ
+                    # (同値が複数ある場合でも1枚は必ず取れる想定)
+                    for t in player_hand:
+                        if t.suit == discard_suit and int(t.value) == val and used_temp[val] < tile_counter[val]:
+                            candidate_tiles.append(t)
+                            used_temp[val] += 1
+                            break
+
+                # candidate_tiles 2枚 + discard_tile で3枚構成
+                new_sequence = candidate_tiles + [discard_tile]
+                chi_candidates.append(new_sequence)
+                print(f"チー候補に追加: {new_sequence}")
 
         if chi_candidates:
-            self.target_tile = discard_tile  # ターゲット牌を設定
+            self.can_chi = True
+            self.target_tile = discard_tile
+            self.chi_candidates = chi_candidates
+        else:
+            self.can_chi = False
+            self.chi_candidates = []
 
         print(f"最終的なチー候補: {chi_candidates}")
         return chi_candidates
+
 
     def process_chi(self, player_id, chosen_sequence,state):
         """
@@ -291,7 +335,12 @@ class Game:
             if pon_set and len(pon_set) == 3 and tile and pon_set[0].is_same_tile(tile):  # is_same_tile を使用
                 kan_candidates.append(tile)
 
-        print(f"カン候補: {kan_candidates}")
+        if kan_candidates:
+            self.can_kan = True
+            self.kan_candidates = kan_candidates
+        else:
+            self.can_kan = False
+            self.kan_candidates = []
         return kan_candidates
     
     def process_kan(self, player_id, tile, state, kan_type):

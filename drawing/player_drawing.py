@@ -2,31 +2,16 @@
 import pygame
 from core.constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN,SCREEN_WIDTH,SCREEN_HEIGHT
 
-def draw_tiles(screen, hand, tsumo_tile, selected_tile):
-    """
-    プレイヤーの手牌とツモ牌を描画。
-    """
-    for i, tile in enumerate(hand.tiles):
-        x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
-        y = 500
-        screen.blit(tile.image, (x, y))
-        if tile == selected_tile:
-            pygame.draw.rect(screen, (255, 0, 0), (x, y, TILE_WIDTH, TILE_HEIGHT), 3)
-
-    if tsumo_tile:
-        x = TILE_WIDTH + len(hand.tiles) * (TILE_WIDTH + TILE_MARGIN) + 20
-        y = 500
-        screen.blit(tsumo_tile.image, (x, y))
-        if tsumo_tile == selected_tile:
-            pygame.draw.rect(screen, (255, 0, 0), (x, y, TILE_WIDTH, TILE_HEIGHT), 3)
-
 def draw_player_state(screen, player, selected_tile):
     """
     プレイヤーの手牌・ポン・チーの状態を描画する
     """
-    # 手牌を描画
+    # --- 手牌(13 or 14枚)を描画 ---
     for i, tile in enumerate(player.tiles):
-        x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
+        if i < 13:
+            x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
+        else:
+            x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN) + 20
         y = 500
         screen.blit(tile.image, (x, y))
         # 選択された手牌に赤枠を描画

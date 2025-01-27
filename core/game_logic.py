@@ -1,126 +1,215 @@
 ##game_logic.py
 from core.constants import *
 
-
-def handle_draw_phase(state, current_time):
-    if current_time >= state.draw_action_time:
-        # ツモ牌を取得するが、手牌にはまだ追加しない
-        state.tsumo_tile = state.game.draw_tile(0)
-        print(f"ツモフェーズ: ツモ牌 = {state.tsumo_tile}")
-        
-        # ツモフェーズからプレイヤーの操作フェーズへ移行
-        state.transition_to(PLAYER_DISCARD_PHASE)  # プレイヤーのターン
-
-        # 暗槓のチェック
-        kan_candidates = state.game.check_kan(0)  # プレイヤーID 0
-        if kan_candidates:
-            print(f"暗槓候補: {kan_candidates}")
-            state.game.can_kan = True
-            state.game.kan_candidates = kan_candidates
-            state.transition_to(KAN_WAIT_PHASE)  # カン選択待機フェーズに移行
+def handle_player_draw_phase(state, current_time):
+    # もしcurrent_time < state.ai_action_timeであれば、まだ待ち時間中とみなしてreturn
+    if current_time < state.ai_action_time:
+        return
+    # まだツモっていないならツモする
+    if True:
+        tile = state.game.draw_tile(0)
+        if tile:
+            print(f"プレイヤーがツモ: {tile}")  # <- ここでまとめて出力
+            state.game.players[0].add_tile(tile)
+        else:
+            print("山が空です。ゲーム終了")
+            state.transition_to(GAME_END_PHASE)
             return
+    # ツモ完了したら捨てるフェーズへ
+    state.transition_to(PLAYER_DISCARD_PHASE)
 
-        # 加槓のチェック（すでにポンしている牌との組み合わせ）
-        for pon_set in state.game.players[0].pons:
-            if len(pon_set) == 3 and state.tsumo_tile.suit == pon_set[0].suit and state.tsumo_tile.value == pon_set[0].value:
-                print(f"加槓候補: {state.tsumo_tile}")
-                state.game.can_kan = True
-                state.game.kan_candidates = [state.tsumo_tile]
-                state.transition_to(KAN_WAIT_PHASE)  # カン選択待機フェーズに移行
-                return
+def handle_player_discard_phase(state, current_time):
+    print("[プレイヤー捨て牌フェーズ]")
 
-        # 通常のターンに移行
-        state.transition_to(PLAYER_DISCARD_PHASE)
-
-def handle_ai_turn(state, current_time):
-    """
-    AIの動作を管理するターン。
-    :param state: ゲームの状態
-    :param current_time: 現在の時間
-    """
-    # プレイヤーのチーまたはポン待機中はAIの動作を停止
-    if state.current_phase in [CHI_WAIT_PHASE, PON_WAIT_PHASE, KAN_WAIT_PHASE]: # 3: チー待機, 4: ポン待機, 5: カン待機
-        print("プレイヤーが待機中のためAIの動作をスキップ")
+    # フェーズに初めて来たときに waiting_for_player_discard を True にして、
+    # まだ捨てていないならリターンする方法
+    if not state.waiting_for_player_discard:
+        print("[初回] プレイヤーの捨て牌待ちを開始します...")
+        state.waiting_for_player_discard = True
         return
 
-    # 通常のAI処理
-    if current_time >= state.ai_action_time:
-        # AIがカン可能か確認
-        kan_candidates = state.game.check_kan(1)  # AIはプレイヤーID 1
-        if kan_candidates:
-            print(f"AIが暗槓を実行: {kan_candidates[0]}")
-            state.game.process_kan(1, kan_candidates[0], state,'暗槓')
-            state.ai_action_time = current_time + AI_ACTION_DELAY  # 次のAIアクションを待つ
-            return  # カン後は即座にツモを行うため処理を終了
+    # ここで waiting_for_player_discard が True なら、まだ入力中
+    if state.waiting_for_player_discard:
+        print("[待機] プレイヤーの捨て牌入力待ち...")
+        return
 
-        # 明槓の可能性を確認（プレイヤーの捨て牌を対象に）
-        if state.game.discards[0]:
-            last_discard = state.game.discards[0][-1]
-            if state.game.check_kan(1, last_discard):
-                print(f"AIが明槓を実行: {last_discard}")
-                state.game.process_kan(1, last_discard, state,'明槓')
-                state.ai_action_time = current_time + AI_ACTION_DELAY
-                return
+    # ここに来た時点で waiting_for_player_discard = False → 入力完了
 
-        # 通常の捨て牌処理
-        discard_tile = state.game.players[1].discard_tile()
-        if discard_tile:
-            state.game.discards[1].append(discard_tile)
-            print(f"AIが牌を捨てました: {discard_tile}")
+    discard_tile = state.game.discards[0][-1] if state.game.discards[0] else None
+    if discard_tile:
+        actions = state.game.get_available_actions(0, discard_tile)
+        if actions:
+            state.available_actions = actions
+            state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
+            return
 
-            # チーのチェックと処理
-            if process_chi_logic(state, discard_tile):  # チー待機状態に移行
-                state.transition_to(CHI_WAIT_PHASE)  # チー待機状態
-                return  # チー待機中はここで処理を終了
+    # アクションがなければAIへ
+    state.ai_action_time = current_time + AI_ACTION_DELAY
+    state.transition_to(AI_DRAW_PHASE)
 
-            # ポンのチェックと処理
-            if process_pon_logic(state, discard_tile):  # ポン待機状態に移行
-                state.transition_to(PON_WAIT_PHASE)  # ポン待機状態
-                return  # ポン待機中はここで処理を終了
+# game_logic.py
 
-            # チー・ポンが発生しない場合
-            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズに移行
-            state.draw_action_time = current_time + AI_ACTION_DELAY
-        else:
-            print("AIの捨て牌がありません！")
-            state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズに移行
-            state.draw_action_time = current_time + AI_ACTION_DELAY
-
-        # 次のAI行動タイミングを設定
-        state.ai_action_time = current_time + AI_ACTION_DELAY
-        
-def process_pon_logic(state, discard_tile):
+def handle_player_action_selection_phase(state, current_time):
     """
-    ポンの処理を行うロジック（選択を待機する）
+    プレイヤーのアクション選択フェーズ: ポン・チー・カンの確認
     """
-    pon_candidates = state.game.check_pon(0, discard_tile)
-    if pon_candidates:
-        print(f"ポンの選択待機中: {discard_tile}")
-        state.game.can_pon = True
-        state.game.pon_candidates = pon_candidates  # ポン候補を設定
-        state.game.target_tile = discard_tile
-        state.transition_to(PON_WAIT_PHASE)  # ポン待機状態に移行
-        return True
+    if not state.game.discards[1]:  # AIの捨て牌がない場合はスキップ
+        print("[スキップ] AIの捨て牌がないためスキップ")
+        state.transition_to(PLAYER_DRAW_PHASE)
+        return
+
+    discard_tile = state.game.discards[1][-1]
+    actions = state.game.get_available_actions(0, discard_tile)
+
+    if actions:
+        print(f"[プレイヤーの選択フェーズ] 選択可能: {actions}")
+
+        # ここで Wait Phase に飛ばすのではなく、ただ "state.available_actions" をセット
+        # → イベントループで draw_action_buttons() が呼ばれてクリックを待つ
+        state.available_actions = actions
+        # ボタンは "events.events.handle_player_input()" や "handle_action_selection()" で処理
+        print("[アクション選択ボタンを表示します]")
+        return
     else:
-        print("ポン候補がありません。")
-        state.game.can_pon = False
-        state.game.pon_candidates = []
-        return False
+        print("[プレイヤーの選択なし] 次のフェーズへ")
+        state.ai_action_time = current_time + AI_ACTION_DELAY
+        state.transition_to(AI_DRAW_PHASE)
 
-def process_chi_logic(state, discard_tile):
+def handle_ai_draw_phase(state, current_time):
     """
-    チーロジックを処理する。チー待機フェーズに移行する場合はTrueを返す。
+    AIのツモフェーズを処理する
     """
-    print("=== チーロジック開始 ===")
-    print(f"プレイヤーの手番: {state.current_phase}, 捨て牌: {discard_tile}")
+    if current_time < state.ai_action_time:
+        return  # AIの行動タイミングでなければスキップ
 
-    # プレイヤーのチー可能性を確認
-    chi_candidates = state.game.check_chi(0, discard_tile)  # プレイヤーIDは0で固定
-    if chi_candidates:
-        print(f"チー候補が見つかりました: {chi_candidates}")
-        state.game.can_chi = True
-        state.game.chi_candidates = chi_candidates
-        return True
+    print("[AIツモフェーズ] AIがツモを行います")
 
-    print("チー候補がありません。")
-    return False
+    # AIがツモを実行
+    tile = state.game.draw_tile(1)
+    if tile:
+        state.game.players[1].draw_tile(tile)
+        print(f"AIがツモ: {tile}")
+
+    # カンの可能性を確認
+    kan_candidates = state.game.check_kan(1)
+    if kan_candidates:
+        print(f"AIがカン可能: {kan_candidates}")
+        state.game.process_kan(1, kan_candidates[0], state, "暗槓")
+        state.ai_action_time = current_time + AI_ACTION_DELAY  # 次の行動まで遅延
+        return
+
+    # AIの捨てフェーズへ遷移
+    state.transition_to(AI_DISCARD_PHASE)
+
+
+def handle_ai_discard_phase(state, current_time):
+    if current_time < state.ai_action_time:
+        return
+    
+    discard_tile = state.game.players[1].discard_tile()
+    if discard_tile:
+        state.game.discards[1].append(discard_tile)
+        print(f"AIが牌を捨てました: {discard_tile}")
+
+    # ▼ 追加: プレイヤー(0)がAIの捨てた牌をポン/チー/カンできるかチェック
+    actions = state.game.get_available_actions(player_id=0, discard_tile=discard_tile)
+    if actions:
+        # もしプレイヤーにポン/チー/カンの可能性があるなら、そちらを優先
+        state.available_actions = actions
+        state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
+        return
+
+    # 次のアクションまでディレイ
+    state.ai_action_time = current_time + AI_ACTION_DELAY
+
+    # AIのアクション選択フェーズ → (本来はAIが他家の捨て牌に反応するためのロジックだが)
+    # 現状2人打ちなら省略して、すぐプレイヤーのツモでもOK
+##   state.transition_to(AI_ACTION_SELECTION_PHASE) //省略
+    state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモへ
+
+
+
+def handle_ai_action_selection_phase(state, current_time):
+    """
+    AIのアクション選択フェーズ: ポン・チー・カンの判断
+    """
+    print("[AI アクション選択開始]")
+
+    if not state.game.discards[0]:  # プレイヤーの捨て牌がない場合はスキップ
+        print("[スキップ] プレイヤーの捨て牌がないためスキップ")
+        state.transition_to(PLAYER_DRAW_PHASE)
+        return
+
+    discard_tile = state.game.discards[0][-1]
+
+    # AIがポンできるかチェック
+    if state.game.check_pon(1, discard_tile):
+        print(f"[AIポン] {discard_tile} でポン")
+        state.game.process_pon(1, state)
+        return
+
+    # AIがチーできるかチェック
+    if state.game.check_chi(1, discard_tile):
+        print(f"[AIチー] {discard_tile} でチー")
+        state.game.process_chi(1, state.game.chi_candidates[0], state)
+        return
+
+    # AIがカンできるかチェック
+    if state.game.check_kan(1, discard_tile):
+        print(f"[AIカン] {discard_tile} でカン")
+        state.game.process_kan(1, discard_tile, state, '明槓')
+        return
+
+    print("[AI アクションなし] プレイヤーのツモフェーズへ移行")
+    state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズ
+
+def handle_pon_wait_phase(state, current_time):
+    """
+    ポン待機フェーズの処理
+    """
+    print("[ポン待機フェーズ] ポンを選択中")
+    # ポンが決定された場合、処理を行う
+    if state.pon_exec_flg:
+        state.game.process_pon(0, state)
+        state.pon_exec_flg = False
+        state.transition_to(PLAYER_DISCARD_PHASE)
+    elif state.skip_flg:
+        print("ポンをスキップ")
+        state.skip_flg = False
+        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ
+
+def handle_chi_wait_phase(state, current_time):
+    """
+    チー待機フェーズの処理
+    """
+    print("[チー待機フェーズ] チーを選択中")
+    if state.chi_exec_flg:
+        print("チー実行")
+        chosen_sequence = state.game.chi_candidates[0]  # 候補が複数あるなら選択処理を入れても良い
+        state.game.process_chi(0, chosen_sequence, state)
+        state.chi_exec_flg = False
+        state.transition_to(PLAYER_DISCARD_PHASE)
+    elif state.skip_flg:
+        print("チーをスキップ")
+        state.skip_flg = False
+        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ
+
+
+def handle_kan_wait_phase(state, current_time):
+    """
+    カン待機フェーズの処理
+    """
+    print("[カン待機フェーズ] カンを選択中")
+    if state.kan_exec_flg:
+        kan_candidates = state.game.kan_candidates
+        if kan_candidates:
+            kan_tile = kan_candidates[0]
+            kan_type = state.game.determine_kan_type(0, kan_tile)
+            state.game.process_kan(0, kan_tile, state, kan_type)
+            state.kan_exec_flg = False
+            state.transition_to(PLAYER_DISCARD_PHASE)
+
+    elif state.skip_flg:
+        print("カンをスキップ")
+        state.skip_flg = False
+        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ

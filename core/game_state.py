@@ -6,7 +6,6 @@ class GameState:
     """
     def __init__(self):
         self.game = None
-        self.tsumo_tile = None
         self.selected_tile = None
         self.ai_action_time = 0
         self.draw_action_time = 0
@@ -17,6 +16,11 @@ class GameState:
         self.current_phase = PLAYER_DRAW_PHASE  # 初期フェーズを直接設定
         self.action_buttons = {}  # アクションボタンの矩形情報を保持
         self.available_actions = []  # 利用可能なアクションのリスト
+        self.waiting_for_player_discard = False  # ✅ プレイヤーの捨て牌待機状態を追加
+        self.pon_exec_flg = False
+        self.chi_exec_flg = False
+        self.kan_exec_flg = False
+        self.skip_flg = False
 
     def initialize(self, game):
         """
@@ -24,7 +28,6 @@ class GameState:
         """
         self.__init__()  # 属性をリセット
         self.game = game
-        self.tsumo_tile = game.draw_tile(0)
 
     def transition_to(self, new_phase):
         """フェーズを遷移させる"""

@@ -1,38 +1,14 @@
 ##ai_player.py
+import random
 from core.hand import Hand
+from core.player import Player
 
-class AIPlayer:
+class AIPlayer(Player):
     def __init__(self, player_id):
-        """
-        AIプレイヤーの初期化
-        :param player_id: プレイヤーID（通常は1以上）
-        """
+        super().__init__()  # Playerの __init__() で self.hand, self.pons 等が作られる
         self.id = player_id
-        self.hand = Hand()  # 手牌を管理する Hand オブジェクト
-        self.pons = []  # ポンした牌のリストを初期化
-        self.chis = []  # チーした牌のリストを初期化
-        self.kans = []  # カンした牌のリストを初期化
 
-    @property
-    def tiles(self):
-        """AIの手牌を取得するプロパティ"""
-        return self.hand.tiles
-
-
-    def add_tile(self, tile):
-        """
-        手牌に牌を追加
-        """
-        self.hand.add_tile(tile)  # Hand クラスの add_tile を利用
-
-    def draw_tile(self, tile):
-        """
-        ツモ牌を手牌に追加し、並び替え
-        :param tile: ツモった牌
-        """
-        self.add_tile(tile)
-        self.hand.sort_tiles()  # 手牌を並べ替え
-
+    # AI専用のメソッドだけ追加する
     def decide_discard(self):
         """
         捨てる牌を決定するロジック。
@@ -41,8 +17,7 @@ class AIPlayer:
         """
         if not self.hand.tiles:
             return None
-        # 暫定的に最初の牌を選択
-        discard_tile = self.hand.tiles[0]
+        discard_tile = random.choice(self.hand.tiles)
         print(f"AIが捨てる牌を決定: {discard_tile}")
         return discard_tile
 
@@ -54,5 +29,6 @@ class AIPlayer:
         discard_tile = self.decide_discard()  # 捨てる牌を選択
         if discard_tile:
             self.hand.remove_tile(discard_tile)  # 手牌から削除
+            self.hand.sort_tiles() #並べ替え
             print(f"AIの捨て牌: {discard_tile}")  # デバッグ用
         return discard_tile

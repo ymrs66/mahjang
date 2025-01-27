@@ -2,14 +2,36 @@
 import pygame
 from core.game import Game
 from core.game_state import GameState
-from core.constants import AI_TURN_PHASE,PLAYER_DRAW_PHASE
+from core.constants import (
+    PLAYER_DISCARD_PHASE,
+    PLAYER_DRAW_PHASE,
+    AI_DRAW_PHASE,
+    AI_DISCARD_PHASE,
+    CHI_WAIT_PHASE,
+    PON_WAIT_PHASE,
+    KAN_WAIT_PHASE,
+    AI_ACTION_SELECTION_PHASE,
+    PLAYER_ACTION_SELECTION_PHASE,
+    GAME_END_PHASE
+)
+
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
-from core.game_logic import handle_ai_turn,handle_draw_phase # ゲームロジックを外部モジュールに分離
+from core.game_logic import (
+    handle_ai_draw_phase,
+    handle_ai_discard_phase,
+    handle_ai_action_selection_phase,
+    handle_player_draw_phase,
+    handle_player_discard_phase,
+    handle_player_action_selection_phase,
+    handle_pon_wait_phase,
+    handle_chi_wait_phase,
+    handle_kan_wait_phase
+)
 # 描画関連
-from drawing.player_drawing import draw_tiles, draw_player_state # プレイヤーの手牌・ポン・チーを描画
+from drawing.player_drawing import draw_player_state # プレイヤーの手牌・ポン・チーを描画
 from drawing.ai_drawing import draw_ai_tiles
 from drawing.discard_drawing import draw_discards
-from drawing.ui_drawing import draw_pon_button, draw_chi_button,draw_kan_button
+from drawing.ui_drawing import draw_action_buttons
 from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 # Pygame初期設定
@@ -23,33 +45,49 @@ def main_loop():
     """
     ゲームのメインループ
     """
-    # ゲームと状態の初期化
     game = Game()
     game.shuffle_wall()
     game.deal_initial_hand()
 
     state = GameState()
-    state.initialize(game)  # `chi_button_rect` も初期化される
+    state.initialize(game)
 
     running = True
     while running:
         current_time = pygame.time.get_ticks()
 
-        # イベント処理
-        running = handle_events(state, current_time, screen)
-
-        # ゲーム終了判定
-        if state.game.is_game_over():
-            print("ゲーム終了！")
+        # 1. **イベント処理** （ここでマウスやキーボードの入力を拾う）
+        if not handle_events(state, current_time, screen):
+            running = False
             break
 
-        # ターン進行処理
-        if state.current_phase == AI_TURN_PHASE:  # AIのターン
-            handle_ai_turn(state, current_time)
-        elif state.current_phase == PLAYER_DRAW_PHASE:  # ツモフェーズ
-            handle_draw_phase(state, current_time)
+        # 2. フェーズ分岐してゲームロジックを呼ぶ
+        if state.current_phase == AI_DRAW_PHASE:  # AIのツモフェーズ
+            handle_ai_draw_phase(state, current_time)
+        elif state.current_phase == AI_DISCARD_PHASE:  # AIの捨て牌フェーズ
+            handle_ai_discard_phase(state, current_time)
+        elif state.current_phase == AI_ACTION_SELECTION_PHASE:  # AIのアクション選択フェーズ
+            handle_ai_action_selection_phase(state, current_time)
+        elif state.current_phase == PLAYER_DRAW_PHASE:  # プレイヤーのツモフェーズ
+            handle_player_draw_phase(state, current_time)
+        elif state.current_phase == PLAYER_DISCARD_PHASE:  # プレイヤーの捨て牌フェーズ
+            handle_player_discard_phase(state, current_time)
+        elif state.current_phase == PLAYER_ACTION_SELECTION_PHASE:  # プレイヤーのアクション選択フェーズ
+            handle_player_action_selection_phase(state, current_time)
+        elif state.current_phase == PON_WAIT_PHASE:  # ポン待機フェーズ
+            handle_pon_wait_phase(state, current_time)
+        elif state.current_phase == CHI_WAIT_PHASE:  # チー待機フェーズ
+            handle_chi_wait_phase(state, current_time)
+        elif state.current_phase == KAN_WAIT_PHASE:  # カン待機フェーズ
+            handle_kan_wait_phase(state, current_time)
+        elif state.current_phase == GAME_END_PHASE:  # ゲーム終了フェーズ
+            print("[ゲーム終了] ゲームが終了しました")
+            running = False
+        else:
+            print(f"[警告] 未知のフェーズ: {state.current_phase} (想定外の状態)")
+            running = False
 
-        # 描画
+        # 描画処理
         render_game(state)
 
         # フレームレート制御
@@ -63,26 +101,13 @@ def render_game(state):
     画面描画を管理する
     """
     screen.fill((0, 128, 0))  # 背景色
-    draw_tiles(screen, state.game.players[0], state.tsumo_tile, state.selected_tile)
     draw_player_state(screen, state.game.players[0], state.selected_tile)  # プレイヤーの手牌・ポン・チーを描画
     draw_ai_tiles(screen)
     draw_discards(screen, state.game.discards)
-    draw_ai_tiles(screen)
-    draw_discards(screen, state.game.discards)
-    
-    # ポンボタンが必要なら描画
-    if state.game.can_pon:
-        state.pon_button_rect = draw_pon_button(screen, True)
-    
-    # チーボタンが必要なら描画
-    if state.game.can_chi:
-        state.chi_button_rect = draw_chi_button(screen, True)
 
-    # カンボタンが必要なら描画
-    if state.game.can_kan:
-        state.kan_button_rect = draw_kan_button(screen, True)
-
-
+    if state.current_phase == PLAYER_ACTION_SELECTION_PHASE and state.available_actions:
+        # 毎フレーム、行動ボタンを描画して Rect を更新
+        state.action_buttons = draw_action_buttons(screen, state.available_actions)    
     pygame.display.flip()
     
 if __name__ == "__main__":
