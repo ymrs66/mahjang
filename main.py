@@ -14,14 +14,9 @@ from core.constants import (
     PLAYER_ACTION_SELECTION_PHASE,
     GAME_END_PHASE
 )
-
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
 from core.game_logic import (
-    handle_ai_draw_phase,
-    handle_ai_discard_phase,
     handle_ai_action_selection_phase,
-    handle_player_draw_phase,
-    handle_player_discard_phase,
     handle_player_action_selection_phase,
     handle_pon_wait_phase,
     handle_chi_wait_phase,
@@ -33,6 +28,8 @@ from drawing.ai_drawing import draw_ai_tiles
 from drawing.discard_drawing import draw_discards
 from drawing.ui_drawing import draw_action_buttons
 from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from phases.draw_phase import PlayerDrawPhase, AIDrawPhase
+from phases.discard_phase import PlayerDiscardPhase, AIDiscardPhase
 
 # Pygame初期設定
 pygame.init()
@@ -52,45 +49,46 @@ def main_loop():
     state = GameState()
     state.initialize(game)
 
+    # ① フェーズID→処理関数 のマッピングを用意
+    phase_handlers = {
+        AI_DRAW_PHASE:   lambda st, ct: AIDrawPhase(st.game, st).update(ct),
+        AI_DISCARD_PHASE: lambda st, ct: AIDiscardPhase(st.game, st).update(ct),
+        PLAYER_DRAW_PHASE: lambda st, ct: PlayerDrawPhase(st.game, st).update(ct),
+        PLAYER_DISCARD_PHASE: lambda st, ct: PlayerDiscardPhase(st.game, st).update(ct),
+        AI_ACTION_SELECTION_PHASE: handle_ai_action_selection_phase,
+        PLAYER_ACTION_SELECTION_PHASE: handle_player_action_selection_phase,
+        PON_WAIT_PHASE: handle_pon_wait_phase,
+        CHI_WAIT_PHASE: handle_chi_wait_phase,
+        KAN_WAIT_PHASE: handle_kan_wait_phase,
+    }
+
     running = True
     while running:
         current_time = pygame.time.get_ticks()
 
-        # 1. **イベント処理** （ここでマウスやキーボードの入力を拾う）
+        # 1. イベント処理
         if not handle_events(state, current_time, screen):
             running = False
             break
 
-        # 2. フェーズ分岐してゲームロジックを呼ぶ
-        if state.current_phase == AI_DRAW_PHASE:  # AIのツモフェーズ
-            handle_ai_draw_phase(state, current_time)
-        elif state.current_phase == AI_DISCARD_PHASE:  # AIの捨て牌フェーズ
-            handle_ai_discard_phase(state, current_time)
-        elif state.current_phase == AI_ACTION_SELECTION_PHASE:  # AIのアクション選択フェーズ
-            handle_ai_action_selection_phase(state, current_time)
-        elif state.current_phase == PLAYER_DRAW_PHASE:  # プレイヤーのツモフェーズ
-            handle_player_draw_phase(state, current_time)
-        elif state.current_phase == PLAYER_DISCARD_PHASE:  # プレイヤーの捨て牌フェーズ
-            handle_player_discard_phase(state, current_time)
-        elif state.current_phase == PLAYER_ACTION_SELECTION_PHASE:  # プレイヤーのアクション選択フェーズ
-            handle_player_action_selection_phase(state, current_time)
-        elif state.current_phase == PON_WAIT_PHASE:  # ポン待機フェーズ
-            handle_pon_wait_phase(state, current_time)
-        elif state.current_phase == CHI_WAIT_PHASE:  # チー待機フェーズ
-            handle_chi_wait_phase(state, current_time)
-        elif state.current_phase == KAN_WAIT_PHASE:  # カン待機フェーズ
-            handle_kan_wait_phase(state, current_time)
-        elif state.current_phase == GAME_END_PHASE:  # ゲーム終了フェーズ
+        # 2. フェーズに応じた処理を呼ぶ
+        if state.current_phase == GAME_END_PHASE:
             print("[ゲーム終了] ゲームが終了しました")
             running = False
         else:
-            print(f"[警告] 未知のフェーズ: {state.current_phase} (想定外の状態)")
-            running = False
+            # ② マッピングで関数を取り出して呼ぶ
+            handler = phase_handlers.get(state.current_phase)
+            if handler:
+                handler(state, current_time)
+            else:
+                # 未定義フェーズなら警告して終了
+                print(f"[警告] 未知のフェーズ: {state.current_phase}")
+                running = False
 
-        # 描画処理
+        # 3. 描画処理
         render_game(state)
 
-        # フレームレート制御
+        # 4. フレームレート制御
         clock.tick(30)
 
     pygame.quit()

@@ -1,0 +1,1841 @@
+pygame 2.6.1 (SDL 2.28.4, Python 3.10.6)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+初期配布完了: プレイヤー: 13枚,            AI: 13枚
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(4352-AudioDeviceAdded {'which': 0, 'iscapture': 0})>
+[デバッグ] イベント検出: <Event(4352-AudioDeviceAdded {'which': 0, 'iscapture': 0})>
+[デバッグ] イベント取得: <Event(32774-WindowShown {'window': None})>
+[デバッグ] イベント検出: <Event(32774-WindowShown {'window': None})>
+[デバッグ] イベント取得: <Event(32768-ActiveEvent {'gain': 1, 'state': 2})>
+[デバッグ] イベント検出: <Event(32768-ActiveEvent {'gain': 1, 'state': 2})>
+[デバッグ] イベント取得: <Event(32785-WindowFocusGained {'window': None})>
+[デバッグ] イベント検出: <Event(32785-WindowFocusGained {'window': None})>
+[デバッグ] イベント取得: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント検出: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント取得: <Event(32768-ActiveEvent {'gain': 1, 'state': 1})>
+[デバッグ] イベント検出: <Event(32768-ActiveEvent {'gain': 1, 'state': 1})>
+[デバッグ] イベント取得: <Event(32783-WindowEnter {'window': None})>
+[デバッグ] イベント検出: <Event(32783-WindowEnter {'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (651, 420), 'rel': (0, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (651, 420), 'rel': (0, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント検出: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント取得: <Event(32770-VideoExpose {})>
+[デバッグ] イベント検出: <Event(32770-VideoExpose {})>
+[デバッグ] イベント取得: <Event(32776-WindowExposed {'window': None})>
+[デバッグ] イベント検出: <Event(32776-WindowExposed {'window': None})>
+プレイヤーがツモ: 1m (id=2988355483152)
+フェーズ遷移: 1 -> 0
+[デバッグ] 現在のフェーズ: 0
+[初回] プレイヤーの捨て牌待ちを開始します...
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (649, 420), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (649, 420), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (619, 421), 'rel': (-30, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (619, 421), 'rel': (-30, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (510, 407), 'rel': (-109, -14), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (510, 407), 'rel': (-109, -14), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (508, 410), 'rel': (-2, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (508, 410), 'rel': (-2, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (500, 454), 'rel': (-8, 44), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (500, 454), 'rel': (-8, 44), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (453, 581), 'rel': (-47, 127), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (453, 581), 'rel': (-47, 127), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (436, 621), 'rel': (-17, 40), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (436, 621), 'rel': (-17, 40), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (436, 622), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (436, 622), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (437, 622), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (437, 622), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (467, 615), 'rel': (30, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (467, 615), 'rel': (30, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (498, 599), 'rel': (31, -16), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (498, 599), 'rel': (31, -16), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (511, 592), 'rel': (13, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (511, 592), 'rel': (13, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (513, 588), 'rel': (2, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (513, 588), 'rel': (2, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (523, 562), 'rel': (10, -26), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (523, 562), 'rel': (10, -26), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (530, 540), 'rel': (7, -22), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (530, 540), 'rel': (7, -22), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (535, 533), 'rel': (5, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (535, 533), 'rel': (5, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (538, 530), 'rel': (3, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (538, 530), 'rel': (3, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (539, 528), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (539, 528), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (542, 528), 'rel': (3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (542, 528), 'rel': (3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (543, 528), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (543, 528), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (544, 528), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (544, 528), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (549, 528), 'rel': (5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (549, 528), 'rel': (5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (551, 528), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (551, 528), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (551, 528), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (551, 528), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (551, 528)
+[選択] 手牌から選択された牌: tonz (id=2988355475952)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (551, 528), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (551, 528), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント検出: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント取得: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[デバッグ] イベント検出: <Event(770-TextEditing {'text': '', 'start': 0, 'length': 0, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[処理] 手牌から捨てます: tonz (id=2988355475952)
+手牌から捨てます: tonz (id=2988355475952)
+捨てる処理...
+チー判定開始: プレイヤー0, 捨て牌: tonz (id=2988355475952)
+チー不可: 捨て牌が数牌ではありません
+[アクション候補] []
+[フェーズ遷移] AI_DRAW_PHASE へ移行
+フェーズ遷移: 0 -> 2
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (552, 527), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (557, 526), 'rel': (5, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (585, 523), 'rel': (28, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (632, 523), 'rel': (47, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (658, 523), 'rel': (26, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (659, 523), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (660, 523), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (663, 523), 'rel': (3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (666, 521), 'rel': (3, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (668, 520), 'rel': (2, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (670, 520), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (664, 525), 'rel': (-6, 5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (648, 533), 'rel': (-16, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (641, 537), 'rel': (-7, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (637, 539), 'rel': (-4, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (634, 540), 'rel': (-3, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (629, 541), 'rel': (-5, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (625, 543), 'rel': (-4, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (621, 543), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (618, 543), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (617, 543), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 7m (id=2988355473936)
+フェーズ遷移: 2 -> 3
+[デバッグ] 現在のフェーズ: 3
+AIが捨てる牌を決定: chunz (id=2988355633840)
+AIの捨て牌: chunz (id=2988355633840)
+AIが牌を捨てました: chunz (id=2988355633840)
+チー判定開始: プレイヤー0, 捨て牌: chunz (id=2988355633840)
+チー不可: 捨て牌が数牌ではありません
+フェーズ遷移: 3 -> 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (616, 543), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (616, 543), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (614, 543), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (614, 543), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (612, 543), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (612, 543), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (609, 543), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (609, 543), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (605, 543), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (605, 543), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (604, 543), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (604, 543), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+プレイヤーがツモ: 1p (id=2988355477488)
+フェーズ遷移: 1 -> 0
+[デバッグ] 現在のフェーズ: 0
+[初回] プレイヤーの捨て牌待ちを開始します...
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (604, 543), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (604, 543), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (604, 543)
+[選択] 手牌から選択された牌: shaz (id=2988355479408)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (604, 543), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (604, 543), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[処理] 手牌から捨てます: shaz (id=2988355479408)
+手牌から捨てます: shaz (id=2988355479408)
+捨てる処理...
+チー判定開始: プレイヤー0, 捨て牌: shaz (id=2988355479408)
+チー不可: 捨て牌が数牌ではありません
+[アクション候補] []
+[フェーズ遷移] AI_DRAW_PHASE へ移行
+フェーズ遷移: 0 -> 2
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (622, 538), 'rel': (18, -5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (646, 531), 'rel': (24, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (661, 527), 'rel': (15, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (668, 526), 'rel': (7, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (670, 526), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (673, 526), 'rel': (3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (675, 526), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (677, 526), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (678, 526), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (679, 526), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (680, 526), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 5s (id=2988355475472)
+フェーズ遷移: 2 -> 3
+[デバッグ] 現在のフェーズ: 3
+AIが捨てる牌を決定: 7m (id=2988355480464)
+AIの捨て牌: 7m (id=2988355480464)
+AIが牌を捨てました: 7m (id=2988355480464)
+チー判定開始: プレイヤー0, 捨て牌: 7m (id=2988355480464)
+必要な値: [5, 6] (オフセット: [-2, -1])
+必要な値: [6, 8] (オフセット: [-1, 1])
+必要な値: [8, 9] (オフセット: [1, 2])
+最終的なチー候補: []
+フェーズ遷移: 3 -> 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (672, 534), 'rel': (-8, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (672, 534), 'rel': (-8, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (658, 542), 'rel': (-14, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (658, 542), 'rel': (-14, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (653, 544), 'rel': (-5, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (653, 544), 'rel': (-5, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (651, 546), 'rel': (-2, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (651, 546), 'rel': (-2, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (638, 549), 'rel': (-13, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (638, 549), 'rel': (-13, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (629, 550), 'rel': (-9, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (629, 550), 'rel': (-9, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (628, 550), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (628, 550), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (624, 550), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (624, 550), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (608, 548), 'rel': (-16, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (608, 548), 'rel': (-16, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (589, 544), 'rel': (-19, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (589, 544), 'rel': (-19, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (573, 541), 'rel': (-16, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (573, 541), 'rel': (-16, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (558, 540), 'rel': (-15, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (558, 540), 'rel': (-15, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (545, 540), 'rel': (-13, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (545, 540), 'rel': (-13, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 1
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (536, 540), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (536, 540), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+プレイヤーがツモ: 3m (id=2988355476816)
+フェーズ遷移: 1 -> 0
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (523, 540), 'rel': (-13, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (523, 540), 'rel': (-13, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[初回] プレイヤーの捨て牌待ちを開始します...
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (513, 540), 'rel': (-10, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (513, 540), 'rel': (-10, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (504, 540), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (504, 540), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (501, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (501, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (493, 540), 'rel': (-8, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (493, 540), 'rel': (-8, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (483, 540), 'rel': (-10, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (483, 540), 'rel': (-10, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (480, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (480, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (477, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (477, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (473, 540), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (473, 540), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (468, 540), 'rel': (-5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (468, 540), 'rel': (-5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (465, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (465, 540), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (463, 540), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (463, 540), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (462, 540), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (462, 540), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (457, 541), 'rel': (-5, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (457, 541), 'rel': (-5, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (444, 546), 'rel': (-13, 5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (444, 546), 'rel': (-13, 5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (422, 550), 'rel': (-22, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (422, 550), 'rel': (-22, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (383, 551), 'rel': (-39, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (383, 551), 'rel': (-39, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (313, 551), 'rel': (-70, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (313, 551), 'rel': (-70, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (293, 551), 'rel': (-20, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (293, 551), 'rel': (-20, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (276, 551), 'rel': (-17, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (276, 551), 'rel': (-17, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (270, 551), 'rel': (-6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (270, 551), 'rel': (-6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (267, 551), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (267, 551), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (264, 551), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (264, 551), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (263, 551), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (263, 551), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (262, 551), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (262, 551), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (260, 551), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (260, 551), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (256, 551), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (256, 551), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (242, 547), 'rel': (-14, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (242, 547), 'rel': (-14, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (240, 546), 'rel': (-2, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (240, 546), 'rel': (-2, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (238, 546), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (238, 546), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (234, 546), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (234, 546), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (228, 546), 'rel': (-6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (228, 546), 'rel': (-6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (223, 546), 'rel': (-5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (223, 546), 'rel': (-5, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (214, 546), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (214, 546), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (211, 546), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (211, 546), 'rel': (-3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (210, 546), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (210, 546), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (209, 545), 'rel': (-1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (209, 545), 'rel': (-1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (207, 545), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (207, 545), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (207, 545), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (207, 545), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (207, 545)
+[選択] 手牌から選択された牌: 9m (id=2988355474128)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (207, 545), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (207, 545), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[処理] 手牌から捨てます: 9m (id=2988355474128)
+手牌から捨てます: 9m (id=2988355474128)
+捨てる処理...
+チー判定開始: プレイヤー0, 捨て牌: 9m (id=2988355474128)
+必要な値: [7, 8] (オフセット: [-2, -1])
+必要な値: [8, 10] (オフセット: [-1, 1])
+必要な値: [10, 11] (オフセット: [1, 2])
+最終的なチー候補: []
+[アクション候補] []
+[フェーズ遷移] AI_DRAW_PHASE へ移行
+フェーズ遷移: 0 -> 2
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (208, 544), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (216, 541), 'rel': (8, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (230, 537), 'rel': (14, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (244, 533), 'rel': (14, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (275, 525), 'rel': (31, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (316, 515), 'rel': (41, -10), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (389, 503), 'rel': (73, -12), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (417, 502), 'rel': (28, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (440, 499), 'rel': (23, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (459, 496), 'rel': (19, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (479, 492), 'rel': (20, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (507, 486), 'rel': (28, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (521, 483), 'rel': (14, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (533, 480), 'rel': (12, -3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (541, 478), 'rel': (8, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (549, 477), 'rel': (8, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (556, 475), 'rel': (7, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (558, 475), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (560, 475), 'rel': (2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: pez (id=2988355633552)
+フェーズ遷移: 2 -> 3
+[デバッグ] 現在のフェーズ: 3
+AIが捨てる牌を決定: 3p (id=2988355484208)
+AIの捨て牌: 3p (id=2988355484208)
+AIが牌を捨てました: 3p (id=2988355484208)
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+フェーズ遷移: 3 -> 8
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (563, 475), 'rel': (3, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (572, 475), 'rel': (9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (613, 478), 'rel': (41, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (648, 481), 'rel': (35, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (675, 481), 'rel': (27, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (715, 486), 'rel': (40, 5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (773, 495), 'rel': (58, 9), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (814, 502), 'rel': (41, 7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (825, 503), 'rel': (11, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (826, 503), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (816, 510), 'rel': (-10, 7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (774, 527), 'rel': (-42, 17), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (746, 538), 'rel': (-28, 11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (742, 540), 'rel': (-4, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (737, 544), 'rel': (-5, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (723, 553), 'rel': (-14, 9), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (711, 564), 'rel': (-12, 11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (709, 570), 'rel': (-2, 6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (708, 572), 'rel': (-1, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 3p (id=2988355484208)
+必要な値: [1, 2] (オフセット: [-2, -1])
+必要な値: [2, 4] (オフセット: [-1, 1])
+必要な値: [4, 5] (オフセット: [1, 2])
+チー候補に追加: [4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]
+最終的なチー候補: [[4p (id=2988355481040), 5p (id=2988355474608), 3p (id=2988355484208)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[スペースキー] アクションをスキップして捨て牌フェーズへ移行します
+フェーズ遷移: 8 -> 0
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント検出: <Event(771-TextInput {'text': ' ', 'window': None})>
+[初回] プレイヤーの捨て牌待ちを開始します...
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (708, 573), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (708, 573), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (707, 574), 'rel': (-1, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (707, 574), 'rel': (-1, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (707, 575), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (707, 575), 'rel': (0, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (706, 575), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (706, 575), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (706, 575), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (706, 575), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (706, 575)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (706, 575), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (706, 575), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (704, 575), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (704, 575), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (688, 579), 'rel': (-16, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (688, 579), 'rel': (-16, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (666, 586), 'rel': (-22, 7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (666, 586), 'rel': (-22, 7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (644, 590), 'rel': (-22, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (644, 590), 'rel': (-22, 4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (620, 593), 'rel': (-24, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (620, 593), 'rel': (-24, 3), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (596, 594), 'rel': (-24, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (596, 594), 'rel': (-24, 1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (587, 594), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (587, 594), 'rel': (-9, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (583, 594), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (583, 594), 'rel': (-4, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (581, 594), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (581, 594), 'rel': (-2, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (580, 594), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (580, 594), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[警告] 捨てる牌が選択されていません。牌を選択してください。
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント検出: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (579, 594), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (579, 594), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[警告] 捨てる牌が選択されていません。牌を選択してください。
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント検出: <Event(771-TextInput {'text': ' ', 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[警告] 捨てる牌が選択されていません。牌を選択してください。
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント検出: <Event(771-TextInput {'text': ' ', 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (579, 592), 'rel': (0, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (579, 592), 'rel': (0, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (580, 590), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (580, 590), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[警告] 捨てる牌が選択されていません。牌を選択してください。
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント検出: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (584, 584), 'rel': (4, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (584, 584), 'rel': (4, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (587, 577), 'rel': (3, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (587, 577), 'rel': (3, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (589, 572), 'rel': (2, -5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (589, 572), 'rel': (2, -5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (590, 571), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (590, 571), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (590, 570), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (590, 570), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (590, 569), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (590, 569), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (588, 561), 'rel': (-2, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (588, 561), 'rel': (-2, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (585, 550), 'rel': (-3, -11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (585, 550), 'rel': (-3, -11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (585, 549), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (585, 549), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (586, 548), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (586, 548), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (587, 547), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (587, 547), 'rel': (1, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (587, 547), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (587, 547), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (587, 547)
+[選択] 手牌から選択された牌: 7s (id=2988355478928)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (587, 547), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (587, 547), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (558, 555), 'rel': (-29, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (558, 555), 'rel': (-29, 8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (531, 557), 'rel': (-27, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (531, 557), 'rel': (-27, 2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (505, 556), 'rel': (-26, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (505, 556), 'rel': (-26, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (502, 554), 'rel': (-3, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (502, 554), 'rel': (-3, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (500, 553), 'rel': (-2, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (500, 553), 'rel': (-2, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (485, 547), 'rel': (-15, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (485, 547), 'rel': (-15, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (460, 539), 'rel': (-25, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (460, 539), 'rel': (-25, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (455, 537), 'rel': (-5, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (455, 537), 'rel': (-5, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (454, 537), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (454, 537), 'rel': (-1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1025-MouseButtonDown {'pos': (454, 537), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1025-MouseButtonDown {'pos': (454, 537), 'button': 1, 'touch': False, 'window': None})>
+[クリック検出] 座標: (454, 537)
+[選択] 手牌から選択された牌: 1s (id=2988355481616)
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (454, 536), 'rel': (0, -1), 'buttons': (1, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (454, 536), 'rel': (0, -1), 'buttons': (1, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1026-MouseButtonUp {'pos': (454, 536), 'button': 1, 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1026-MouseButtonUp {'pos': (454, 536), 'button': 1, 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (460, 536), 'rel': (6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (460, 536), 'rel': (6, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (484, 532), 'rel': (24, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント検出: <Event(1024-MouseMotion {'pos': (484, 532), 'rel': (24, -4), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[プレイヤー捨て牌フェーズ]
+[待機] プレイヤーの捨て牌入力待ち...
+[デバッグ] 現在のフェーズ: 0
+[デバッグ] イベント取得: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント検出: <Event(768-KeyDown {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[処理] 手牌から捨てます: 1s (id=2988355481616)
+手牌から捨てます: 1s (id=2988355481616)
+捨てる処理...
+チー判定開始: プレイヤー0, 捨て牌: 1s (id=2988355481616)
+必要な値: [-1, 0] (オフセット: [-2, -1])
+必要な値: [0, 2] (オフセット: [-1, 1])
+必要な値: [2, 3] (オフセット: [1, 2])
+最終的なチー候補: []
+[アクション候補] []
+[フェーズ遷移] AI_DRAW_PHASE へ移行
+フェーズ遷移: 0 -> 2
+[デバッグ] イベント取得: <Event(771-TextInput {'text': ' ', 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (526, 521), 'rel': (42, -11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (603, 501), 'rel': (77, -20), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (693, 482), 'rel': (90, -19), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (744, 465), 'rel': (51, -17), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (756, 458), 'rel': (12, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(769-KeyUp {'unicode': ' ', 'key': 32, 'mod': 0, 'scancode': 44, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (767, 449), 'rel': (11, -9), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (771, 442), 'rel': (4, -7), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (772, 440), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (772, 439), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (774, 431), 'rel': (2, -8), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (774, 399), 'rel': (0, -32), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (775, 377), 'rel': (1, -22), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (796, 335), 'rel': (21, -42), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (825, 258), 'rel': (29, -77), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (860, 195), 'rel': (35, -63), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (915, 108), 'rel': (55, -87), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (930, 74), 'rel': (15, -34), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (933, 68), 'rel': (3, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (934, 66), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (935, 64), 'rel': (1, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (941, 53), 'rel': (6, -11), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (946, 48), 'rel': (5, -5), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (952, 42), 'rel': (6, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (981, 26), 'rel': (29, -16), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (1003, 6), 'rel': (22, -20), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (1005, 4), 'rel': (2, -2), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (1006, 4), 'rel': (1, 0), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (1006, 3), 'rel': (0, -1), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] イベント取得: <Event(1024-MouseMotion {'pos': (1008, 0), 'rel': (2, -6), 'buttons': (0, 0, 0), 'touch': False, 'window': None})>
+[デバッグ] イベント取得: <Event(32768-ActiveEvent {'gain': 0, 'state': 1})>
+[デバッグ] イベント取得: <Event(32784-WindowLeave {'window': None})>
+[デバッグ] 現在のフェーズ: 2
+[デバッグ] 現在のフェーズ: 2
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 7s (id=2988355475664)
+フェーズ遷移: 2 -> 3
+[デバッグ] 現在のフェーズ: 3
+AIが捨てる牌を決定: 5m (id=2988355473744)
+AIの捨て牌: 5m (id=2988355473744)
+AIが牌を捨てました: 5m (id=2988355473744)
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+フェーズ遷移: 3 -> 8
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+チー判定開始: プレイヤー0, 捨て牌: 5m (id=2988355473744)
+必要な値: [3, 4] (オフセット: [-2, -1])
+チー候補に追加: [3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]
+必要な値: [4, 6] (オフセット: [-1, 1])
+必要な値: [6, 7] (オフセット: [1, 2])
+最終的なチー候補: [[3m (id=2988355476816), 4m (id=2988355480176), 5m (id=2988355473744)]]
+[プレイヤーの選択フェーズ] 選択可能: ['チー']
+[アクション選択ボタンを表示します]
+[デバッグ] 現在のフェーズ: 8
+[デバッグ] イベント取得: <Event(32787-WindowClose {'window': None})>
+[デバッグ] イベント取得: <Event(256-Quit {})>
+[処理] ゲーム終了

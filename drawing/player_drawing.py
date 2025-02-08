@@ -21,7 +21,9 @@ def draw_player_state(screen, player, selected_tile):
     # ポン牌を描画
     pon_x = SCREEN_WIDTH - TILE_WIDTH * 3 - TILE_MARGIN * 3
     pon_y = 500
+    print(f"[デバッグ] draw_player_state: player.pons={player.pons}")  # ここで追加
     for i, pon_set in enumerate(player.pons):
+        print(f"[デバッグ]  pon_set index={i} => {pon_set}")  # ここで追加        
         for j, tile in enumerate(pon_set):
             screen.blit(tile.image, (pon_x, pon_y - i * (TILE_HEIGHT + 10) - TILE_MARGIN))
             pon_x += TILE_WIDTH + TILE_MARGIN

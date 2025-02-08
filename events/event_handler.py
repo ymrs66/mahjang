@@ -15,6 +15,9 @@ def handle_events(state, current_time, screen):
 
         # --- ① プレイヤーの手牌クリック関連 ---
         if state.current_phase in [PLAYER_DISCARD_PHASE, PLAYER_DRAW_PHASE]:
+            if current_time < state.ai_action_time:
+                # まだAIの行動待ち時間中なら、プレイヤー操作を無視
+                continue  # もしくは return True など
             # ここで state.selected_tile などを更新
             selected_tile  = handle_player_input(
                 event,
@@ -64,6 +67,8 @@ def handle_action_selection(event, state, current_time):
 
                 if action == "ポン":
                     # ポンできるかどうかをチェック
+                    print("[デバッグ] ポンボタンが押されました (action == 'ポン')")
+                    print(f"[デバッグ] can_pon={state.game.can_pon}, pon_candidates={state.game.pon_candidates}")
                     if state.game.can_pon:
                         print("[処理] ポンを実行します。")
                         state.game.process_pon(0, state)
@@ -107,12 +112,12 @@ def handle_action_selection(event, state, current_time):
         return  # `selected_tile` を返さない
 
     elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-        # ---- スペースキーでアクションをスキップし、捨て牌フェーズへ ----
-        print("[スペースキー] アクションをスキップして捨て牌フェーズへ移行します")
+        # ---- スペースキーでアクションをスキップし、ツモフェーズへ ----
+        print("[スペースキー] アクションをスキップしてツモフェーズへ移行します")
 
         # アクションをスキップし、プレイヤーの捨て牌フェーズに遷移
         state.ai_action_time = current_time + AI_ACTION_DELAY
-        state.transition_to(PLAYER_DISCARD_PHASE)
+        state.transition_to(PLAYER_DRAW_PHASE)
 
 
 def handle_pon_wait_phase(state, current_time):

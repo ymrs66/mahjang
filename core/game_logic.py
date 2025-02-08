@@ -1,54 +1,6 @@
 ##game_logic.py
 from core.constants import *
 
-def handle_player_draw_phase(state, current_time):
-    # もしcurrent_time < state.ai_action_timeであれば、まだ待ち時間中とみなしてreturn
-    if current_time < state.ai_action_time:
-        return
-    # まだツモっていないならツモする
-    if True:
-        tile = state.game.draw_tile(0)
-        if tile:
-            print(f"プレイヤーがツモ: {tile}")  # <- ここでまとめて出力
-            state.game.players[0].add_tile(tile)
-        else:
-            print("山が空です。ゲーム終了")
-            state.transition_to(GAME_END_PHASE)
-            return
-    # ツモ完了したら捨てるフェーズへ
-    state.transition_to(PLAYER_DISCARD_PHASE)
-
-def handle_player_discard_phase(state, current_time):
-    print("[プレイヤー捨て牌フェーズ]")
-
-    # フェーズに初めて来たときに waiting_for_player_discard を True にして、
-    # まだ捨てていないならリターンする方法
-    if not state.waiting_for_player_discard:
-        print("[初回] プレイヤーの捨て牌待ちを開始します...")
-        state.waiting_for_player_discard = True
-        return
-
-    # ここで waiting_for_player_discard が True なら、まだ入力中
-    if state.waiting_for_player_discard:
-        print("[待機] プレイヤーの捨て牌入力待ち...")
-        return
-
-    # ここに来た時点で waiting_for_player_discard = False → 入力完了
-
-    discard_tile = state.game.discards[0][-1] if state.game.discards[0] else None
-    if discard_tile:
-        actions = state.game.get_available_actions(0, discard_tile)
-        if actions:
-            state.available_actions = actions
-            state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
-            return
-
-    # アクションがなければAIへ
-    state.ai_action_time = current_time + AI_ACTION_DELAY
-    state.transition_to(AI_DRAW_PHASE)
-
-# game_logic.py
-
 def handle_player_action_selection_phase(state, current_time):
     """
     プレイヤーのアクション選択フェーズ: ポン・チー・カンの確認
@@ -74,59 +26,6 @@ def handle_player_action_selection_phase(state, current_time):
         print("[プレイヤーの選択なし] 次のフェーズへ")
         state.ai_action_time = current_time + AI_ACTION_DELAY
         state.transition_to(AI_DRAW_PHASE)
-
-def handle_ai_draw_phase(state, current_time):
-    """
-    AIのツモフェーズを処理する
-    """
-    if current_time < state.ai_action_time:
-        return  # AIの行動タイミングでなければスキップ
-
-    print("[AIツモフェーズ] AIがツモを行います")
-
-    # AIがツモを実行
-    tile = state.game.draw_tile(1)
-    if tile:
-        state.game.players[1].draw_tile(tile)
-        print(f"AIがツモ: {tile}")
-
-    # カンの可能性を確認
-    kan_candidates = state.game.check_kan(1)
-    if kan_candidates:
-        print(f"AIがカン可能: {kan_candidates}")
-        state.game.process_kan(1, kan_candidates[0], state, "暗槓")
-        state.ai_action_time = current_time + AI_ACTION_DELAY  # 次の行動まで遅延
-        return
-
-    # AIの捨てフェーズへ遷移
-    state.transition_to(AI_DISCARD_PHASE)
-
-
-def handle_ai_discard_phase(state, current_time):
-    if current_time < state.ai_action_time:
-        return
-    
-    discard_tile = state.game.players[1].discard_tile()
-    if discard_tile:
-        state.game.discards[1].append(discard_tile)
-        print(f"AIが牌を捨てました: {discard_tile}")
-
-    # ▼ 追加: プレイヤー(0)がAIの捨てた牌をポン/チー/カンできるかチェック
-    actions = state.game.get_available_actions(player_id=0, discard_tile=discard_tile)
-    if actions:
-        # もしプレイヤーにポン/チー/カンの可能性があるなら、そちらを優先
-        state.available_actions = actions
-        state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
-        return
-
-    # 次のアクションまでディレイ
-    state.ai_action_time = current_time + AI_ACTION_DELAY
-
-    # AIのアクション選択フェーズ → (本来はAIが他家の捨て牌に反応するためのロジックだが)
-    # 現状2人打ちなら省略して、すぐプレイヤーのツモでもOK
-##   state.transition_to(AI_ACTION_SELECTION_PHASE) //省略
-    state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモへ
-
 
 
 def handle_ai_action_selection_phase(state, current_time):
