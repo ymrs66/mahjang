@@ -27,88 +27,53 @@ def handle_player_action_selection_phase(state, current_time):
         state.ai_action_time = current_time + AI_ACTION_DELAY
         state.transition_to(AI_DRAW_PHASE)
 
-
 def handle_ai_action_selection_phase(state, current_time):
-    """
-    AIのアクション選択フェーズ: ポン・チー・カンの判断
-    """
     print("[AI アクション選択開始]")
 
-    if not state.game.discards[0]:  # プレイヤーの捨て牌がない場合はスキップ
+    # プレイヤーの捨て牌が無ければスキップ
+    if not state.game.discards[0]:
         print("[スキップ] プレイヤーの捨て牌がないためスキップ")
         state.transition_to(PLAYER_DRAW_PHASE)
         return
 
+    # プレイヤーの捨て牌のうち直近の1枚を取得
     discard_tile = state.game.discards[0][-1]
 
-    # AIがポンできるかチェック
-    if state.game.check_pon(1, discard_tile):
-        print(f"[AIポン] {discard_tile} でポン")
+    # (1) AIが取り得るアクションをまとめて取得
+    actions = state.game.get_available_actions(player_id=1, discard_tile=discard_tile)
+    print(f"[AI] 行動候補: {actions}")
+
+    # (2) アクションがあるなら、優先度 or ランダム で1つ実行
+    if "ポン" in actions:
+        print("[AI] ポンを選択")
         state.game.process_pon(1, state)
         return
-
-    # AIがチーできるかチェック
-    if state.game.check_chi(1, discard_tile):
-        print(f"[AIチー] {discard_tile} でチー")
-        state.game.process_chi(1, state.game.chi_candidates[0], state)
+    elif "チー" in actions:
+        print("[AI] チーを選択")
+        chosen_sequence = state.game.meld_candidates["chi"][0]  # とりあえず先頭
+        state.game.process_chi(1, chosen_sequence, state)
+        return
+    elif "カン" in actions:
+        print("[AI] カンを選択")
+        kan_tile = state.game.meld_candidates["kan"][0]  # とりあえず先頭
+        state.game.process_kan(1, kan_tile, state)
         return
 
-    # AIがカンできるかチェック
-    if state.game.check_kan(1, discard_tile):
-        print(f"[AIカン] {discard_tile} でカン")
-        state.game.process_kan(1, discard_tile, state, '明槓')
+    # (3) どのアクションも無ければスキップ
+    print("[AI アクションなし] → プレイヤーのツモへ")
+    state.transition_to(PLAYER_DRAW_PHASE)
+
+def handle_meld_wait_phase(state, current_time):
+    """
+    ポン／チー／カン待機フェーズを共通処理で行う。
+    state.current_phase を見て分岐し、実行 or スキップの処理を行う。
+    """
+    # ログなど共通処理
+    print("[待機フェーズ] ポン or チー or カン待ちフェーズです")
+    
+    if state.meld_action == "skip":
+        # 全待機共通でスキップ処理
+        print("[スキップ] メルドを行わずツモへ")
+        state.meld_action = None  # リセット
+        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ
         return
-
-    print("[AI アクションなし] プレイヤーのツモフェーズへ移行")
-    state.transition_to(PLAYER_DRAW_PHASE)  # プレイヤーのツモフェーズ
-
-def handle_pon_wait_phase(state, current_time):
-    """
-    ポン待機フェーズの処理
-    """
-    print("[ポン待機フェーズ] ポンを選択中")
-    # ポンが決定された場合、処理を行う
-    if state.pon_exec_flg:
-        state.game.process_pon(0, state)
-        state.pon_exec_flg = False
-        state.transition_to(PLAYER_DISCARD_PHASE)
-    elif state.skip_flg:
-        print("ポンをスキップ")
-        state.skip_flg = False
-        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ
-
-def handle_chi_wait_phase(state, current_time):
-    """
-    チー待機フェーズの処理
-    """
-    print("[チー待機フェーズ] チーを選択中")
-    if state.chi_exec_flg:
-        print("チー実行")
-        chosen_sequence = state.game.chi_candidates[0]  # 候補が複数あるなら選択処理を入れても良い
-        state.game.process_chi(0, chosen_sequence, state)
-        state.chi_exec_flg = False
-        state.transition_to(PLAYER_DISCARD_PHASE)
-    elif state.skip_flg:
-        print("チーをスキップ")
-        state.skip_flg = False
-        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ
-
-
-def handle_kan_wait_phase(state, current_time):
-    """
-    カン待機フェーズの処理
-    """
-    print("[カン待機フェーズ] カンを選択中")
-    if state.kan_exec_flg:
-        kan_candidates = state.game.kan_candidates
-        if kan_candidates:
-            kan_tile = kan_candidates[0]
-            kan_type = state.game.determine_kan_type(0, kan_tile)
-            state.game.process_kan(0, kan_tile, state, kan_type)
-            state.kan_exec_flg = False
-            state.transition_to(PLAYER_DISCARD_PHASE)
-
-    elif state.skip_flg:
-        print("カンをスキップ")
-        state.skip_flg = False
-        state.transition_to(PLAYER_DRAW_PHASE)  # ツモフェーズへ

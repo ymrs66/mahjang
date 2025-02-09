@@ -48,7 +48,7 @@ class AIDrawPhase(BasePhase):
 
         # カン判定など
         self.game.check_all_melds_in_game(player_id=1, discard_tile=None)  # or discard_tile
-        kan_candidates = self.game.kan_candidates  # これでカン候補が取れる
+        kan_candidates = self.game.meld_candidates["kan"]  # これでカン候補が取れる
         if kan_candidates:
             print(f"AIがカン可能: {kan_candidates}")
             self.game.process_kan(1, kan_candidates[0], self.state, "暗槓")

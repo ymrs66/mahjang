@@ -9,18 +9,19 @@ class GameState:
         self.selected_tile = None
         self.ai_action_time = 0
         self.draw_action_time = 0
-        self.chi_button_rect = None  # チーボタンの位置とサイズ
-        self.pon_button_rect = None  # ポンボタンの位置とサイズ
-        self.kan_button_rect = None  # カンボタンの位置とサイズ
-        self.phase_history = []  # 遷移履歴を保持（デバッグ用）
-        self.current_phase = PLAYER_DRAW_PHASE  # 初期フェーズを直接設定
-        self.action_buttons = {}  # アクションボタンの矩形情報を保持
-        self.available_actions = []  # 利用可能なアクションのリスト
-        self.waiting_for_player_discard = False  # ✅ プレイヤーの捨て牌待機状態を追加
-        self.pon_exec_flg = False
-        self.chi_exec_flg = False
-        self.kan_exec_flg = False
-        self.skip_flg = False
+        self.phase_history = []
+        self.current_phase = PLAYER_DRAW_PHASE
+        self.action_buttons = {}
+        self.available_actions = []
+        self.waiting_for_player_discard = False
+
+        # ここで "どのメルドを実行したいか" を示すフラグを1つに統合
+        self.meld_action = None   # "pon", "chi", "kan", "skip", または None
+
+        # ボタンの位置など既存の変数はそのまま or まとめるかはお好み
+        self.chi_button_rect = None
+        self.pon_button_rect = None
+        self.kan_button_rect = None
 
     def initialize(self, game):
         """

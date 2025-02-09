@@ -7,9 +7,7 @@ from core.constants import (
     PLAYER_DRAW_PHASE,
     AI_DRAW_PHASE,
     AI_DISCARD_PHASE,
-    CHI_WAIT_PHASE,
-    PON_WAIT_PHASE,
-    KAN_WAIT_PHASE,
+    MELD_WAIT_PHASE,
     AI_ACTION_SELECTION_PHASE,
     PLAYER_ACTION_SELECTION_PHASE,
     GAME_END_PHASE
@@ -18,9 +16,7 @@ from events.event_handler import handle_events  # イベント処理を外部モ
 from core.game_logic import (
     handle_ai_action_selection_phase,
     handle_player_action_selection_phase,
-    handle_pon_wait_phase,
-    handle_chi_wait_phase,
-    handle_kan_wait_phase
+    handle_meld_wait_phase
 )
 # 描画関連
 from drawing.player_drawing import draw_player_state # プレイヤーの手牌・ポン・チーを描画
@@ -57,9 +53,7 @@ def main_loop():
         PLAYER_DISCARD_PHASE: lambda st, ct: PlayerDiscardPhase(st.game, st).update(ct),
         AI_ACTION_SELECTION_PHASE: handle_ai_action_selection_phase,
         PLAYER_ACTION_SELECTION_PHASE: handle_player_action_selection_phase,
-        PON_WAIT_PHASE: handle_pon_wait_phase,
-        CHI_WAIT_PHASE: handle_chi_wait_phase,
-        KAN_WAIT_PHASE: handle_kan_wait_phase,
+        MELD_WAIT_PHASE: handle_meld_wait_phase,
     }
 
     running = True
