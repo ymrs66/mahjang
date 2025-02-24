@@ -2,6 +2,152 @@
 
 from collections import Counter
 
+def is_win_hand(tiles_14):
+    # 1) 同じ形式にソート or suit, value に分解したリストを作る
+    sorted_list = convert_tiles_to_sorted(tiles_14)
+    
+    # 2) 雀頭候補を列挙
+    for i in range(len(sorted_list) - 1):
+        if sorted_list[i] == sorted_list[i+1]:
+            # 雀頭候補が見つかった
+            head_tile = sorted_list[i]
+
+            # 雀頭2枚を抜いた残りをメンツ分解
+            new_list = remove_two_tiles(sorted_list, i, i+1)  # i番目とi+1番目を除去
+            if check_4_melds(new_list):
+                return True
+    return False
+
+def check_4_melds(tiles_12):
+    # ベースケース
+    if len(tiles_12) == 0:
+        return True
+    
+    # 先頭牌を取り出す (タプル: (suit_id, val))
+    first = tiles_12[0]
+    
+    # (1) 刻子チェック
+    if tiles_12.count(first) >= 3:
+        # 先頭と同じ牌3枚を除去
+        new_list = remove_three_tiles(tiles_12, first, first, first)
+        if new_list is not None and check_4_melds(new_list):
+            return True
+    
+    # (2) 順子チェック
+    suit_id, val = first
+    # 先頭が字牌(suit_id==3)だったら順子は作れない
+    if suit_id < 3:
+        # is_sequence_possible(tiles_12) も suit_id/val をチェックしているならOK
+        if is_sequence_possible(tiles_12):
+            new_list = remove_sequence(tiles_12,
+                                       (suit_id, val),
+                                       (suit_id, val + 1),
+                                       (suit_id, val + 2))
+            if new_list is not None and check_4_melds(new_list):
+                return True
+    
+    # 失敗
+    return False
+
+def convert_tiles_to_sorted(tiles_14):
+    """
+    14枚の Tile オブジェクトのリストを受け取り、
+    (suit, value) のタプルなどに変換してソートしたリストを返す例。
+    'm'/'p'/'s'なら数値、'z'なら別途優先度を割り当てるなどの仕組み。
+    """
+    # suitを整数にマッピングする例: m->0, p->1, s->2, z->3
+    suit_priority = {'m': 0, 'p': 1, 's': 2, 'z': 3}
+
+    converted = []
+
+    for tile in tiles_14:
+        s = tile.suit
+        # 字牌(z)なら tile.value は 'ton','nan'... or 'haku','chun' など
+        # 数牌(m,p,s)なら '1'〜'9'
+        # ここではスーツごとの優先度を suit_priority[s] とし、
+        # 値は数牌なら int(tile.value)、字牌なら任意の並び順にマッピング
+        if s in ('m', 'p', 's'):
+            v = int(tile.value)  # '1'〜'9' → 数値化
+        else:
+            # 字牌 'z' の場合 -> 'ton','nan','sha','pe','haku','hatsu','chun'
+            # 好きな順番に割り当てる例: ton->1, nan->2, sha->3, pe->4, haku->5, hatsu->6, chun->7
+            honor_map = {
+                'ton': 1, 'nan': 2, 'sha': 3, 'pe': 4,
+                'haku': 5, 'hatsu': 6, 'chun': 7
+            }
+            v = honor_map.get(tile.value, 0)  # 万が一想定外のvalueなら0などにしておく
+
+        converted.append((suit_priority[s], v))
+
+    # ここでソート
+    converted.sort()
+
+    # 返り値としては、この後の「刻子・順子判定」がやりやすい形にする。文字列で返してもOK
+    return converted
+
+def remove_two_tiles(original_list, idx1, idx2):
+    """
+    original_listから、指定した2つのインデックス要素を除去し、新しいリストを返す。
+    original_list はタプルやTileのソート済み配列を想定。
+
+    例:
+        original_list = [(0,1),(0,1),(0,2),(0,3) ... ]
+        remove_two_tiles(original_list, 0, 1)
+        -> 上記で 0番目,1番目の要素を削除する新リストを返す
+
+    注意:
+      idx1,idx2の大小関係によってはpopの順番に注意。
+      大きい方からpopしないと、先に小さい要素をpopしたとき
+      後ろのindexがずれてしまう。
+    """
+    new_list = original_list[:]
+    # idx1, idx2を大きい順に並べ替えて pop
+    for idx in sorted([idx1, idx2], reverse=True):
+        new_list.pop(idx)
+    return new_list
+
+def remove_three_tiles(original_list, val1, val2, val3):
+    """
+    original_list から val1, val2, val3 という値を1枚ずつ取り除いた新リストを返す。
+
+    例えば:
+      - 刻子: val1 == val2 == val3
+      - 順子: val2 == val1+1, val3 == val1+2
+    """
+    new_list = original_list[:]
+
+    # val1, val2, val3 をそれぞれ new_list から1回だけ削除
+    for v in (val1, val2, val3):
+        if v in new_list:
+            new_list.remove(v)
+        else:
+            # v が見つからなければ取り除けない(エラー or そのままリターンなど)
+            return None  # 取り除き失敗を示す
+
+    return new_list
+
+def is_sequence_possible(tiles_list):
+    """
+    tiles_list は [(suit_id, val), (suit_id, val), ...]
+    先頭要素を first = tiles_list[0] として
+    同じ suit_id で val, val+1, val+2 が含まれているかチェック
+    """
+    if not tiles_list:
+        return False
+
+    suit_id, val = tiles_list[0]
+
+    # 字牌は順子不可なので suit_id==3 のときはFalse
+    if suit_id == 3:
+        return False
+
+    return ((suit_id, val+1) in tiles_list) and ((suit_id, val+2) in tiles_list)
+
+def remove_sequence(original_list, val1, val2, val3):
+    """ original_list から (val1, val2, val3) を1回ずつ取り除いた新リストを返す """
+    return remove_three_tiles(original_list, val1, val2, val3)
+
+
 class MeldChecker:
     """
     ポン/チー/カンなどの成立判定ロジックをまとめるクラス。
@@ -67,12 +213,10 @@ class MeldChecker:
         """
         if discard_tile is None:
             return []
-
-        count = sum(1 for t in tiles if t.is_same_tile(discard_tile))
-        if count >= 2:
-            return [[discard_tile, discard_tile, discard_tile]]
-        else:
-            return []
+        matching = [t for t in tiles if t.is_same_tile(discard_tile)]
+        if len(matching) >= 2:
+            return [[matching[0], matching[1], discard_tile]]
+        return []
 
     @staticmethod
     def can_chi(tiles, discard_tile):

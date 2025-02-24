@@ -13,10 +13,12 @@ class Hand:
 
     def remove_tile(self, tile):
         """指定した牌を手牌から削除"""
+        print(f"  [Hand.remove_tile] 入力 tile={tile}, 現在手牌={self.tiles}")
         if tile in self.tiles:
+            print(f"  [Hand.remove_tile] tile in self.tiles == True -> 削除実行")
             self.tiles.remove(tile)
         else:
-            print(f"{tile} は手牌にありません")
+            print(f"  [Hand.remove_tile] tile in self.tiles == False -> 削除失敗: {tile}")
 
     def add_chi(self, sequence, discard_tile):
         """

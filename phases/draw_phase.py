@@ -4,10 +4,13 @@ from core.constants import (
     GAME_END_PHASE,
     PLAYER_DRAW_PHASE,
     PLAYER_DISCARD_PHASE,
+    PLAYER_ACTION_SELECTION_PHASE,  # ← 追加
     AI_DRAW_PHASE,
     AI_DISCARD_PHASE,
     AI_ACTION_DELAY
 )
+
+from meld_checker import is_win_hand  # ← 既にあるなら不要
 
 class PlayerDrawPhase(BasePhase):
     def update(self, current_time):
@@ -26,6 +29,22 @@ class PlayerDrawPhase(BasePhase):
         # ツモ後のカン判定など必要ならこちらで
         # e.g. kan_candidates = self.game.check_kan(0)
         # ...
+
+        # --- ツモあがり判定を追加 ---
+        # プレイヤーの手牌（14枚）を取得
+        player_tiles = self.game.players[0].tiles  
+        if is_win_hand(player_tiles):
+            print("[ツモ判定] is_win_hand = True")
+            print("[ツモ判定] プレイヤーが和了形です。ツモアクションを追加します。")
+
+            # ★「スキップ」を含めず「ツモ」だけにする
+            self.state.available_actions = ["ツモ"]
+
+            # アクション選択フェーズへ
+            self.state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
+            return
+        else:
+            print("[ツモ判定] is_win_hand = False -> 捨て牌フェーズへ")
 
         # ツモ完了したらプレイヤーの捨て牌フェーズへ
         self.state.transition_to(PLAYER_DISCARD_PHASE)
@@ -47,12 +66,20 @@ class AIDrawPhase(BasePhase):
             return
 
         # カン判定など
-        self.game.check_all_melds_in_game(player_id=1, discard_tile=None)  # or discard_tile
-        kan_candidates = self.game.meld_candidates["kan"]  # これでカン候補が取れる
+        self.game.meld_manager.check_all_melds(1, None)  # discard_tile=None
+        kan_candidates = self.game.meld_manager.meld_candidates["kan"]
         if kan_candidates:
             print(f"AIがカン可能: {kan_candidates}")
             self.game.process_kan(1, kan_candidates[0], self.state, "暗槓")
             self.state.ai_action_time = current_time + AI_ACTION_DELAY
+            return
+
+        # AIの14枚が和了形かチェック
+        ai_tiles = self.game.players[1].tiles
+        if is_win_hand(ai_tiles):
+            print("[AI] ツモ和了可能！和了します。")
+            # process_tsumo_ai() or 直接処理
+            self.game.process_ai_tsumo(1, self.state)
             return
 
         # AIの捨てフェーズへ

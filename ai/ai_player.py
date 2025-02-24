@@ -10,25 +10,25 @@ class AIPlayer(Player):
 
     # AI専用のメソッドだけ追加する
     def decide_discard(self):
-        """
-        捨てる牌を決定するロジック。
-        現在は暫定的に最初の牌を捨てる。
-        :return: 捨てる牌（Tile オブジェクト）または None
-        """
         if not self.hand.tiles:
+            print("  [AIPlayer.decide_discard] 手牌が空です。Noneを返します。")
             return None
         discard_tile = random.choice(self.hand.tiles)
-        print(f"AIが捨てる牌を決定: {discard_tile}")
+        print(f"  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: {discard_tile}")
         return discard_tile
 
-    # AIPlayer の discard_tile メソッド
     def discard_tile(self):
-        """
-        AIが捨てる牌を選び、削除する。
-        """
+        print("  [AIPlayer.discard_tile()] start")
         discard_tile = self.decide_discard()  # 捨てる牌を選択
+        print(f"  [AIPlayer.discard_tile] decide_discard() => {discard_tile}")
+
         if discard_tile:
-            self.hand.remove_tile(discard_tile)  # 手牌から削除
-            self.hand.sort_tiles() #並べ替え
-            print(f"AIの捨て牌: {discard_tile}")  # デバッグ用
+            print(f"  [AIPlayer] discard_tile={discard_tile}, 手牌から除去します...")
+            self.hand.remove_tile(discard_tile)
+            self.hand.sort_tiles()
+            print(f"  [AIPlayer] remove後の手牌: {self.hand.tiles}")
+            print(f"AIの捨て牌: {discard_tile}")
+        else:
+            print("  [AIPlayer] discard_tile=None 何も捨てません。")
+        print("  [AIPlayer.discard_tile()] end")
         return discard_tile

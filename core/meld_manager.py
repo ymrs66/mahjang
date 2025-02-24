@@ -1,5 +1,5 @@
 # File: core/meld_manager.py
-
+from core.constants import *
 from meld_checker import MeldChecker
 
 class MeldManager:
@@ -67,7 +67,9 @@ class MeldManager:
 
         # 1) 手札から除去
         for t in tiles_to_remove:
+            print(f"  [process_meld] remove_tile({t}) を実行します。手牌: {player.tiles}")
             player.remove_tile(t)
+            print(f"  [process_meld] remove_tile後の手牌: {player.tiles}")
 
         # 2) 捨て牌から1枚除去 (self.target_tile がある場合)
         if self.target_tile:
@@ -148,5 +150,3 @@ class MeldManager:
         pass
 
     # 必要に応じて prepare_kan_tiles(...) などのヘルパーもこちらに置く
-
-

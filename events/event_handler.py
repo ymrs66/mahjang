@@ -62,43 +62,45 @@ def handle_action_selection(event, state, current_time):
 
                 if action == "ポン":
                     # meld_enabled["pon"] と meld_candidates["pon"] をチェック
-                    print("[デバッグ] ポンボタンが押されました")
-                    print(f'[デバッグ] meld_enabled["pon"]={state.game.meld_enabled["pon"]}, '
-                          f'meld_candidates["pon"]={state.game.meld_candidates["pon"]}')
-
-                    if state.game.meld_enabled["pon"] and state.game.meld_candidates["pon"]:
-                        # 実行
-                        print("[処理] ポンを実行します。")
-                        state.game.process_pon(0, state)
+                    print(f'[デバッグ] meld_enabled["pon"]={state.game.meld_manager.meld_enabled["pon"]}, '
+                          f'meld_candidates["pon"]={state.game.meld_manager.meld_candidates["pon"]}')
+                    if state.game.meld_manager.meld_enabled["pon"] and state.game.meld_manager.meld_candidates["pon"]:
+                        state.game.meld_manager.process_pon(0, state)
                         state.transition_to(PLAYER_DISCARD_PHASE)
                     else:
                         print("[エラー] ポンできない状態なのにボタンが押されました。")
 
                 elif action == "チー":
                     # meld_enabled["chi"] と meld_candidates["chi"] をチェック
-                    if state.game.meld_enabled["chi"] and state.game.meld_candidates["chi"]:
-                        # 複数候補がある場合はUI等で選択させる想定。ここでは先頭を使用
-                        chosen_sequence = state.game.meld_candidates["chi"][0]
-                        print(f"[処理] チーを実行します。順子: {chosen_sequence}")
-                        state.game.process_chi(0, chosen_sequence, state)
+                    if state.game.meld_manager.meld_enabled["chi"] and state.game.meld_manager.meld_candidates["chi"]:
+                        chosen_sequence = state.game.meld_manager.meld_candidates["chi"][0]
+                        state.game.meld_manager.process_chi(0, chosen_sequence, state)
                         state.transition_to(PLAYER_DISCARD_PHASE)
                     else:
                         print("[エラー] チーできない状態 or チー候補なし")
 
                 elif action == "カン":
                     # meld_enabled["kan"] と meld_candidates["kan"] をチェック
-                    if state.game.meld_enabled["kan"] and state.game.meld_candidates["kan"]:
-                        # 複数候補がある可能性も
-                        if len(state.game.meld_candidates["kan"]) == 1:
-                            kan_tile = state.game.meld_candidates["kan"][0]
+                    if state.game.meld_manager.meld_enabled["kan"] and state.game.meld_manager.meld_candidates["kan"]:
+                        if len(state.game.meld_manager.meld_candidates["kan"]) == 1:
+                            kan_tile = state.game.meld_manager.meld_candidates["kan"][0]
                             kan_type = state.game.determine_kan_type(0, kan_tile)
-                            print(f"[処理] カンを実行します。タイプ: {kan_type}, 牌: {kan_tile}")
-                            state.game.process_kan(0, kan_tile, state)
+                            state.game.meld_manager.process_kan(0, kan_tile, state)
                             state.transition_to(PLAYER_DISCARD_PHASE)
                         else:
                             print("[情報] 複数のカン候補があるため、別のUIで選択が必要です。")
                     else:
                         print("[エラー] カンできない状態 or カン候補なし")
+                elif action == "ツモ":
+                    print("[処理] ツモを実行します")
+                    # ツモ処理を呼び出す
+                    state.game.process_tsumo(0,state)
+                    return  # 押下処理を終えて抜ける
+
+                elif action == "ロン":
+                    print("[処理] ロンを実行します")
+                    discard_tile = state.game.target_tile
+                    state.game.process_ron(0, discard_tile, state)
 
                 elif action == "スキップ":
                     print("[スキップ] アクションを行わず次に進みます。")
@@ -108,11 +110,15 @@ def handle_action_selection(event, state, current_time):
         return  # 選択処理が終わったらここで抜ける
 
     elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-        # スペースキーでアクションをスキップ
-        print("[スペースキー] アクションをスキップしてツモフェーズへ移行します")
-        state.ai_action_time = current_time + AI_ACTION_DELAY
-        state.transition_to(PLAYER_DRAW_PHASE)
-
+    # ★もし "ツモ" がアクション一覧に含まれている場合はスキップさせない
+        if "ツモ" in state.available_actions:
+            print("[情報] ツモ可能なため、スペースキーではスキップできません。")
+            # 何もせず return するので「ツモボタン」を押すしかない
+            return
+        else:
+            print("[スペースキー] アクションをスキップしてツモフェーズへ移行します")
+            state.ai_action_time = current_time + AI_ACTION_DELAY
+            state.transition_to(PLAYER_DRAW_PHASE)
 
 # 以下はポン待機フェーズ等がまだ残っている場合のサンプル。
 # 実際には handle_meld_wait_phase(...) に統合するのが望ましい。

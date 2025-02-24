@@ -41,20 +41,32 @@ class PlayerDiscardPhase(BasePhase):
 
 class AIDiscardPhase(BasePhase):
     def update(self, current_time):
+        print("[AIDiscardPhase.update()] start")  # ここでフェーズの開始を明示
         if current_time < self.state.ai_action_time:
+            print(f"  [AIDiscardPhase] AIの待機時間中: {current_time} < {self.state.ai_action_time}")
             return
 
+        # AIがどの手牌を持っているか確認（調査用）
+        print(f"  [AIDiscardPhase] AI手牌: {self.game.players[1].tiles}")
+
         discard_tile = self.game.players[1].discard_tile()
-        if discard_tile:
+        print(f"  [AIDiscardPhase] discard_tile={discard_tile}")  # ← 追加
+        if discard_tile is not None:
+            print(f"  [AIDiscardPhase] AI chose tile to discard: {discard_tile}")
             self.game.discards[1].append(discard_tile)
-            print(f"AIが牌を捨てました: {discard_tile}")
+            print(f"  [AIDiscardPhase] AIが牌を捨てました: {discard_tile}")
+            print(f"  [AIDiscardPhase] discards[1]={self.game.discards[1]}")  # ← 追加: 現在のAI捨て牌リストを表示
+        else:
+            print("  [エラー] AIが捨て牌を選択できませんでした！（discard_tile=None）")
 
         # ポン・チー・カン確認
         actions = self.game.get_available_actions(player_id=0, discard_tile=discard_tile)
         if actions:
             self.state.available_actions = actions
+            print(f"  [AIDiscardPhase] プレイヤーが取り得るアクション: {actions}")
             self.state.transition_to(PLAYER_ACTION_SELECTION_PHASE)
             return
 
         self.state.ai_action_time = current_time + AI_ACTION_DELAY
+        print("[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE")
         self.state.transition_to(PLAYER_DRAW_PHASE)

@@ -16,14 +16,6 @@ class Tile:
         if image_path:  # 画像パスが指定されている場合のみ画像をロード
             self.image = pygame.image.load(image_path)
 
-    def __eq__(self, other):
-        """
-        比較演算子 == をオーバーライドして、牌の suit と value が一致する場合に True を返す。
-        """
-        if isinstance(other, Tile):
-            return self.suit == other.suit and self.value == other.value and id(self) == id(other)
-        return False
-
     def is_same_tile(self, other):
         """
         suit と value が同じであれば True を返す比較メソッド。
