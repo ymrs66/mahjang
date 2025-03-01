@@ -64,17 +64,33 @@ class Game:
         ポン/チー/カン判定をまとめて呼び出し、
         実行可能なアクション名をリストで返す。
         """
-        self.meld_manager.check_all_melds(player_id, discard_tile)
+        player = self.players[player_id]
+
+        # --- 1) リーチ中ならポン・チー・カンを無効化する ---
+        #     ここで「リーチした player_id 自身が鳴けない」ようにする。
+        #     もし「他家が鳴けない」ルールなら、別の判定が必要。
+        if player.is_reach:
+            # リーチ中のプレイヤーは鳴き不可
+            pon_enabled = False
+            chi_enabled = False
+            kan_enabled = False
+        else:
+            # --- 通常通りメルドチェック ---
+            self.meld_manager.check_all_melds(player_id, discard_tile)
+            pon_enabled = self.meld_manager.meld_enabled["pon"]
+            chi_enabled = self.meld_manager.meld_enabled["chi"]
+            kan_enabled = self.meld_manager.meld_enabled["kan"]
+
         actions = []
-        if self.meld_manager.meld_enabled["pon"]:
+        if pon_enabled:
             actions.append("ポン")
-        if self.meld_manager.meld_enabled["chi"]:
+        if chi_enabled:
             actions.append("チー")
-        if self.meld_manager.meld_enabled["kan"]:
+        if kan_enabled:
             actions.append("カン")
-            
+
         # 2) ロン判定
-        temp_tiles = self.players[player_id].tiles.copy()
+        temp_tiles = player.tiles.copy()
         temp_tiles.append(discard_tile)   # 14枚になる
         if is_win_hand(temp_tiles):
             actions.append("ロン")

@@ -80,10 +80,15 @@ class MeldManager:
 
         # 3) メルド先に追加
         if meld_type == "pon":
+            player.is_menzen = False
             player.pons.append(tiles_to_remove + [self.target_tile])
         elif meld_type == "chi":
+            player.is_menzen = False
             player.chis.append(tiles_to_remove + [self.target_tile])
         elif meld_type == "kan":
+            kan_type = self.game.determine_kan_type(player_id, self.target_tile)
+            if kan_type in ("明槓", "加槓"):
+                player.is_menzen = False
             player.kans.append(tiles_to_remove + [self.target_tile])
         else:
             print(f"[警告] 不明なmeld_type: {meld_type}")

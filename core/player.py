@@ -7,6 +7,9 @@ class Player:
         self.pons = []
         self.chis = []
         self.kans = []
+        self.is_menzen = True  # ← 新規追加: Trueなら門前とみなす
+        self.is_reach = False
+
 
     @property
     def tiles(self):

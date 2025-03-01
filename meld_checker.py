@@ -18,6 +18,52 @@ def is_win_hand(tiles_14):
                 return True
     return False
 
+def is_tenpai(tiles_13):
+    """
+    13枚の手牌がテンパイ(あと1枚で和了)状態かどうかを判定する。
+    ＝ 現在の13枚に1枚足すと和了形になるか？
+    """
+    all_candidate_tiles = generate_all_mahjong_tile_candidates()
+    for candidate in all_candidate_tiles:
+        test_14 = tiles_13[:] + [candidate]
+        if is_win_hand(test_14):
+            return True
+    return False
+
+def is_14_tile_tenpai(tiles_14):
+    """
+    14枚の手牌が「いずれか1枚を切ればテンパイ」状態かどうかを判定する。
+    """
+    if len(tiles_14) != 14:
+        return False
+
+    # 14枚のうちどれを切っても13枚がテンパイになるかチェック
+    for i in range(14):
+        temp_13 = tiles_14[:i] + tiles_14[i+1:]
+        if is_tenpai(temp_13):
+            return True
+
+    return False
+
+
+def generate_all_mahjong_tile_candidates():
+    """
+    1m~9m, 1p~9p, 1s~9s, 字牌(東南西北白発中) の計34種を返す。
+    画像やインスタンス生成ルールは省略し、suit/valueだけセットでもOK。
+    """
+    from core.tile import Tile
+
+    candidates = []
+    for suit in ('m','p','s'):
+        for val in range(1,10):
+            candidates.append(Tile(suit, str(val)))
+    # 字牌
+    honors = ['ton','nan','sha','pe','haku','hatsu','chun']
+    for h in honors:
+        candidates.append(Tile('z', h))
+
+    return candidates
+
 def check_4_melds(tiles_12):
     # ベースケース
     if len(tiles_12) == 0:

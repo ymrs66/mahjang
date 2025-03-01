@@ -35,4 +35,5 @@ AI_DISCARD_PHASE = 3      # AIの捨て牌フェーズ
 MELD_WAIT_PHASE = 4  # ポンチーカンウェイトフェーズ
 AI_ACTION_SELECTION_PHASE = 7  # AIのアクション選択フェーズ
 PLAYER_ACTION_SELECTION_PHASE = 8  # プレイヤーのアクション選択フェーズ
-GAME_END_PHASE = 9        # ゲーム終了フェーズ
+PLAYER_RIICHI_PHASE = 9  # プレイヤーのリーチ可否を確認するフェーズ
+GAME_END_PHASE = 10        # ゲーム終了フェーズ
