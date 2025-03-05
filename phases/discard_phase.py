@@ -51,6 +51,10 @@ class AIDiscardPhase(BasePhase):
 
         discard_tile = self.game.players[1].discard_tile()
         print(f"  [AIDiscardPhase] discard_tile={discard_tile}")  # ← 追加
+
+        # AIが捨て終わった後、プレイヤーの選択牌をクリア
+        self.state.selected_tile = None
+
         if discard_tile is not None:
             print(f"  [AIDiscardPhase] AI chose tile to discard: {discard_tile}")
             self.game.discards[1].append(discard_tile)

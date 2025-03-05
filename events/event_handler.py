@@ -32,7 +32,7 @@ def handle_events(state, current_time, screen):
                 screen
             )
             state.selected_tile = selected_tile
-
+            print(f"handle_event,35,selected_tile: {selected_tile}")
         if state.current_phase == PLAYER_RIICHI_PHASE:
             # 新規フェーズ用のイベントハンドラを呼ぶ
             # ただし フェーズのクラスを生成して handle_event するなら、一時的なインスタンスが必要
