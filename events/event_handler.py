@@ -2,7 +2,6 @@
 
 import pygame
 from events.events import handle_player_input
-from phases.riichi_phase import PlayerRiichiPhase
 from core.constants import *  # 全ての定義をインポート
 from drawing.ui_drawing import draw_pon_button, draw_chi_button, draw_kan_button
 
@@ -17,7 +16,7 @@ def handle_events(state, current_time, screen):
             return False
 
         # --- ① プレイヤーの手牌クリック関連 ---
-        if state.current_phase in [PLAYER_DISCARD_PHASE, PLAYER_DRAW_PHASE]:
+        if state.current_phase in [PLAYER_SELECT_TILE_PHASE, PLAYER_DRAW_PHASE]:
             # AIの待ち時間中であれば、プレイヤー操作を無視
             if current_time < state.ai_action_time:
                 continue
@@ -33,12 +32,6 @@ def handle_events(state, current_time, screen):
             )
             state.selected_tile = selected_tile
             print(f"handle_event,35,selected_tile: {selected_tile}")
-        if state.current_phase == PLAYER_RIICHI_PHASE:
-            # 新規フェーズ用のイベントハンドラを呼ぶ
-            # ただし フェーズのクラスを生成して handle_event するなら、一時的なインスタンスが必要
-            # もしくはグローバルにフェーズオブジェクトを持ってもいい
-            ph = PlayerRiichiPhase(state.game, state)
-            ph.handle_event(event)
 
         # --- ② ACTION_SELECTION_PHASE 用に handle_action_selection を呼ぶ ---
         if state.current_phase == PLAYER_ACTION_SELECTION_PHASE:
@@ -54,7 +47,12 @@ def handle_events(state, current_time, screen):
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 print("スキップ処理（スペースキー）")
                 state.meld_action = "skip"
-
+        # --- ④ リーチフェーズ用に handle_event を呼ぶ ---
+        if state.current_phase == PLAYER_RIICHI_PHASE:
+            from phases.riichi_phase import PlayerRiichiPhase
+            ph = PlayerRiichiPhase(state.game, state)
+            ph.handle_event(event)
+            
     return True
 
 def handle_action_selection(event, state, current_time):
@@ -110,31 +108,6 @@ def handle_action_selection(event, state, current_time):
                     discard_tile = state.game.target_tile
                     state.game.process_ron(0, discard_tile, state)
                     
-                elif action == "リーチ":
-               # 1) フラグセット
-                    print("[処理] リーチを実行します")
-                    current_player = state.game.players[0]
-                    current_player.is_reach = True  # リーチ状態にする
-
-            # 2) リーチ棒を場に出す(仮に1000点引く処理)
-            #   例: state.game_table.deposit_reach_stick(player_id=0)
-            #    とか、単に print("リーチ棒を出しました") でもOK
-
-            # 3) 「リーチ宣言の捨て牌」を強制的に捨てる
-            #    - どの牌を捨てるか？ → UIから選択させる or 自動で選択
-            #    - ここでは「既に選択されている牌を捨てる」というのが自然
-                    tile_to_discard = state.selected_tile
-                    if tile_to_discard:
-                        state.game.discard_tile(tile_to_discard, 0)
-                        state.selected_tile = None
-                    else:
-                        print("[リーチ] 捨て牌が選択されていない？一旦エラー処理")
-
-                    # 4) リーチ後にどう進めるか
-                    #    他家の鳴きを許可しない or 通常通りなど、ルールに合わせる。
-                    #    簡単には discard_tile 後に AI のターンへ移行
-                    state.ai_action_time = current_time + AI_ACTION_DELAY
-                    state.transition_to(AI_DRAW_PHASE)
                 elif action == "スキップ":
                     print("[スキップ] アクションを行わず次に進みます。")
                     state.ai_action_time = current_time + AI_ACTION_DELAY

@@ -5,7 +5,7 @@ from core.constants import (
     PLAYER_DRAW_PHASE,
     PLAYER_DISCARD_PHASE,
     PLAYER_ACTION_SELECTION_PHASE,
-    PLAYER_RIICHI_PHASE,
+    PLAYER_SELECT_TILE_PHASE,
     AI_DRAW_PHASE,
     AI_DISCARD_PHASE,
     AI_ACTION_DELAY
@@ -21,6 +21,8 @@ class PlayerDrawPhase(BasePhase):
 
         print(f"[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---")
         print(f"[デバッグ:PlayerDrawPhase] current_time={current_time}, ai_action_time={self.state.ai_action_time}")
+        # ここでアクションをリセット
+        self.state.available_actions.clear()
 
         tile = self.game.draw_tile(0)
         if tile:
@@ -50,20 +52,11 @@ class PlayerDrawPhase(BasePhase):
         current_player = self.game.players[0]
         print(f"[デバッグ:PlayerDrawPhase] 門前状態={current_player.is_menzen}, リーチ済み={current_player.is_reach}")
 
-        # phases/draw_phase.py の中
-        if current_player.is_menzen and not current_player.is_reach:
-            if is_14_tile_tenpai(player_tiles):
-                print("[デバッグ:PlayerDrawPhase] テンパイ！ → 'リーチ'を選択できるフェーズへ移動します")
-                self.state.transition_to(PLAYER_RIICHI_PHASE)
-                return
-            else:
-                print("[デバッグ:PlayerDrawPhase] テンパイしていません → リーチ不可")
-
         # ここで現在のアクションリストを確認
         print(f"[デバッグ:PlayerDrawPhase] 現在の available_actions={self.state.available_actions}")
 
         # ツモ完了したらプレイヤーの捨て牌フェーズへ遷移
-        self.state.transition_to(PLAYER_DISCARD_PHASE)
+        self.state.transition_to(PLAYER_SELECT_TILE_PHASE)
 
 
 class AIDrawPhase(BasePhase):

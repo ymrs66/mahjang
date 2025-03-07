@@ -2,7 +2,6 @@
 import pygame
 from core.game import Game
 from core.game_state import GameState
-from phases.riichi_phase import PlayerRiichiPhase
 from core.constants import (
     PLAYER_DISCARD_PHASE,
     PLAYER_DRAW_PHASE,
@@ -12,8 +11,11 @@ from core.constants import (
     AI_ACTION_SELECTION_PHASE,
     PLAYER_ACTION_SELECTION_PHASE,
     PLAYER_RIICHI_PHASE,
+    PLAYER_SELECT_TILE_PHASE,
     GAME_END_PHASE
 )
+from phases.riichi_phase import PlayerRiichiPhase
+from phases.select_tile_phase import PlayerSelectTilePhase
 from events.event_handler import handle_events  # イベント処理を外部モジュールに分離
 from core.game_logic import (
     handle_ai_action_selection_phase,
@@ -52,11 +54,12 @@ def main_loop():
         AI_DRAW_PHASE:   lambda st, ct: AIDrawPhase(st.game, st).update(ct),
         AI_DISCARD_PHASE: lambda st, ct: AIDiscardPhase(st.game, st).update(ct),
         PLAYER_DRAW_PHASE: lambda st, ct: PlayerDrawPhase(st.game, st).update(ct),
-        PLAYER_RIICHI_PHASE:   lambda st, ct: PlayerRiichiPhase(st.game, st).update(ct),
         PLAYER_DISCARD_PHASE: lambda st, ct: PlayerDiscardPhase(st.game, st).update(ct),
         AI_ACTION_SELECTION_PHASE: handle_ai_action_selection_phase,
         PLAYER_ACTION_SELECTION_PHASE: handle_player_action_selection_phase,
         MELD_WAIT_PHASE: handle_meld_wait_phase,
+        PLAYER_RIICHI_PHASE: lambda st, ct: PlayerRiichiPhase(st.game, st).update(ct),
+        PLAYER_SELECT_TILE_PHASE: lambda st, ct: PlayerSelectTilePhase(st.game, st).update(ct),
     }
 
     running = True
@@ -100,8 +103,12 @@ def render_game(state):
     draw_ai_tiles(screen)
     draw_discards(screen, state.game.discards)
 
-    if (state.current_phase in [PLAYER_ACTION_SELECTION_PHASE, PLAYER_RIICHI_PHASE]) \
-    and state.available_actions:
+    if (state.current_phase in
+        [PLAYER_DISCARD_PHASE, 
+         PLAYER_ACTION_SELECTION_PHASE,
+         PLAYER_RIICHI_PHASE,
+         PLAYER_SELECT_TILE_PHASE
+         ]) and state.available_actions:
         # 毎フレーム、行動ボタンを描画して Rect を更新
         state.action_buttons = draw_action_buttons(screen, state.available_actions)    
     pygame.display.flip()
