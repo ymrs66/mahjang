@@ -40,7 +40,6 @@ class PlayerSelectTilePhase(BasePhase):
             if is_14_tile_tenpai(player.tiles):
                 print(actions)
                 actions.append("リーチ")
-                self.state.transition_to(PLAYER_RIICHI_PHASE) # リーチフェーズに移行
 
         # スキップ系のボタンを入れる場合はここで追加
         # actions.append("スキップ") など
@@ -81,3 +80,53 @@ class PlayerSelectTilePhase(BasePhase):
             self.state.transition_to(PLAYER_DISCARD_PHASE)
         else:
             print("[警告] 牌が選択されていません")
+
+
+    def do_riichi(self):
+        """
+        リーチボタンが押されたときの処理:
+          - 選択中の牌があればそれを切る
+          - なければテンパイ牌を自動探索して切る
+          - リーチフラグを立てて discard_phase へ
+        """
+        player = self.game.players[0]
+        player.is_reach = True
+        tile_to_discard = self.state.selected_tile
+
+        # 選択牌がない場合は自動でテンパイ牌を探す
+        if tile_to_discard is None:
+            tile_to_discard = self.find_tenpai_tile()
+
+        if tile_to_discard:
+            # 本当にその牌を切ったらテンパイか確認したいなら:
+            temp = player.tiles.copy()
+            if tile_to_discard in temp:
+                temp.remove(tile_to_discard)
+                from meld_checker import is_tenpai
+                if not is_tenpai(temp):
+                    print("[エラー] 選択された牌(または自動探索した牌)を切ってもテンパイになりません!")
+                    # キャンセルするか、別のUIを出すかはお好み
+                    return
+            else:
+                print("[エラー] tile_to_discard が手牌にありません!")
+                return
+
+            # テンパイOKならリーチ成立 → PlayerDiscardPhaseで実際に捨てる
+            print(f"[リーチ宣言] {tile_to_discard} を捨てます")
+            self.state.selected_tile = tile_to_discard
+
+            # フェーズ遷移: この後 discard_phase で自動的に捨てる
+            self.state.transition_to(PLAYER_DISCARD_PHASE)
+        else:
+            print("[エラー] テンパイ牌が見つかりません。リーチ不能。")
+
+    def find_tenpai_tile(self):
+        """14枚のうち、切ったらテンパイになる牌を探索して返す。"""
+        from meld_checker import is_tenpai
+        player = self.game.players[0]
+        for t in player.tiles:
+            temp = player.tiles.copy()
+            temp.remove(t)
+            if is_tenpai(temp):
+                return t
+        return None

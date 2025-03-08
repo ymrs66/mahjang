@@ -33,6 +33,11 @@ def handle_events(state, current_time, screen):
             state.selected_tile = selected_tile
             print(f"handle_event,35,selected_tile: {selected_tile}")
 
+        if state.current_phase == PLAYER_SELECT_TILE_PHASE:
+            from phases.select_tile_phase import PlayerSelectTilePhase
+            ph = PlayerSelectTilePhase(state.game, state)
+            ph.handle_event(event)
+
         # --- ② ACTION_SELECTION_PHASE 用に handle_action_selection を呼ぶ ---
         if state.current_phase == PLAYER_ACTION_SELECTION_PHASE:
             handle_action_selection(event, state, current_time)
@@ -107,7 +112,9 @@ def handle_action_selection(event, state, current_time):
                     print("[処理] ロンを実行します")
                     discard_tile = state.game.target_tile
                     state.game.process_ron(0, discard_tile, state)
-                    
+                elif action == "リーチ":
+                    print("[処理] リーチボタンが押されました")
+                    state.transition_to(PLAYER_RIICHI_PHASE)    
                 elif action == "スキップ":
                     print("[スキップ] アクションを行わず次に進みます。")
                     state.ai_action_time = current_time + AI_ACTION_DELAY
