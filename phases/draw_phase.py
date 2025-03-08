@@ -28,6 +28,7 @@ class PlayerDrawPhase(BasePhase):
         if tile:
             print(f"[デバッグ:PlayerDrawPhase] プレイヤーがツモ: {tile}")
             self.game.players[0].add_tile(tile)
+            self.state.drawn_tile = tile
         else:
             print("[デバッグ:PlayerDrawPhase] 山が空です。ゲーム終了")
             self.state.transition_to(GAME_END_PHASE)
@@ -58,6 +59,10 @@ class PlayerDrawPhase(BasePhase):
         # ツモ完了したらプレイヤーの捨て牌フェーズへ遷移
         self.state.transition_to(PLAYER_SELECT_TILE_PHASE)
 
+    def handle_event(self, event):
+        # まず共通処理を実行
+        super().handle_event(event)
+        pass
 
 class AIDrawPhase(BasePhase):
     def update(self, current_time):
@@ -92,3 +97,8 @@ class AIDrawPhase(BasePhase):
 
         # AIの捨てフェーズへ
         self.state.transition_to(AI_DISCARD_PHASE)
+
+    def handle_event(self, event):
+        # まず共通処理を実行
+        super().handle_event(event)
+        pass

@@ -29,10 +29,16 @@ class PlayerDiscardPhase(BasePhase):
         self.game.discard_tile(selected_tile, 0)
         # 選択解除
         self.state.selected_tile = None
+        # ツモ牌（drawn_tile）が使用された場合、クリアする
+        self.state.drawn_tile = None
 
         # (3) AIへ移行
         self.state.ai_action_time = current_time + AI_ACTION_DELAY
         self.state.transition_to(AI_DRAW_PHASE)
+    def handle_event(self, event):
+        # まず共通処理を実行
+        super().handle_event(event)
+        pass
 
 class AIDiscardPhase(BasePhase):
     def update(self, current_time):
@@ -69,3 +75,7 @@ class AIDiscardPhase(BasePhase):
         self.state.ai_action_time = current_time + AI_ACTION_DELAY
         print("[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE")
         self.state.transition_to(PLAYER_DRAW_PHASE)
+    def handle_event(self, event):
+        # まず共通処理を実行
+        super().handle_event(event)
+        pass

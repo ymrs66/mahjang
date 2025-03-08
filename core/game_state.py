@@ -1,5 +1,37 @@
-##game_state.py
-from core.constants import PLAYER_DRAW_PHASE
+# File: mahjang/core/game_state.py
+from core.constants import (
+    PLAYER_DISCARD_PHASE,
+    PLAYER_DRAW_PHASE,
+    AI_DRAW_PHASE,
+    AI_DISCARD_PHASE,
+    MELD_WAIT_PHASE,
+    AI_ACTION_SELECTION_PHASE,
+    PLAYER_ACTION_SELECTION_PHASE,
+    PLAYER_RIICHI_PHASE,
+    PLAYER_SELECT_TILE_PHASE,
+    GAME_END_PHASE
+)
+from phases.draw_phase import PlayerDrawPhase, AIDrawPhase
+from phases.discard_phase import PlayerDiscardPhase, AIDiscardPhase
+from phases.riichi_phase import PlayerRiichiPhase
+from phases.select_tile_phase import PlayerSelectTilePhase
+from phases.player_action_selection_phase import PlayerActionSelectionPhase
+from phases.ai_action_selection_phase import AIActionSelectionPhase
+from phases.meld_wait_phase import MeldWaitPhase
+
+# フェーズIDとクラスの対応表
+PHASE_CLASS_MAP = {
+    PLAYER_DRAW_PHASE: PlayerDrawPhase,
+    PLAYER_DISCARD_PHASE: PlayerDiscardPhase,
+    AI_DRAW_PHASE: AIDrawPhase,
+    AI_DISCARD_PHASE: AIDiscardPhase,
+    PLAYER_ACTION_SELECTION_PHASE: PlayerActionSelectionPhase,
+    AI_ACTION_SELECTION_PHASE: AIActionSelectionPhase,
+    MELD_WAIT_PHASE: MeldWaitPhase,
+    PLAYER_RIICHI_PHASE: PlayerRiichiPhase,
+    PLAYER_SELECT_TILE_PHASE: PlayerSelectTilePhase,
+}
+
 class GameState:
     """
     ゲーム全体の状態を管理するクラス
@@ -11,35 +43,43 @@ class GameState:
         self.draw_action_time = 0
         self.phase_history = []
         self.current_phase = PLAYER_DRAW_PHASE
+        self.current_phase_object = None  #現在のフェーズのオブジェクト
         self.action_buttons = {}
         self.available_actions = []
         self.waiting_for_player_discard = False
-
-        # ここで "どのメルドを実行したいか" を示すフラグを1つに統合
         self.meld_action = None   # "pon", "chi", "kan", "skip", または None
+        self.drawn_tile = None
 
-        # ボタンの位置など既存の変数はそのまま or まとめるかはお好み
         self.chi_button_rect = None
         self.pon_button_rect = None
         self.kan_button_rect = None
 
     def initialize(self, game):
-        """
-        ゲームの初期化
-        """
         self.__init__()  # 属性をリセット
         self.game = game
+        # 初期フェーズのオブジェクトを生成
+        self.set_current_phase_object(self.current_phase)
+
+    def set_current_phase_object(self, phase_id):
+        """フェーズIDに対応するフェーズオブジェクトを生成して保持する"""
+        phase_class = PHASE_CLASS_MAP.get(phase_id)
+        if phase_class:
+            self.current_phase_object = phase_class(self.game, self)
+        else:
+            self.current_phase_object = None
+            print(f"[警告] 未対応のフェーズID: {phase_id}")
 
     def transition_to(self, new_phase):
-        """フェーズを遷移させる"""
         print(f"フェーズ遷移: {self.current_phase} -> {new_phase}")
         self.phase_history.append(self.current_phase)
         self.current_phase = new_phase
+        # 新しいフェーズオブジェクトを生成して保持
+        self.set_current_phase_object(new_phase)
 
     def revert_to_previous_phase(self):
-        """前のフェーズに戻す"""
         if self.phase_history:
             self.current_phase = self.phase_history.pop()
+            self.set_current_phase_object(self.current_phase)
             print(f"フェーズを前に戻す: {self.current_phase}")
         else:
             print("フェーズ履歴がありません。")

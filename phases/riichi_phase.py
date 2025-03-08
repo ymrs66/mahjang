@@ -35,6 +35,8 @@ class PlayerRiichiPhase(BasePhase):
     def handle_event(self, event):
         """リーチフェーズ内でのマウスクリック or キー押下を処理"""
         import pygame
+        super().handle_event(event)
+
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos = event.pos
             # 各ボタンのRectが state.action_buttons にあるとして、

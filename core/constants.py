@@ -26,6 +26,7 @@ AI_ACTION_DELAY = 1000  # AI のアクション待機時間（ミリ秒）
 # ポン表示のオフセット
 PON_OFFSET_X = 100  # 右方向へのオフセット
 PON_OFFSET_Y = 450  # 基準となるY座標
+DRAWN_TILE_EXTRA_OFFSET = 20 #ツモ牌用の追加オフセット
 
 # フェーズ
 PLAYER_DISCARD_PHASE = 0  # プレイヤーの捨てるフェーズ

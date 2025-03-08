@@ -6,6 +6,9 @@ from core.constants import (
     PLAYER_RIICHI_PHASE,
 )
 from meld_checker import is_14_tile_tenpai
+import pygame
+from core.constants import TILE_WIDTH, TILE_HEIGHT,TILE_MARGIN
+
 
 class PlayerSelectTilePhase(BasePhase):
     """
@@ -47,30 +50,34 @@ class PlayerSelectTilePhase(BasePhase):
         self.state.available_actions = actions
 
     def handle_event(self, event):
-        """
-        このフェーズ中は「手牌クリック」と「ボタンクリック」を処理する。
-        """
-        import pygame
-        # (1) 手牌クリック処理は従来と同様
+        # まず共通処理を実行
+        super().handle_event(event)
+
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos = event.pos
-            # 手牌をクリックして state.selected_tile を更新
+            # 牌の領域をループでチェックして、クリックされた牌を選択する
             for i, tile in enumerate(self.game.players[0].tiles):
-                # (TILE_WIDTH, TILE_MARGIN などは流用)
-                # ここでクリック判定...
-                pass
+                x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
+                y = 500  # 牌描画のy座標（適宜調整）
+                if x <= pos[0] <= x + TILE_WIDTH and y <= pos[1] <= y + TILE_HEIGHT:
+                    self.state.selected_tile = tile
+                    print(f"[選択] 手牌から選択された牌: {tile}")
+                    # ここで何か視覚的なフィードバック（例：赤枠描画）があると良い
+                    break
 
-            # ボタン領域も判定
+            # ボタン領域もチェック（既存のコード）
             for action, rect in self.state.action_buttons.items():
                 if rect.collidepoint(pos):
                     if action == "捨てる":
                         self.discard_selected_tile()
                     elif action == "リーチ":
                         self.do_riichi()
-                    # もしスキップがあれば skip() など
-
-        # キー操作でスペース押下なら、捨てるのかスキップなのか決めるならここでもOK
-
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            if self.state.selected_tile is not None:
+                print("[キー入力] スペースキーが押されたので、捨てる処理を実行します")
+                self.discard_selected_tile()
+            else:
+                print("[警告] 牌が選択されていません。スペースキーで捨てられません。")            
     def discard_selected_tile(self):
         """
         選択された牌を確定し、PLAYER_DISCARD_PHASE へ遷移する

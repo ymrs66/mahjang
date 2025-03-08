@@ -1,4 +1,5 @@
 # File: core/meld_manager.py
+import pygame
 from core.constants import *
 from meld_checker import MeldChecker
 
@@ -96,6 +97,7 @@ class MeldManager:
         print(f"{meld_type}成功: {tiles_to_remove + [self.target_tile]}")
         self.meld_enabled[meld_type] = False
         self.target_tile = None
+        state.ai_action_time = state.ai_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
         # 4) フェーズ遷移
         state.waiting_for_player_discard = False
