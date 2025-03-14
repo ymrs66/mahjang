@@ -3,7 +3,6 @@ from phases.base_phase import BasePhase
 from core.constants import (
     PLAYER_SELECT_TILE_PHASE,
     PLAYER_DISCARD_PHASE,
-    PLAYER_RIICHI_PHASE,
 )
 from meld_checker import is_14_tile_tenpai
 import pygame
@@ -106,6 +105,7 @@ class PlayerSelectTilePhase(BasePhase):
 
         if tile_to_discard:
             # 本当にその牌を切ったらテンパイか確認したいなら:
+            tile_to_discard.is_riichi_discard = True  
             temp = player.tiles.copy()
             if tile_to_discard in temp:
                 temp.remove(tile_to_discard)

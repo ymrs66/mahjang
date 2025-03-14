@@ -73,8 +73,6 @@ class PlayerActionSelectionPhase(BasePhase):
                         self.do_tsumo()
                     elif action == "ロン":
                         self.do_ron()
-                    elif action == "リーチ":
-                        self.state.transition_to(9)  # PLAYER_RIICHI_PHASE など
                     elif action == "スキップ":
                         # スキップ → AIツモへ
                         self.state.ai_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
@@ -124,7 +122,16 @@ class PlayerActionSelectionPhase(BasePhase):
         self.state.game.process_tsumo(0, self.state)
 
     def do_ron(self):
-        discard_tile = self.state.game.target_tile
+        # （例）AIが捨てた最後の牌を取得
+        #   もし捨てたのがプレイヤー1だけとは限らない場合は、対象プレイヤーIDをその都度決める必要あり。
+        #   とりあえず2人対戦で「他家＝AI＝1番」と想定:
+        if self.state.game.discards[1]:
+            discard_tile = self.state.game.discards[1][-1]
+        else:
+            discard_tile = None
+
+        print(f"[DEBUG] do_ron() called. discard_tile={discard_tile}")
+
         if discard_tile:
             self.state.game.process_ron(0, discard_tile, self.state)
         else:

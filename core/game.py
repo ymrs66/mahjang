@@ -9,6 +9,7 @@ from core.constants import *
 # meld_checker.py をインポート
 from meld_checker import is_win_hand
 from core.meld_manager import MeldManager
+from core.yaku_caliculator import calculate_yaku
 
 class Game:
     def __init__(self):
@@ -136,13 +137,15 @@ class Game:
             # --- メルドリセットは MelsManagerにまとめる ---
             self.meld_manager.clear_meld_state()
 
-            self.target_tile = None
+            #self.target_tile = None
 
         else:
             discarded_tile = self.players[1].discard_tile()
             if discarded_tile:
                 self.discards[1].append(discarded_tile)
                 print(f"AIが捨てた牌: {discarded_tile}")
+                self.target_tile = discarded_tile
+                print(f"[DEBUG] game.target_tile after AI discard: {self.target_tile}")
             else:
                 print("エラー: AIが捨て牌を選択できませんでした！")
 
@@ -200,44 +203,54 @@ class Game:
 
     def process_ron(self, player_id, discard_tile, state):
         print(f"[ロン宣言] プレイヤー{player_id}が {discard_tile} をロンしました！")
-
-        # 1) 誰の捨て牌かを決定 → discard_tile を該当箇所から削除
-        #   仮に "AIが捨てた牌" なら => self.discards[1]
-        #   "プレイヤー0が捨てた牌" なら => self.discards[0]
-        #   もしプレイヤーID == 0 => AIの捨て牌(1) を除去
-        #   もしプレイヤーID == 1 => プレイヤーの捨て牌(0) を除去
-
+        # 対象の捨て牌を削除（既存の処理）
         if player_id == 0:
-            # = プレイヤー0がロン → AI(=1)の捨て牌から discard_tile を除去
             if discard_tile in self.discards[1]:
                 self.discards[1].remove(discard_tile)
         else:
-            # = AIがロン → プレイヤー0の捨て牌から discard_tile を除去
             if discard_tile in self.discards[0]:
                 self.discards[0].remove(discard_tile)
-
-        # 2) 手牌14枚を最終形として持たせる(任意)
-        #    (点数計算を実装するならやる)
+    
         winning_tiles = self.players[player_id].tiles.copy()
         winning_tiles.append(discard_tile)
         print(f"[ロン] {winning_tiles} で和了！")
-
-        # 3) ゲーム終了(仮)
-        state.transition_to(GAME_END_PHASE)
+    
+        # プレイヤーの手牌に加える
+        self.players[player_id].tiles.append(discard_tile)
+    
+        # 役計算実施（ロンの場合、concealed_hand は通常は鳴いていないので簡単化）
+        concealed_hand = self.players[player_id].tiles  
+        melds = self.players[player_id].pons + self.players[player_id].chis + self.players[player_id].kans
+        player=state.game.players[0]
+        yaku_list, han = calculate_yaku(concealed_hand, melds, discard_tile, False, player)
+    
+    
+        state.win_message = "ロン和了！"
+        state.win_yaku = yaku_list
+        state.win_score = han * 1000  # 仮の点数例
+    
+        state.transition_to(WIN_RESULT_PHASE)
         
-    def process_tsumo(self,player_id,state):
-        """
-        プレイヤーが自分のツモ牌で和了する処理
-        """
-
+    def process_tsumo(self, player_id, state):
         winning_tiles = state.game.players[player_id].tiles.copy()  # 14枚
         print(f"[ツモ宣言] プレイヤー{player_id}が自摸和了しました！")
         print(f"[ツモ] {winning_tiles} で和了！")
+    
+        # ここで役計算を実行（現時点では calculate_yaku を使った例）
+        # 例えば、隠し手牌は player.tiles の中から鳴き牌を除いたもの（簡略化のため全体で計算）
+        concealed_hand = state.game.players[player_id].tiles  
+        melds = state.game.players[player_id].pons + state.game.players[player_id].chis + state.game.players[player_id].kans
+        player=state.game.players[0]
+        yaku_list, han = calculate_yaku(concealed_hand, melds, None, True, player)
+    
+        # GameState に結果をセット
+        state.win_message = "ツモ和了！"
+        state.win_yaku = yaku_list
+        state.win_score = han * 1000  # 仮の点数計算例（1翻＝1000点とする）
+    
+        # WinResultPhase へ遷移
+        state.transition_to(WIN_RESULT_PHASE)
 
-        # 点数計算などあればここで計算
-
-        # その後、ゲームを終了
-        state.transition_to(GAME_END_PHASE)
     
     def process_ai_tsumo(self,player_id, state):
         winning_tiles = self.players[player_id].tiles.copy()

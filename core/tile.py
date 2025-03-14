@@ -12,6 +12,7 @@ class Tile:
         self.suit = suit  # 牌の種類
         self.value = value  # 数字または字牌
         self.image = None  # 初期値として None を設定
+        self.is_riichi_discard = False   # ← リーチ捨て牌フラグを初期Falseに
 
         if image_path:  # 画像パスが指定されている場合のみ画像をロード
             self.image = pygame.image.load(image_path)

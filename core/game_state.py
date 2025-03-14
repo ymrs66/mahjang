@@ -7,17 +7,17 @@ from core.constants import (
     MELD_WAIT_PHASE,
     AI_ACTION_SELECTION_PHASE,
     PLAYER_ACTION_SELECTION_PHASE,
-    PLAYER_RIICHI_PHASE,
     PLAYER_SELECT_TILE_PHASE,
+    WIN_RESULT_PHASE,
     GAME_END_PHASE
 )
 from phases.draw_phase import PlayerDrawPhase, AIDrawPhase
 from phases.discard_phase import PlayerDiscardPhase, AIDiscardPhase
-from phases.riichi_phase import PlayerRiichiPhase
 from phases.select_tile_phase import PlayerSelectTilePhase
 from phases.player_action_selection_phase import PlayerActionSelectionPhase
 from phases.ai_action_selection_phase import AIActionSelectionPhase
 from phases.meld_wait_phase import MeldWaitPhase
+from phases.win_result_phase import WinResultPhase
 
 # フェーズIDとクラスの対応表
 PHASE_CLASS_MAP = {
@@ -28,8 +28,8 @@ PHASE_CLASS_MAP = {
     PLAYER_ACTION_SELECTION_PHASE: PlayerActionSelectionPhase,
     AI_ACTION_SELECTION_PHASE: AIActionSelectionPhase,
     MELD_WAIT_PHASE: MeldWaitPhase,
-    PLAYER_RIICHI_PHASE: PlayerRiichiPhase,
     PLAYER_SELECT_TILE_PHASE: PlayerSelectTilePhase,
+    WIN_RESULT_PHASE: WinResultPhase,
 }
 
 class GameState:

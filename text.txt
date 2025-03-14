@@ -1,0 +1,3300 @@
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.1)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+初期配布完了: プレイヤー: 13枚, AI: 13枚
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=1320, ai_action_time=0
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 6m (id=1906119173968)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [4p (id=1906119171376), hakuz (id=1906119176464), chunz (id=1906119179920), 7s (id=1906119172528), 2m (id=1906118807056), 6s (id=1906119172432), 8p (id=1906119178288), nanz (id=1906119169552), hatsuz (id=1906119173296), 7p (id=1906119174928), 4p (id=1906118774800), 5s (id=1905826314704), 2m (id=1906119176848), 6m (id=1906119173968)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: hatsuz (id=1906119173296)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: hatsuz (id=1906119173296)
+  [Hand.remove_tile] 入力 tile=hatsuz (id=1906119173296), 現在手牌=[4p (id=1906119171376), hakuz (id=1906119176464), chunz (id=1906119179920), 7s (id=1906119172528), 2m (id=1906118807056), 6s (id=1906119172432), 8p (id=1906119178288), nanz (id=1906119169552), hatsuz (id=1906119173296), 7p (id=1906119174928), 4p (id=1906118774800), 5s (id=1905826314704), 2m (id=1906119176848), 6m (id=1906119173968)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 9p (id=1906119175120)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [3m (id=1906119170416), 3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119176656), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 3m (id=1906119170416)
+  [AIPlayer.discard_tile] decide_discard() => 3m (id=1906119170416)
+  [AIPlayer] discard_tile=3m (id=1906119170416), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=3m (id=1906119170416), 現在手牌=[3m (id=1906119170416), 3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119176656), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119176656), pez (id=1906119176368)]
+AIの捨て牌: 3m (id=1906119170416)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=3m (id=1906119170416)
+  [AIDiscardPhase] AI chose tile to discard: 3m (id=1906119170416)
+  [AIDiscardPhase] AIが牌を捨てました: 3m (id=1906119170416)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=6054, ai_action_time=6050
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: shaz (id=1906119179536)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), chunz (id=1906119179920), hakuz (id=1906119176464), nanz (id=1906119169552), shaz (id=1906119179536)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: chunz (id=1906119179920)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: chunz (id=1906119179920)
+  [Hand.remove_tile] 入力 tile=chunz (id=1906119179920), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), chunz (id=1906119179920), hakuz (id=1906119176464), nanz (id=1906119169552), shaz (id=1906119179536)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 4s (id=1906119172240)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119176656), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: chunz (id=1906119176656)
+  [AIPlayer.discard_tile] decide_discard() => chunz (id=1906119176656)
+  [AIPlayer] discard_tile=chunz (id=1906119176656), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=chunz (id=1906119176656), 現在手牌=[3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119176656), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: chunz (id=1906119176656)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=chunz (id=1906119176656)
+  [AIDiscardPhase] AI chose tile to discard: chunz (id=1906119176656)
+  [AIDiscardPhase] AIが牌を捨てました: chunz (id=1906119176656)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=9518, ai_action_time=9511
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: nanz (id=1906119172912)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), hakuz (id=1906119176464), nanz (id=1906119169552), shaz (id=1906119179536), nanz (id=1906119172912)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[警告] 牌が選択されていません。スペースキーで捨てられません。
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: shaz (id=1906119179536)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: shaz (id=1906119179536)
+  [Hand.remove_tile] 入力 tile=shaz (id=1906119179536), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), hakuz (id=1906119176464), nanz (id=1906119169552), shaz (id=1906119179536), nanz (id=1906119172912)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: chunz (id=1906119173392)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 3m (id=1906118808016)
+  [AIPlayer.discard_tile] decide_discard() => 3m (id=1906118808016)
+  [AIPlayer] discard_tile=3m (id=1906118808016), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=3m (id=1906118808016), 現在手牌=[3m (id=1906118808016), 5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+AIの捨て牌: 3m (id=1906118808016)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=3m (id=1906118808016)
+  [AIDiscardPhase] AI chose tile to discard: 3m (id=1906118808016)
+  [AIDiscardPhase] AIが牌を捨てました: 3m (id=1906118808016)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=14052, ai_action_time=14046
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: nanz (id=1906119179440)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), hakuz (id=1906119176464), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: hakuz (id=1906119176464)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: hakuz (id=1906119176464)
+  [Hand.remove_tile] 入力 tile=hakuz (id=1906119176464), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), hakuz (id=1906119176464), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 7s (id=1906119175792)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 7m (id=1906119170800)
+  [AIPlayer.discard_tile] decide_discard() => 7m (id=1906119170800)
+  [AIPlayer] discard_tile=7m (id=1906119170800), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=7m (id=1906119170800), 現在手牌=[5m (id=1906119177136), 7m (id=1906119170800), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [5m (id=1906119177136), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+AIの捨て牌: 7m (id=1906119170800)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=7m (id=1906119170800)
+  [AIDiscardPhase] AI chose tile to discard: 7m (id=1906119170800)
+  [AIDiscardPhase] AIが牌を捨てました: 7m (id=1906119170800)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=18773, ai_action_time=18771
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: hakuz (id=1906119179728)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), hakuz (id=1906119179728)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: hakuz (id=1906119179728)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: hakuz (id=1906119179728)
+  [Hand.remove_tile] 入力 tile=hakuz (id=1906119179728), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), hakuz (id=1906119179728)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 8m (id=1906119177424)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 1p (id=1906119171088)
+  [AIPlayer.discard_tile] decide_discard() => 1p (id=1906119171088)
+  [AIPlayer] discard_tile=1p (id=1906119171088), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=1p (id=1906119171088), 現在手牌=[5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119171088), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+AIの捨て牌: 1p (id=1906119171088)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=1p (id=1906119171088)
+  [AIDiscardPhase] AI chose tile to discard: 1p (id=1906119171088)
+  [AIDiscardPhase] AIが牌を捨てました: 1p (id=1906119171088)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=23271, ai_action_time=23262
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 5s (id=1906119178864)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 5s (id=1906119178864)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[警告] 牌が選択されていません。スペースキーで捨てられません。
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: 5s (id=1906119178864)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 5s (id=1906119178864)
+  [Hand.remove_tile] 入力 tile=5s (id=1906119178864), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 5s (id=1906119178864)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 1s (id=1906119178480)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 9p (id=1906119175120)
+  [AIPlayer.discard_tile] decide_discard() => 9p (id=1906119175120)
+  [AIPlayer] discard_tile=9p (id=1906119175120), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=9p (id=1906119175120), 現在手牌=[5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 9p (id=1906119175120), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [5m (id=1906119177136), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+AIの捨て牌: 9p (id=1906119175120)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=9p (id=1906119175120)
+  [AIDiscardPhase] AI chose tile to discard: 9p (id=1906119175120)
+  [AIDiscardPhase] AIが牌を捨てました: 9p (id=1906119175120)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120)]
+  [AIDiscardPhase] プレイヤーが取り得るアクション: ['チー']
+フェーズ遷移: 3 -> 8
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[Info] スペース → スキップ
+フェーズ遷移: 8 -> 1
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=29880, ai_action_time=29066
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 8p (id=1906118498000)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 8p (id=1906118498000)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: 8p (id=1906118498000)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 8p (id=1906118498000)
+  [Hand.remove_tile] 入力 tile=8p (id=1906118498000), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 8p (id=1906118498000)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 7m (id=1906119174064)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: chunz (id=1906119173392)
+  [AIPlayer.discard_tile] decide_discard() => chunz (id=1906119173392)
+  [AIPlayer] discard_tile=chunz (id=1906119173392), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=chunz (id=1906119173392), 現在手牌=[5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), chunz (id=1906119173392), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: chunz (id=1906119173392)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=chunz (id=1906119173392)
+  [AIDiscardPhase] AI chose tile to discard: chunz (id=1906119173392)
+  [AIDiscardPhase] AIが牌を捨てました: chunz (id=1906119173392)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=37060, ai_action_time=37058
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 3s (id=1906119175408)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 3s (id=1906119175408)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: 3s (id=1906119175408)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 3s (id=1906119175408)
+  [Hand.remove_tile] 入力 tile=3s (id=1906119175408), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 3s (id=1906119175408)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 2m (id=1906119170320)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 8s (id=1906119040640)
+  [AIPlayer.discard_tile] decide_discard() => 8s (id=1906119040640)
+  [AIPlayer] discard_tile=8s (id=1906119040640), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=8s (id=1906119040640), 現在手牌=[2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), 8s (id=1906119040640), chunz (id=1906119170128), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: 8s (id=1906119040640)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=8s (id=1906119040640)
+  [AIDiscardPhase] AI chose tile to discard: 8s (id=1906119040640)
+  [AIDiscardPhase] AIが牌を捨てました: 8s (id=1906119040640)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392), 8s (id=1906119040640)]
+  [AIDiscardPhase] プレイヤーが取り得るアクション: ['チー']
+フェーズ遷移: 3 -> 8
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['チー']
+[デバッグ] draw_player_state: player.pons=[]
+[Info] スペース → スキップ
+フェーズ遷移: 8 -> 1
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=42301, ai_action_time=41216
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 4p (id=1906119174640)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 4p (id=1906119174640)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=False
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+['捨てる']
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[リーチ宣言] 6m (id=1906119173968) を捨てます
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 6m (id=1906119173968)
+  [Hand.remove_tile] 入力 tile=6m (id=1906119173968), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 6m (id=1906119173968), 4p (id=1906119171376), 4p (id=1906118774800), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 4p (id=1906119174640)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: tonz (id=1906119172816)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368), tonz (id=1906119172816)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: tonz (id=1906119172816)
+  [AIPlayer.discard_tile] decide_discard() => tonz (id=1906119172816)
+  [AIPlayer] discard_tile=tonz (id=1906119172816), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=tonz (id=1906119172816), 現在手牌=[2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368), tonz (id=1906119172816)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: tonz (id=1906119172816)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=tonz (id=1906119172816)
+  [AIDiscardPhase] AI chose tile to discard: tonz (id=1906119172816)
+  [AIDiscardPhase] AIが牌を捨てました: tonz (id=1906119172816)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392), 8s (id=1906119040640), tonz (id=1906119172816)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=49398, ai_action_time=49391
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: shaz (id=1906119169840)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), shaz (id=1906119169840)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=True
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[警告] 牌が選択されていません。スペースキーで捨てられません。
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: shaz (id=1906119169840)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: shaz (id=1906119169840)
+  [Hand.remove_tile] 入力 tile=shaz (id=1906119169840), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), shaz (id=1906119169840)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 4p (id=1906119177904)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 7s (id=1906119175792)
+  [AIPlayer.discard_tile] decide_discard() => 7s (id=1906119175792)
+  [AIPlayer] discard_tile=7s (id=1906119175792), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=7s (id=1906119175792), 現在手牌=[2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 7s (id=1906119175792), chunz (id=1906119170128), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [2m (id=1906119170320), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: 7s (id=1906119175792)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=7s (id=1906119175792)
+  [AIDiscardPhase] AI chose tile to discard: 7s (id=1906119175792)
+  [AIDiscardPhase] AIが牌を捨てました: 7s (id=1906119175792)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392), 8s (id=1906119040640), tonz (id=1906119172816), 7s (id=1906119175792)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=56571, ai_action_time=56567
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 3p (id=1906117958528)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 3p (id=1906117958528)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=True
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: 3p (id=1906117958528)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 3p (id=1906117958528)
+  [Hand.remove_tile] 入力 tile=3p (id=1906117958528), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 3p (id=1906117958528)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 4m (id=1906119177040)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [2m (id=1906119170320), 4m (id=1906119177040), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), chunz (id=1906119170128), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 5m (id=1906119177136)
+  [AIPlayer.discard_tile] decide_discard() => 5m (id=1906119177136)
+  [AIPlayer] discard_tile=5m (id=1906119177136), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=5m (id=1906119177136), 現在手牌=[2m (id=1906119170320), 4m (id=1906119177040), 5m (id=1906119177136), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), chunz (id=1906119170128), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [2m (id=1906119170320), 4m (id=1906119177040), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: 5m (id=1906119177136)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=5m (id=1906119177136)
+  [AIDiscardPhase] AI chose tile to discard: 5m (id=1906119177136)
+  [AIDiscardPhase] AIが牌を捨てました: 5m (id=1906119177136)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392), 8s (id=1906119040640), tonz (id=1906119172816), 7s (id=1906119175792), 5m (id=1906119177136)]
+[AIDiscardPhase.update()] end → PLAYER_DRAW_PHASE
+フェーズ遷移: 3 -> 1
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=60595, ai_action_time=60586
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 2s (id=1906119178576)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 2s (id=1906119178576)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=True
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[選択] 手牌から選択された牌: 2s (id=1906119178576)
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[キー入力] スペースキーが押されたので、捨てる処理を実行します
+フェーズ遷移: 10 -> 0
+[PlayerDiscardPhase] update start
+手牌から捨てます: 2s (id=1906119178576)
+  [Hand.remove_tile] 入力 tile=2s (id=1906119178576), 現在手牌=[2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 2s (id=1906119178576)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+捨てる処理...
+フェーズ遷移: 0 -> 2
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[AIツモフェーズ] AIがツモを行います
+AIがツモ: 9s (id=1905826500528)
+フェーズ遷移: 2 -> 3
+[デバッグ] draw_player_state: player.pons=[]
+[AIDiscardPhase.update()] start
+  [AIDiscardPhase] AI手牌: [2m (id=1906119170320), 4m (id=1906119177040), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 9s (id=1905826500528), chunz (id=1906119170128), pez (id=1906119176368)]
+  [AIPlayer.discard_tile()] start
+  [AIPlayer.decide_discard] ランダムに選んだ捨て牌: 9p (id=1906119171856)
+  [AIPlayer.discard_tile] decide_discard() => 9p (id=1906119171856)
+  [AIPlayer] discard_tile=9p (id=1906119171856), 手牌から除去します...
+  [Hand.remove_tile] 入力 tile=9p (id=1906119171856), 現在手牌=[2m (id=1906119170320), 4m (id=1906119177040), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 9p (id=1906119171856), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 9s (id=1905826500528), chunz (id=1906119170128), pez (id=1906119176368)]
+  [Hand.remove_tile] tile in self.tiles == True -> 削除実行
+  [AIPlayer] remove後の手牌: [2m (id=1906119170320), 4m (id=1906119177040), 7m (id=1906119174064), 8m (id=1906119177424), 1p (id=1906119174352), 4p (id=1906119177904), 1s (id=1906119178480), 4s (id=1906118925856), 4s (id=1906119172240), 6s (id=1905826315472), 9s (id=1905826500528), chunz (id=1906119170128), pez (id=1906119176368)]
+AIの捨て牌: 9p (id=1906119171856)
+  [AIPlayer.discard_tile()] end
+  [AIDiscardPhase] discard_tile=9p (id=1906119171856)
+  [AIDiscardPhase] AI chose tile to discard: 9p (id=1906119171856)
+  [AIDiscardPhase] AIが牌を捨てました: 9p (id=1906119171856)
+  [AIDiscardPhase] discards[1]=[3m (id=1906119170416), chunz (id=1906119176656), 3m (id=1906118808016), 7m (id=1906119170800), 1p (id=1906119171088), 9p (id=1906119175120), chunz (id=1906119173392), 8s (id=1906119040640), tonz (id=1906119172816), 7s (id=1906119175792), 5m (id=1906119177136), 9p (id=1906119171856)]
+  [AIDiscardPhase] プレイヤーが取り得るアクション: ['ロン']
+フェーズ遷移: 3 -> 8
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] ボタン 'ロン' がクリックされました
+[Error] ロン対象の捨て牌がありません
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[PlayerActionSelectionPhase] update
+[PlayerActionSelectionPhase] 選択可能アクション: ['ロン']
+[デバッグ] draw_player_state: player.pons=[]
+[Info] スペース → スキップ
+フェーズ遷移: 8 -> 1
+[デバッグ:PlayerDrawPhase] --- プレイヤーのツモフェーズ開始 ---
+[デバッグ:PlayerDrawPhase] current_time=71999, ai_action_time=63142
+[デバッグ:PlayerDrawPhase] プレイヤーがツモ: 2p (id=1906119171184)
+[デバッグ:PlayerDrawPhase] プレイヤーの手牌（14枚想定）: [2m (id=1906118807056), 2m (id=1906119176848), 4p (id=1906119171376), 4p (id=1906118774800), 4p (id=1906119174640), 7p (id=1906119174928), 8p (id=1906119178288), 5s (id=1905826314704), 6s (id=1906119172432), 7s (id=1906119172528), nanz (id=1906119169552), nanz (id=1906119172912), nanz (id=1906119179440), 2p (id=1906119171184)]
+[ツモ判定] is_win_hand = False → 捨て牌フェーズへ
+[デバッグ:PlayerDrawPhase] 門前状態=True, リーチ済み=True
+[デバッグ:PlayerDrawPhase] 現在の available_actions=[]
+フェーズ遷移: 1 -> 10
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]
+[デバッグ] draw_player_state: player.pons=[]

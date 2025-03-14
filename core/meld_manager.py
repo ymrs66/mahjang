@@ -10,10 +10,7 @@ class MeldManager:
         """
         self.game = game
 
-        # meld_enabled や meld_candidates なども、
-        # 必要であればこちらで持つことができる (あるいは Game 側に置いたままでもOK)
-        self.target_tile = None
-
+        # 「ポン/チー/カン」それぞれの成立可否と候補セット
         self.meld_candidates = {
             "pon": [],
             "chi": [],
@@ -27,13 +24,14 @@ class MeldManager:
 
     def check_all_melds(self, player_id, discard_tile):
         """
-        ポン/チー/カンをまとめて判定し、結果を自分のメンバに保持。
-        あるいは結果を返すことも可能。
+        ポン/チー/カンをまとめて判定し、結果を self.meld_candidates と self.meld_enabled に保持。
+        discard_tile は「他家が捨てた牌」を外部から渡す。
         """
         player = self.game.players[player_id]
         tiles = player.tiles
         pons  = player.pons
 
+        # meld_checker.py のロジックを呼び出す
         result = MeldChecker.check_all_melds(tiles, pons, discard_tile)
 
         self.meld_candidates["pon"] = result["pon_candidates"]
@@ -44,70 +42,77 @@ class MeldManager:
         self.meld_enabled["chi"] = (len(result["chi_candidates"]) > 0)
         self.meld_enabled["kan"] = (len(result["kan_candidates"]) > 0)
 
-        if discard_tile is not None:
-            self.target_tile = discard_tile
-
         return result
 
     def clear_meld_state(self):
         """
-        メルドに関する状態をリセットしたいときに呼ぶ (target_tile, meld_candidates, etc.)
+        メルドに関する状態をリセットしたいときに呼ぶ。
         """
-        self.target_tile = None
         for k in self.meld_candidates:
             self.meld_candidates[k] = []
         for k in self.meld_enabled:
             self.meld_enabled[k] = False
 
-    def process_meld(self, player_id, meld_type, tiles_to_remove, state):
+
+    def process_meld(self, player_id, meld_type, discard_tile, tiles_to_remove, state):
         """
-        汎用的なメルド実行処理
-        (Gameにあった process_meld のロジックを移行)
+        汎用的なメルド実行処理。discard_tile(捨て牌)も引数で受け取り、必要に応じて捨て牌リストから除去する。
+
+        :param player_id: メルドを行うプレイヤーID
+        :param meld_type: "pon"/"chi"/"kan" のいずれか
+        :param discard_tile: 他家が捨てた牌 (Tile)
+        :param tiles_to_remove: 手牌から除去する牌リスト（刻子/順子など）
+        :param state: GameState オブジェクト
         """
         player = self.game.players[player_id]
 
-        # 1) 手札から除去
+        # --- 1) 手札から除去 ---
         for t in tiles_to_remove:
             print(f"  [process_meld] remove_tile({t}) を実行します。手牌: {player.tiles}")
             player.remove_tile(t)
             print(f"  [process_meld] remove_tile後の手牌: {player.tiles}")
 
-        # 2) 捨て牌から1枚除去 (self.target_tile がある場合)
-        if self.target_tile:
+        # --- 2) 捨て牌から除去 (discard_tileがあれば1枚だけ消す) ---
+        if discard_tile:
+            # 例として「AIの捨て牌一覧(discards[1]) から除く」等
+            # あなたの仕様にあわせて調整してください。通常は「他家の捨て牌」を消します。
             self.game.discards[1] = [
                 d for d in self.game.discards[1]
-                if not d.is_same_tile(self.target_tile)
+                if not d.is_same_tile(discard_tile)
             ]
 
-        # 3) メルド先に追加
+        # --- 3) メルド先に追加 ---
         if meld_type == "pon":
             player.is_menzen = False
-            player.pons.append(tiles_to_remove + [self.target_tile])
+            player.pons.append(tiles_to_remove + [discard_tile])
         elif meld_type == "chi":
             player.is_menzen = False
-            player.chis.append(tiles_to_remove + [self.target_tile])
+            player.chis.append(tiles_to_remove + [discard_tile])
         elif meld_type == "kan":
-            kan_type = self.game.determine_kan_type(player_id, self.target_tile)
+            kan_type = self.game.determine_kan_type(player_id, discard_tile)
             if kan_type in ("明槓", "加槓"):
                 player.is_menzen = False
-            player.kans.append(tiles_to_remove + [self.target_tile])
+            player.kans.append(tiles_to_remove + [discard_tile])
         else:
             print(f"[警告] 不明なmeld_type: {meld_type}")
 
-        print(f"{meld_type}成功: {tiles_to_remove + [self.target_tile]}")
+        print(f"{meld_type}成功: {tiles_to_remove + [discard_tile]}")
         self.meld_enabled[meld_type] = False
-        self.target_tile = None
-        state.ai_action_time = state.ai_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
 
-        # 4) フェーズ遷移
+        # --- 4) フェーズ遷移 ---
+        state.ai_action_time = pygame.time.get_ticks() + AI_ACTION_DELAY
         state.waiting_for_player_discard = False
         state.transition_to(PLAYER_DISCARD_PHASE)
 
-    def process_pon(self, player_id, state):
+
+    def process_pon(self, player_id, discard_tile, state):
         """
-        (Game.process_pon) を移行。
+        ポン処理:
+          - discard_tile(捨て牌) を外部から受け取り
+          - pon_candidates から最初の候補を取り出して process_meld() を呼ぶ
         """
-        if not self.meld_enabled["pon"] or self.target_tile is None:
+        if not self.meld_enabled["pon"]:
+            print("[エラー] ポンが有効になっていません")
             return
 
         pon_sets = self.meld_candidates["pon"]
@@ -115,45 +120,54 @@ class MeldManager:
             print("[エラー] pon候補がありません")
             return
 
+        # pon_sets[0] は [A, B, discard_tile] という3枚セット想定
         pon_set = pon_sets[0]
-        tiles_to_remove = pon_set[:-1]
-        self.process_meld(player_id, "pon", tiles_to_remove, state)
+        tiles_to_remove = pon_set[:-1]  # 手札から除去する2枚
+        self.process_meld(player_id, "pon", discard_tile, tiles_to_remove, state)
 
-    def process_chi(self, player_id, chosen_sequence, state):
+    def process_chi(self, player_id, discard_tile, chosen_sequence, state):
         """
-        (Game.process_chi) を移行。
+        チー処理:
+          - discard_tile と chosen_sequence( [Tile, Tile, discard_tile] ) を受け取る
+          - discard_tile以外を手札から除去してメルド。
         """
-        if not self.meld_enabled["chi"] or self.target_tile is None:
+        if not self.meld_enabled["chi"]:
+            print("[エラー] チーが有効になっていません")
             return
 
-        seq_without_discard = [t for t in chosen_sequence if not t.is_same_tile(self.target_tile)]
-        self.process_meld(player_id, "chi", seq_without_discard, state)
+        seq_without_discard = [t for t in chosen_sequence if not t.is_same_tile(discard_tile)]
+        self.process_meld(player_id, "chi", discard_tile, seq_without_discard, state)
 
-    def process_kan(self, player_id, tile, state):
+    def process_kan(self, player_id, discard_tile, tile, state):
         """
-        (Game.process_kan) を移行。
+        カン処理:
+          - discard_tile(捨て牌) or None
+          - tile: カン対象の牌（明槓/加槓なら discard_tile と同一 or 既存のポン牌）
         """
         if not self.meld_enabled["kan"]:
-            print("[エラー] カンが有効でない状態です")
+            print("[エラー] カンが有効になっていません")
             return
 
-        # ここで暗槓/明槓/加槓を判定 → 除去すべき牌を確定
-        kan_type = self.determine_kan_type(player_id, tile)
+        kan_type = self.game.determine_kan_type(player_id, tile)
         if kan_type is None:
             print("[エラー] カンできない or 不明な種類")
             return
 
-        # ... (暗槓/明槓/加槓 の除去ロジック)
-        # → self.process_meld( ... ) を呼ぶ
+        # ここで prepare_kan_tiles(...) 相当のロジックを呼び出し
+        # 例: 
+        tiles_to_remove = self.game.prepare_kan_tiles(player_id, tile, kan_type)
+        if not tiles_to_remove:
+            print("[エラー] カン用の牌が不足しています")
+            return
 
-        # カン完了後、嶺上牌ツモするなど…
+        # カンメルドを実行
+        self.process_meld(player_id, "kan", discard_tile, tiles_to_remove, state)
+        # カン後の「嶺上牌ツモ」などはここで行う（必要に応じて実装）
+
 
     def determine_kan_type(self, player_id, tile):
         """
-        ここで暗槓/明槓/加槓を判定 (Game.determine_kan_type) を移行。
+        Gameクラスの determine_kan_type をそのまま呼んでもいいし、
+        又はこのメソッド内に同じロジックを移植してもOK。
         """
-        # ここでは self.game.discards や self.target_tile を参照
-        # ...
-        pass
-
-    # 必要に応じて prepare_kan_tiles(...) などのヘルパーもこちらに置く
+        return self.game.determine_kan_type(player_id, tile)
