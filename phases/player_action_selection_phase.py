@@ -91,16 +91,19 @@ class PlayerActionSelectionPhase(BasePhase):
     # --- 以下、具体的な副露アクション ---
     def do_pon(self):
         if self.state.game.meld_manager.meld_enabled["pon"]:
-            self.state.game.meld_manager.process_pon(0, self.state)
+            discard_tile = self.state.game.discards[1][-1]
+            self.state.game.meld_manager.process_pon(0, discard_tile, self.state)
         else:
             print("[Error] ポンできる状態ではありません")
 
     def do_chi(self):
         if self.state.game.meld_manager.meld_enabled["chi"]:
-            chi_list = self.state.game.meld_manager.meld_candidates["chi"]
-            if chi_list:
-                chosen_sequence = chi_list[0]
-                self.state.game.meld_manager.process_chi(0, chosen_sequence, self.state)
+            chi_candidates = self.state.game.meld_manager.meld_candidates["chi"]
+            if chi_candidates:
+                chosen_sequence = chi_candidates[0]
+                # 仮定：chosen_sequence の最後の要素が捨て牌
+                discard_tile = chosen_sequence[-1]
+                self.state.game.meld_manager.process_chi(0, discard_tile, chosen_sequence, self.state)
             else:
                 print("[Error] チー候補が存在しない")
         else:

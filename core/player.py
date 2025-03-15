@@ -7,9 +7,10 @@ class Player:
         self.pons = []
         self.chis = []
         self.kans = []
-        self.is_menzen = True  # ← 新規追加: Trueなら門前とみなす
+        self.is_menzen = True  #  Trueなら門前とみなす
         self.is_reach = False
-
+        self.double_riichi = False  # ダブルリーチ（自摸前にリーチ宣言ができた場合など）
+        self.ippatsu = False       # 一発（リーチ直後に和了する場合）
 
     @property
     def tiles(self):

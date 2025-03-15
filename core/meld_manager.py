@@ -106,11 +106,6 @@ class MeldManager:
 
 
     def process_pon(self, player_id, discard_tile, state):
-        """
-        ポン処理:
-          - discard_tile(捨て牌) を外部から受け取り
-          - pon_candidates から最初の候補を取り出して process_meld() を呼ぶ
-        """
         if not self.meld_enabled["pon"]:
             print("[エラー] ポンが有効になっていません")
             return
@@ -120,9 +115,13 @@ class MeldManager:
             print("[エラー] pon候補がありません")
             return
 
+        # ここで、他家からの捨て牌にフラグをセットする
+        discard_tile.is_meld_discard = True
+        print("[process_pon] Set is_meld_discard=True for discard_tile", discard_tile)
+
         # pon_sets[0] は [A, B, discard_tile] という3枚セット想定
         pon_set = pon_sets[0]
-        tiles_to_remove = pon_set[:-1]  # 手札から除去する2枚
+        tiles_to_remove = pon_set[:-1]  # 手牌から除去する2枚
         self.process_meld(player_id, "pon", discard_tile, tiles_to_remove, state)
 
     def process_chi(self, player_id, discard_tile, chosen_sequence, state):
@@ -136,6 +135,9 @@ class MeldManager:
             return
 
         seq_without_discard = [t for t in chosen_sequence if not t.is_same_tile(discard_tile)]
+        # ここでは、他家からの捨て牌にフラグをセットする
+        discard_tile.is_meld_discard = True
+        print("[process_chi] Set is_meld_discard=True for discard_tile", discard_tile)
         self.process_meld(player_id, "chi", discard_tile, seq_without_discard, state)
 
     def process_kan(self, player_id, discard_tile, tile, state):
