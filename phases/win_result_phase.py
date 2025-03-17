@@ -1,5 +1,6 @@
 # File: mahjang/phases/win_result_phase.py
 import pygame
+from core.game import Game
 from phases.base_phase import BasePhase
 from core.constants import PLAYER_DRAW_PHASE, GAME_END_PHASE, AI_ACTION_DELAY
 from core.resource_utils import get_resource_path
@@ -23,12 +24,17 @@ class WinResultPhase(BasePhase):
     def update(self, current_time):
         # 一定時間表示後、またはイベント（キー入力など）で早期終了できるようにする
         if current_time - self.start_time > self.display_duration:
-            print("[WinResultPhase] 結果表示終了 → 次のフェーズへ")
-            # ここでプレイヤーの手牌を再セット or 削除
-            self.state.game.players[0].tiles.clear()
-            self.state.game.players[1].tiles.clear()
+            print("[WinResultPhase] 結果表示終了 → 次の局へ")
 
-            # ここでは例として PLAYER_DRAW_PHASE に遷移（局のリスタートなど）
+        # --- 1) 新しい Game インスタンスを作り直す ---
+            new_game = Game()
+            new_game.shuffle_wall()
+            new_game.deal_initial_hand()
+
+        # --- 2) 既存の GameState に対して initialize(new_game) で再初期化 ---
+            self.state.initialize(new_game)
+
+        # 例: 最初のフェーズとしてプレイヤーのツモ(PLAYER_DRAW_PHASE)に移行
             self.state.transition_to(PLAYER_DRAW_PHASE)
 
     def handle_event(self, event):

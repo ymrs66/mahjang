@@ -201,6 +201,7 @@ def is_toitoi(concealed_hand, melds):
       ※ 隠し手牌に順子が含まれている場合は成立しない
     """
     # ここでは、メルドが存在する場合に、全てのメルドが3枚または4枚の同一牌であればトイトイとする
+    return False # 中途半端な実装のためひとまずFalse
     for meld in melds:
         if len(meld) not in (3, 4):
             return False
@@ -221,6 +222,7 @@ def is_chanta(concealed_hand, melds):
     ※各グループ（隠し手牌＋鳴き牌）は、端牌（1または9）または字牌を含むとする。
     ここでは、全体の牌（隠し手牌と鳴き牌を合わせたもの）に1枚以上の端牌または字牌があれば成立とする（大雑把な実装）。
     """
+    return False #実装が中途半端なためひとまずFalse
     all_tiles = concealed_hand[:]
     for meld in melds:
         all_tiles.extend(meld)
@@ -236,6 +238,7 @@ def is_junchan(concealed_hand, melds):
     ・全体の牌に字牌が含まれず、かつ必ず端牌が含まれている
     ※実際は各グループごとに判定する必要がありますが、ここでは全体でチェックする簡易実装とする。
     """
+    return False #実装が中途半端なためひとまずFalse
     all_tiles = concealed_hand[:]
     for meld in melds:
         all_tiles.extend(meld)
@@ -251,6 +254,7 @@ def is_sanshoku(concealed_hand, melds):
     鳴き牌の中から順子（3枚組で連続するもの）を抽出し、
     同じ数列が三種類のスートに渡って存在すれば成立とする。
     """
+    return False #実装が中途半端なためひとまずFalse
     sequences = []
     # 鳴き牌から順子を抽出
     for meld in melds:
