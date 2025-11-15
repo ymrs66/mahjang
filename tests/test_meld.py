@@ -21,7 +21,8 @@ def test_pon_can_happen():
     discard_tile = Tile('m', '1')
 
     # 4. check_pon を呼んで結果を確認
-    pon_candidates = game.check_pon(player_id=0, discard_tile=discard_tile)
+    game.meld_manager.check_all_melds(player_id=0, discard_tile=discard_tile)
+    pon_candidates = game.meld_manager.meld_candidates["pon"]
 
     # 5. pon_candidates が空でなければ「ポンできる」とみなす
     assert len(pon_candidates) > 0, "1m,1m + 捨て牌1m ならポン可能なはず"
@@ -43,7 +44,8 @@ def test_chi_can_happen():
     discard_tile = Tile('m', '2')
 
     # 4. check_chi でチー候補を取得
-    chi_candidates = game.check_chi(player_id=0, discard_tile=discard_tile)
+    game.meld_manager.check_all_melds(player_id=0, discard_tile=discard_tile)
+    chi_candidates = game.meld_manager.meld_candidates["chi"]
 
     # 5. チーが可能かどうか(リストがあるか)
     assert len(chi_candidates) > 0, "3m,4m + 捨て牌2m でチー可能"
@@ -61,5 +63,6 @@ def test_chi_cannot_happen_with_wrong_suit():
     discard_tile = Tile('p','2')
 
     # check_chi
-    chi_candidates = game.check_chi(player_id=0, discard_tile=discard_tile)
+    game.meld_manager.check_all_melds(player_id=0, discard_tile=discard_tile)
+    chi_candidates = game.meld_manager.meld_candidates["chi"]
     assert len(chi_candidates) == 0, "スーツが違えばチー不可"

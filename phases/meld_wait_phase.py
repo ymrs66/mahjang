@@ -13,6 +13,8 @@ class MeldWaitPhase(BasePhase):
 
     def update(self, current_time):
         print("[MeldWaitPhase] update")
+        # 直近の他家捨て牌（2人戦想定：AI=1）
+        discard_tile = self.state.game.discards[1][-1] if self.state.game.discards[1] else None
 
         if self.state.meld_action == "skip":
             print("[MeldWaitPhase] skip → PLAYER_DRAW_PHASE")
@@ -21,19 +23,19 @@ class MeldWaitPhase(BasePhase):
             return
         elif self.state.meld_action == "pon":
             print("[MeldWaitPhase] ポン実行")
-            self.state.game.meld_manager.process_pon(0, self.state)
+            self.state.game.meld_manager.process_pon(0, discard_tile, self.state)
             self.state.meld_action = None
         elif self.state.meld_action == "chi":
             print("[MeldWaitPhase] チー実行")
             chi_candidates = self.state.game.meld_manager.meld_candidates["chi"]
             if chi_candidates:
-                self.state.game.meld_manager.process_chi(0, chi_candidates[0], self.state)
+                self.state.game.meld_manager.process_chi(0, discard_tile, chi_candidates[0], self.state)
             self.state.meld_action = None
         elif self.state.meld_action == "kan":
             print("[MeldWaitPhase] カン実行")
             kan_candidates = self.state.game.meld_manager.meld_candidates["kan"]
             if kan_candidates:
-                self.state.game.meld_manager.process_kan(0, kan_candidates[0], self.state)
+                self.state.game.meld_manager.process_kan(0, discard_tile, kan_candidates[0], self.state)
             self.state.meld_action = None
 
         # どの道、メルド後は捨て牌 or 次のフェーズへ進む想定

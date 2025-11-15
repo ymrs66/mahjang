@@ -72,14 +72,23 @@ class MeldManager:
             player.remove_tile(t)
             print(f"  [process_meld] remove_tile後の手牌: {player.tiles}")
 
-        # --- 2) 捨て牌から除去 (discard_tileがあれば1枚だけ消す) ---
+        # --- 2) 捨て牌から除去：相手の捨て牌山から「1枚だけ」消す（同一個体優先→値同値） ---
         if discard_tile:
-            # 例として「AIの捨て牌一覧(discards[1]) から除く」等
-            # あなたの仕様にあわせて調整してください。通常は「他家の捨て牌」を消します。
-            self.game.discards[1] = [
-                d for d in self.game.discards[1]
-                if not d.is_same_tile(discard_tile)
-            ]
+            opponent = 1 if player_id == 0 else 0
+            stack = self.game.discards[opponent]
+            # a) identity で後方から1枚だけ
+            removed = False
+            for i in range(len(stack) - 1, -1, -1):
+                if stack[i] is discard_tile:
+                    del stack[i]
+                    removed = True
+                    break
+            # b) 見つからなければ値同値（is_same_tile）で後方から1枚だけ
+            if not removed:
+                for i in range(len(stack) - 1, -1, -1):
+                    if stack[i].is_same_tile(discard_tile):
+                        del stack[i]
+                        break
 
         # --- 3) メルド先に追加 ---
         if meld_type == "pon":
@@ -89,10 +98,9 @@ class MeldManager:
             player.is_menzen = False
             player.chis.append(tiles_to_remove + [discard_tile])
         elif meld_type == "kan":
-            kan_type = self.game.determine_kan_type(player_id, discard_tile)
-            if kan_type in ("明槓", "加槓"):
-                player.is_menzen = False
-            player.kans.append(tiles_to_remove + [discard_tile])
+        # menzen の更新は process_kan 側で行う。ここでは None を混ぜないように append を組む
+            appended = tiles_to_remove + ([discard_tile] if discard_tile else [])
+            player.kans.append(appended)
         else:
             print(f"[警告] 不明なmeld_type: {meld_type}")
 
@@ -161,6 +169,10 @@ class MeldManager:
         if not tiles_to_remove:
             print("[エラー] カン用の牌が不足しています")
             return
+
+        # menzen 更新
+        if kan_type in ("明槓", "加槓"):
+            self.game.players[player_id].is_menzen = False
 
         # カンメルドを実行
         self.process_meld(player_id, "kan", discard_tile, tiles_to_remove, state)

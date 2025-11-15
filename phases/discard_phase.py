@@ -61,6 +61,7 @@ class AIDiscardPhase(BasePhase):
             self.game.discards[1].append(discard_tile)
             print(f"  [AIDiscardPhase] AIが牌を捨てました: {discard_tile}")
             print(f"  [AIDiscardPhase] discards[1]={self.game.discards[1]}")  # ← 追加: 現在のAI捨て牌リストを表示
+            self.game.target_tile = discard_tile  # ← 明槓判定に利用
         else:
             print("  [エラー] AIが捨て牌を選択できませんでした！（discard_tile=None）")
 

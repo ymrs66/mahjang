@@ -11,7 +11,9 @@ from core.constants import (
     PLAYER_ACTION_SELECTION_PHASE,
     PLAYER_SELECT_TILE_PHASE,
     WIN_RESULT_PHASE,
-    GAME_END_PHASE
+    GAME_END_PHASE,
+    START_SCREEN_PHASE, 
+    END_SCREEN_PHASE
 )
 from core.resource_utils import get_resource_path
 from core.constants import DEFAULT_FONT_PATH,TILE_WIDTH,TILE_MARGIN,SCREEN_HEIGHT,SCREEN_WIDTH 
@@ -52,6 +54,18 @@ def render_game_state(state, screen):
     WinResultPhase(WIN_RESULT_PHASE) かどうかで分岐し、
     通常フェーズは共通描画を行う。
     """
+    if state.current_phase == START_SCREEN_PHASE:
+        # StartScreenPhase の renderを呼ぶだけでOK
+        state.current_phase_object.render(screen)
+        pygame.display.flip()
+        return
+    
+    # 2) 終了画面 (EndScreenPhase) もあるならここに分岐を追加
+    if state.current_phase == END_SCREEN_PHASE:
+        state.current_phase_object.render(screen)
+        pygame.display.flip()
+        return
+
     # 1) 特殊フェーズ(例: 勝利結果)の判定
     if state.current_phase == WIN_RESULT_PHASE:
         render_win_result_phase(state, screen)

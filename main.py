@@ -2,7 +2,7 @@
 import pygame
 from core.game import Game
 from core.game_state import GameState
-from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT, GAME_END_PHASE
+from core.constants import SCREEN_WIDTH, SCREEN_HEIGHT, GAME_END_PHASE,START_SCREEN_PHASE
 from core.ui_manager import UIManager  # 新たに追加
 
 # Pygame 初期設定
@@ -19,6 +19,10 @@ def main_loop():
 
     state = GameState()
     state.initialize(game)  # この時点で current_phase_object が生成される
+
+    # ここで状態を強制的にスタート画面へ
+    state.current_phase = START_SCREEN_PHASE
+    state.set_current_phase_object(START_SCREEN_PHASE)
 
     # UIManager の作成
     ui_manager = UIManager(screen, state)

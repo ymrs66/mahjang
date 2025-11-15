@@ -109,21 +109,21 @@ class Game:
         player_pons = self.players[player_id].pons
 
         # 暗槓（手牌に4枚揃っている）
-        if player_hand.count(tile) == 4:
+        if sum(1 for t in player_hand if t.is_same_tile(tile)) == 4:
             return "暗槓"
 
         # 明槓（捨て牌を含めて4枚になる）
         # たとえば「target_tile == tile」かつ「手札に3枚同じ牌がある」などをチェック
         if self.target_tile and self.target_tile.is_same_tile(tile):
             discard_count = sum(1 for d in self.discards[1] if d.is_same_tile(tile))  # AIの捨て牌から枚数カウント
-            if discard_count == 1 and player_hand.count(tile) == 3:
+            if discard_count == 1 and sum(1 for t in player_hand if t.is_same_tile(tile)) == 3:
                 return "明槓"
 
         # 加槓（ポン済みの牌と同じ牌が1枚手牌にある）
         # たとえば「既に pons にある [tile,tile,tile] が存在し、手札に tile が1枚ある」等
         for pon_set in player_pons:
             if len(pon_set) == 3 and pon_set[0].is_same_tile(tile):
-                if player_hand.count(tile) == 1:
+                if sum(1 for t in player_hand if t.is_same_tile(tile)) == 1:
                     return "加槓"
 
         return None  # カン不可
@@ -203,13 +203,17 @@ class Game:
 
     def process_ron(self, player_id, discard_tile, state):
         print(f"[ロン宣言] プレイヤー{player_id}が {discard_tile} をロンしました！")
-        # 対象の捨て牌を削除（既存の処理）
-        if player_id == 0:
-            if discard_tile in self.discards[1]:
-                self.discards[1].remove(discard_tile)
-        else:
-            if discard_tile in self.discards[0]:
-                self.discards[0].remove(discard_tile)
+        # 対象の捨て牌を「相手側の捨て山」から1枚だけ削除
+        opponent = 1 if player_id == 0 else 0
+        stack = self.discards[opponent]
+        removed = False
+        for i in range(len(stack)-1, -1, -1):
+            if stack[i] is discard_tile:
+                del stack[i]; removed = True; break
+        if not removed:
+            for i in range(len(stack)-1, -1, -1):
+                if stack[i].is_same_tile(discard_tile):
+                    del stack[i]; break
     
         winning_tiles = self.players[player_id].tiles.copy()
         winning_tiles.append(discard_tile)

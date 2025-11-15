@@ -114,7 +114,8 @@ class PlayerActionSelectionPhase(BasePhase):
             kan_list = self.state.game.meld_manager.meld_candidates["kan"]
             if kan_list:
                 kan_tile = kan_list[0]
-                self.state.game.meld_manager.process_kan(0, kan_tile, self.state)
+                discard_tile = self.state.game.discards[1][-1] if self.state.game.discards[1] else None
+                self.state.game.meld_manager.process_kan(0, discard_tile, kan_tile, self.state)
             else:
                 print("[Error] カン候補が存在しない")
         else:

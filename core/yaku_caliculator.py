@@ -1,5 +1,12 @@
 # core/yaku_caliculator.py
 
+from collections import Counter
+
+def _counts_by_value(tiles):
+#    """(suit,value) をキーにしたカウントを返す。Tileの同一性に依存しない。"""
+    return Counter((t.suit, t.value) for t in tiles)
+
+
 def calculate_yaku(concealed_hand, melds, win_tile, is_tsumo, player):
     """
     役計算関数（ドラなし版、簡易実装）
@@ -120,9 +127,8 @@ def is_pinfu(concealed_hand, melds, win_tile):
     if melds and len(melds) > 0:
         return False
 
-    from collections import Counter
-    counts = Counter(concealed_hand)
-    if any(counts[t] >= 3 for t in counts):
+    counts = _counts_by_value(concealed_hand)
+    if any(c >= 3 for c in counts.values()):
         return False
 
     # 2) 対子の数をチェック
@@ -211,9 +217,8 @@ def is_toitoi(concealed_hand, melds):
 
 def is_three_anko(concealed_hand):
     """隠し手牌内で、同一牌が3枚以上あるものをカウントし、3組以上なら三暗刻とする"""
-    from collections import Counter
-    counts = Counter(concealed_hand)
-    anko_count = sum(1 for tile, count in counts.items() if count >= 3)
+    counts = _counts_by_value(concealed_hand)
+    anko_count = sum(1 for _, c in counts.items() if c >= 3)
     return anko_count >= 3
 
 def is_chanta(concealed_hand, melds):
@@ -278,10 +283,9 @@ def is_sanshoku(concealed_hand, melds):
 
 def is_honor_anko(concealed_hand):
     """隠し手牌内に、字牌の暗刻（3枚以上）があればTrue"""
-    from collections import Counter
-    counts = Counter(concealed_hand)
-    for tile, count in counts.items():
-        if is_honor(tile) and count >= 3:
+    counts = _counts_by_value(concealed_hand)
+    for (suit, _), c in counts.items():
+        if suit == 'z' and c >= 3:
             return True
     return False
 

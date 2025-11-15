@@ -5,13 +5,13 @@ from core.constants import TILE_WIDTH, TILE_HEIGHT, TILE_MARGIN,SCREEN_WIDTH,SCR
 def draw_player_state(screen, player, selected_tile, drawn_tile):
     # --- 手牌（13 or 14枚）を描画 ---
     for i, tile in enumerate(player.tiles):
-        if tile == drawn_tile:
+        if tile is drawn_tile:
             x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN) + 20  # DRAWN_TILE_EXTRA_OFFSET=20
         else:
             x = TILE_WIDTH + i * (TILE_WIDTH + TILE_MARGIN)
         y = 500
         screen.blit(tile.image, (x, y))
-        if tile == selected_tile:
+        if tile is selected_tile:
             pygame.draw.rect(screen, (255, 0, 0), (x, y, TILE_WIDTH, TILE_HEIGHT), 3)
 
     # --- ポン牌を描画 ---

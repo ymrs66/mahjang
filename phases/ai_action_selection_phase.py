@@ -32,17 +32,17 @@ class AIActionSelectionPhase(BasePhase):
         # 4) 優先度(またはランダム等)で実行
         if "ポン" in actions:
             print("[AI] ポン選択")
-            self.state.game.meld_manager.process_pon(1, self.state)
+            self.state.game.meld_manager.process_pon(1, discard_tile, self.state)
             return
         elif "チー" in actions:
             print("[AI] チー選択")
             chi_seq = self.state.game.meld_manager.meld_candidates["chi"][0]
-            self.state.game.meld_manager.process_chi(1, chi_seq, self.state)
+            self.state.game.meld_manager.process_chi(1, discard_tile, chi_seq, self.state)
             return
         elif "カン" in actions:
             print("[AI] カン選択")
             kan_tile = self.state.game.meld_manager.meld_candidates["kan"][0]
-            self.state.game.meld_manager.process_kan(1, kan_tile, self.state)
+            self.state.game.meld_manager.process_kan(1, discard_tile, kan_tile, self.state)
             return
         elif "ロン" in actions:
             print("[AI] ロン選択")

@@ -39,3 +39,5 @@ PLAYER_ACTION_SELECTION_PHASE = 8  # プレイヤーのアクション選択フ�
 PLAYER_SELECT_TILE_PHASE = 9 #牌選択フェーズ
 WIN_RESULT_PHASE = 10      # 和了結果表示フェーズ
 GAME_END_PHASE = 11        # ゲーム終了フェーズ
+START_SCREEN_PHASE = 12    # タイトル画面
+END_SCREEN_PHASE = 13      # 終了画面

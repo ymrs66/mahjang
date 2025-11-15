@@ -9,7 +9,9 @@ from core.constants import (
     PLAYER_ACTION_SELECTION_PHASE,
     PLAYER_SELECT_TILE_PHASE,
     WIN_RESULT_PHASE,
-    GAME_END_PHASE
+    GAME_END_PHASE,
+    START_SCREEN_PHASE,
+    END_SCREEN_PHASE,
 )
 from phases.draw_phase import PlayerDrawPhase, AIDrawPhase
 from phases.discard_phase import PlayerDiscardPhase, AIDiscardPhase
@@ -18,6 +20,8 @@ from phases.player_action_selection_phase import PlayerActionSelectionPhase
 from phases.ai_action_selection_phase import AIActionSelectionPhase
 from phases.meld_wait_phase import MeldWaitPhase
 from phases.win_result_phase import WinResultPhase
+from phases.start_screen_phase import StartScreenPhase
+from phases.end_screen_phase import EndScreenPhase
 
 # フェーズIDとクラスの対応表
 PHASE_CLASS_MAP = {
@@ -30,6 +34,8 @@ PHASE_CLASS_MAP = {
     MELD_WAIT_PHASE: MeldWaitPhase,
     PLAYER_SELECT_TILE_PHASE: PlayerSelectTilePhase,
     WIN_RESULT_PHASE: WinResultPhase,
+    START_SCREEN_PHASE: StartScreenPhase,
+    END_SCREEN_PHASE: EndScreenPhase,
 }
 
 class GameState:
@@ -42,7 +48,7 @@ class GameState:
         self.ai_action_time = 0
         self.draw_action_time = 0
         self.phase_history = []
-        self.current_phase = PLAYER_DRAW_PHASE
+        self.current_phase = START_SCREEN_PHASE
         self.current_phase_object = None  #現在のフェーズのオブジェクト
         self.action_buttons = {}
         self.available_actions = []

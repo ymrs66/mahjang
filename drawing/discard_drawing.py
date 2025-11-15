@@ -37,7 +37,6 @@ def draw_discard_group(screen, tiles, start_x, start_y, is_player, max_per_row=1
             # ここでは、チー・ポンで使用された牌は is_meld_discard が True であると想定
             if getattr(tile, "is_meld_discard", False):
                 # 90°回転（例：時計回り90° → 90度回転）
-                print(Tile)
                 rotated_img = pygame.transform.rotate(tile.image, 90)
                 # 調整例：Y座標を上に10ピクセルずらす
                 screen.blit(rotated_img, (current_x, current_y - 10))

@@ -84,7 +84,8 @@ class AIDrawPhase(BasePhase):
         kan_candidates = self.game.meld_manager.meld_candidates["kan"]
         if kan_candidates:
             print(f"AIがカン可能: {kan_candidates}")
-            self.game.process_kan(1, kan_candidates[0], self.state, "暗槓")
+            # 暗槓: discard_tile=None を明示
+            self.state.game.meld_manager.process_kan(1, None, kan_candidates[0], self.state)
             self.state.ai_action_time = current_time + AI_ACTION_DELAY
             return
 
